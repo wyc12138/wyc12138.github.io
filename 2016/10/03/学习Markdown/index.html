@@ -25,7 +25,7 @@ Markdown 可以选择性的的转换为 HTML 文档格式。
 
 Markdown的优点
 纯文本，所以兼容性极强，可以用所有文">
-<meta property="og:updated_time" content="2016-10-03T14:28:59.277Z">
+<meta property="og:updated_time" content="2016-10-03T14:39:03.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习Markdown">
 <meta name="twitter:description" content="Markdown介绍
@@ -75,7 +75,7 @@ Markdown的优点
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -167,7 +167,7 @@ Markdown的优点
 <p>var foo =’bar’<br>console.log(foo)<br>function test (name) {<br>    console.log(‘hello’_name)<br>}</p>
 <p>引用之后</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var foo =&apos;bar&apos;</div><div class="line">console.log(foo)</div><div class="line">function test (name) &#123;</div><div class="line">    console.log(&apos;hello&apos;_name)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>书写格式：在代码块前后加上\<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 表格</div><div class="line"></div><div class="line">表格其实就是 HTML 中的 `table`</div><div class="line">书写的时候分为 `thead` 和 `tbody` 以及中间的分割线</div><div class="line"></div><div class="line">书写方式：</div></pre></td></tr></table></figure></p>
+<p>书写格式：在代码块前后加上<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 表格</div><div class="line"></div><div class="line">表格其实就是 HTML 中的 `table`</div><div class="line">书写的时候分为 `thead` 和 `tbody` 以及中间的分割线</div><div class="line"></div><div class="line">书写方式：</div></pre></td></tr></table></figure></p>
 <table>
 <thead>
 <tr>
@@ -194,53 +194,15 @@ Markdown的优点
 </tr>
 </tbody>
 </table>
-<p>```</p>
-<p>结果：</p>
-<table>
-<thead>
-<tr>
-<th>编号</th>
-<th>姓名</th>
-<th>年龄</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>张三</td>
-<td>21</td>
-</tr>
-<tr>
-<td>2</td>
-<td>李四</td>
-<td>20</td>
-</tr>
-<tr>
-<td>3</td>
-<td>王五</td>
-<td>18</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Markdown总结"><a href="#Markdown总结" class="headerlink" title="Markdown总结"></a>Markdown总结</h2><ul>
-<li>标题                    <code>#</code></li>
-<li>段落                    <code>直接写</code></li>
-<li>无序和有序列表           <code>无序-</code> <code>有序1</code></li>
-<li>粗体和斜体              <code>**粗体**</code>  <code>*斜体*</code></li>
-<li>链接和图片              <code>\[链接文本\]\(链接的地址\)</code>  <code>\[图片的alt\]\(图片的链接地址\)</code></li>
-<li>文本引用                <code>&gt; 引用内容</code></li>
-<li>代码引用<ul>
-<li>行内引用            `引用内容`\</li>
-<li>多行引用            ```多行引用内容```\</li>
-</ul>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">结果：</div><div class="line"></div><div class="line">| 编号 | 姓名 | 年龄 |</div><div class="line">| ----- | ----- | ----- |</div><div class="line">| 1 | 张三 | 21 |</div><div class="line">| 2 | 李四 | 20 |</div><div class="line">| 3 | 王五 | 18 |</div><div class="line"></div><div class="line"></div><div class="line">## Markdown总结</div><div class="line"></div><div class="line">- 标题                    `#`</div><div class="line">- 段落                    `直接写`</div><div class="line">- 无序和有序列表           `无序-` `有序1`</div><div class="line">- 粗体和斜体              ` **粗体** `  ` *斜体* `</div><div class="line">- 链接和图片              `[链接文本](链接的地址)`  `[图片的alt](图片的链接地址)`</div><div class="line">- 文本引用                ` &gt; 引用内容 `</div><div class="line">- 代码引用</div><div class="line">    - 行内引用            \`引用内容`</div><div class="line">    - 多行引用            \```多行引用内容</div></pre></td></tr></table></figure>
+<ul>
 <li>表格</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/03/学习Markdown/" data-id="cittzz0r80005ewupb6ipysea" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2016/10/03/学习Markdown/" data-id="cittzz0r80005ewupb6ipysea" class="article-share-link">Share</a>
       
       
     </footer>
@@ -251,7 +213,7 @@ Markdown的优点
   
   
     <a href="/2016/10/03/科学上网/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">科学上网</div>
     </a>
   
@@ -274,7 +236,7 @@ Markdown的优点
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
     </div>
@@ -284,7 +246,7 @@ Markdown的优点
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
