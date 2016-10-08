@@ -61,7 +61,29 @@ Javascript 语言的特点
 基于原型的
 
 原型概念">
-<meta property="og:updated_time" content="2016-10-08T09:05:09.132Z">
+<meta property="og:image" content="http://yoursite.com/images/constructor.png">
+<meta property="og:image" content="http://yoursite.com/images/Dog.png">
+<meta property="og:image" content="http://yoursite.com/images/kuozhan.png">
+<meta property="og:image" content="http://yoursite.com/images/zhihuan.png">
+<meta property="og:image" content="http://yoursite.com/images/copy.png">
+<meta property="og:image" content="http://yoursite.com/images/extend.png">
+<meta property="og:image" content="http://yoursite.com/images/ES5.png">
+<meta property="og:image" content="http://yoursite.com/images/parent.png">
+<meta property="og:image" content="http://yoursite.com/images/toString.png">
+<meta property="og:image" content="http://yoursite.com/images/sousuo.png">
+<meta property="og:image" content="http://yoursite.com/images/hasOwnProperty.png">
+<meta property="og:image" content="http://yoursite.com/images/isPrototypeOf.png">
+<meta property="og:image" content="http://yoursite.com/images/propertyIsEnumerable.png">
+<meta property="og:image" content="http://yoursite.com/images/o.png">
+<meta property="og:image" content="http://yoursite.com/images/arr.png">
+<meta property="og:image" content="http://yoursite.com/images/shengming.png">
+<meta property="og:image" content="http://yoursite.com/images/shengming.png">
+<meta property="og:image" content="http://yoursite.com/images/create.png">
+<meta property="og:image" content="http://yoursite.com/images/Function.png">
+<meta property="og:image" content="http://yoursite.com/images/prototype.png">
+<meta property="og:image" content="http://yoursite.com/images/arguments.png">
+<meta property="og:image" content="http://yoursite.com/fibonacci.png">
+<meta property="og:updated_time" content="2016-10-08T11:13:48.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象">
 <meta name="twitter:description" content="面向对象的概念一种编程思想。
@@ -90,6 +112,7 @@ Javascript 语言的特点
 基于原型的
 
 原型概念">
+<meta name="twitter:image" content="http://yoursite.com/images/constructor.png">
   
     <link rel="alternate" href="/atom.xml" title="Mine" type="application/atom+xml">
   
@@ -199,6 +222,7 @@ Javascript 语言的特点
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__ === foo.prototype);</div></pre></td></tr></table></figure>
 <p>获取构造函数：原型通过constructor属性获取到构造函数</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__.constructor);</div></pre></td></tr></table></figure>
+<p><img src="images/constructor.png" alt=""></p>
 <p>对象的组成部分：</p>
 <ul>
 <li>对象本身</li>
@@ -218,6 +242,7 @@ Javascript 语言的特点
 </ul>
 <p>不提倡在 js 原生对象上进行扩展成员。会导致原生对象过于庞大、累赘，影响性能。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Dog(name,color,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.color = color;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Dog.prototype.eat = function()&#123;</div><div class="line">    console.log(&quot;eat&quot;);</div><div class="line">&#125;</div><div class="line">Dog.prototype.bark = function()&#123;</div><div class="line">    console.log(&quot;wang&quot;);</div><div class="line">&#125;</div><div class="line">var erha = new Dog(&quot;二哈&quot;，&quot;BlackWhite&quot;,&quot;female&quot;);</div><div class="line">erha.eat();</div><div class="line">erha.bark();</div></pre></td></tr></table></figure>
+<p><img src="images/Dog.png" alt=""></p>
 <p>原型的动态特性：</p>
 <ul>
 <li>动态性：<ul>
@@ -242,9 +267,11 @@ Javascript 语言的特点
 <ul>
 <li><p>扩展原型：在原有的原型上进行相应的扩展，实现继承。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">A.prototype.printA = function()&#123;</div><div class="line">    console.log(&quot;a&quot;);&apos;</div><div class="line">&#125;</div><div class="line">a.printA();</div></pre></td></tr></table></figure>
+<p><img src="images/kuozhan.png" alt=""></p>
 </li>
 <li><p>置换原型：将要被继承的对象直接替换掉原有的原型实现继承。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;parent&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.printC = function()&#123;</div><div class="line">    console.log(&quot;c&quot;);</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">function child()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">child.prototype = new parent();</div><div class="line">var c = new child();</div><div class="line">c.printC();</div></pre></td></tr></table></figure>
+<p><img src="images/zhihuan.png" alt=""></p>
 </li>
 </ul>
 </li>
@@ -252,6 +279,7 @@ Javascript 语言的特点
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var parent = &#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;,</div><div class="line">    name:&quot;parent&quot;</div><div class="line">&#125;;</div><div class="line">var child = &#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;;</div><div class="line">//遍历parent</div><div class="line">for(var k in parent)&#123;</div><div class="line">    //将parent对象上的成员添加到child上</div><div class="line">    child[k] = parent[k];</div><div class="line">&#125;</div><div class="line">child.print();</div></pre></td></tr></table></figure>
+<p><img src="images/copy.png" alt=""></p>
 <p><strong> 在实际开发中上述两种继承方式可以组合起来使用 </strong></p>
 <ul>
 <li><p>extend方法 为了方便实现拷贝继承</p>
@@ -259,6 +287,7 @@ Javascript 语言的特点
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function(parent)&#123;</div><div class="line">    for(var k in parent)&#123;</div><div class="line">        this[k] = parent[k];</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
 <p>  一次继承多个对象</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function()&#123;</div><div class="line">    var args = arguments,</div><div class="line">        obj;</div><div class="line">    //遍历arguments上的所有对象，依次将遍历的每个对象的成员添加到child</div><div class="line">    for(var i = 0,l = args.length;i&lt;l;i++)&#123;</div><div class="line">        obj = args[i];</div><div class="line">        //判断传入的是否为对象，不是对象就执行下面的代码</div><div class="line">        if(typeof obj === &quot;object&quot;)&#123;</div><div class="line">            for(var k in obj)&#123;</div><div class="line">                this[k] = obj[k];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
+<p>  <img src="images/extend.png" alt=""></p>
 </li>
 <li><p>ES5 Object.create ：通过置换原型的方式来实现继承</p>
 </li>
@@ -268,13 +297,16 @@ Javascript 语言的特点
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newObject = Object.create(obj);</div><div class="line">newObject.print();</div></pre></td></tr></table></figure>
 <p>解决兼容性问题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(!Object.create)&#123;</div><div class="line">    Object.creat = function(parent)&#123;</div><div class="line">        function F()&#123;&#125;</div><div class="line">        F.prototype = parent;</div><div class="line">        return new F;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newobj = Object.create(&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">newobj.print();</div></pre></td></tr></table></figure>
+<p><img src="images/ES5.png" alt=""></p>
 <ul>
 <li>对象冒充：<br>概念：在一个构造函数中，可以动态的添加一个parent方法指向已有的构造函数，然后调用parent方法去实例化当前对象的一部分成员（或全部成员），这种方式被称为对象冒充。<br>注意：利用完parent属性之后记得删除该属性。</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    this.parent = parent;</div><div class="line">    this.parent(name,age,gender);</div><div class="line">    delete this.parent;</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new child(&quot;小美&quot;,20,&quot;girl&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
+<p><img src="images/parent.png" alt=""></p>
 <h3 id="3-多态："><a href="#3-多态：" class="headerlink" title="3. 多态："></a>3. 多态：</h3><p>体现在继承中的概念。对象A继承自对象B，B对象的某个方法在A中并不适用，然后A对象重写该方法，那么这就是多态</p>
 <p>概念：在父类中的同一方法在各个子类中的实现行为不同。</p>
 <p>例：<br><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var date = new Date();</div><div class="line">console.log(date.toString());</div><div class="line">var arr = [1,3,5];</div><div class="line">console.log(arr.toString());</div><div class="line">var o = &#123;name:&quot;shelly&quot;&#125;;</div><div class="line">console.log(o.toString());</div></pre></td></tr></table></figure></p>
+<p><img src="images/toString.png" alt=""></p>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
 <li><p>概念：从当前对象到Object.prototype之间，存在一条层次分明，逐级递进的体现继承关系的链式结构，这个结构被称为原型链。</p>
 </li>
@@ -302,19 +334,24 @@ Javascript 语言的特点
 <li>兼顾 js 性能以及代码的可读性可扩展性</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;Tom&quot;;</div><div class="line">    this.age = 20;</div><div class="line">    this.gender = &quot;man&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.address = &quot;China&quot;;</div><div class="line">parent.prototype.__proto__=&#123;</div><div class="line">    gender:&quot;nan&quot;</div><div class="line">&#125;;</div><div class="line">var p = new parent;</div><div class="line">console.log(p.name);</div><div class="line">console.log(p.address);</div><div class="line">console.log(p.gender);</div></pre></td></tr></table></figure>
+<p><img src="images/sousuo.png" alt=""></p>
 <p>Object.prototype简介</p>
 <p>console.log(Object.prototype); 介绍打印出来的几个属性</p>
 <ol>
-<li><p>hasOwnProperty()<br>has：有<br>own：自己<br>Property：属性<br>判断指定的属性是否为当前对象自己的（不是继承）<br>语法：<code>&lt;object&gt;.hasOwnProperty(&#39;propName&#39;)</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = &#123;name:&quot;Tom&quot;&#125;;</div><div class="line">console.log(o.hasOwnProperty(&quot;name&quot;));          //true</div><div class="line">console.log(o.hasOwnProperty(&quot;toString&quot;));      //false</div></pre></td></tr></table></figure>
-</li>
-<li><p>isPrototypeOf<br>is：是否<br>prototype：原型<br>of：的<br>判断当前对象是否为指定对象的原型对象<br>只要对象a出现在对象b的原型链上就返回true，否则返回false<br>语法：<code>&lt;a&gt;.isPrototypeOf(&lt;b&gt;)</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">function B()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">B.prototype = a;</div><div class="line">var b = new B();</div><div class="line">//原型链：b-&gt;B.prototype-&gt;A.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(a.isPrototypeOf(b));</div><div class="line">console.log(A.prototype.isPrototypeOf(b));</div><div class="line">console.log(Object.prototype.isPrototypeOf(a));</div><div class="line">console.log(Object.prototype.isPrototypeOf(b));</div></pre></td></tr></table></figure>
-</li>
-<li><p>propertyIsEnumerable<br>property：属性<br>is：是否<br>Enumerable：可枚举的<br>判断对象的制定属性是否可枚举，并且指定的属性必须是自身的<br>是hasOwnProperty的升级版<br>默认：手动添加的属性都是可枚举的，js 解析器自动添加的属性都是不可枚举的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    age:18</div><div class="line">&#125;;</div><div class="line">for(var k in obj)&#123;</div><div class="line">    console.log(k)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>hasOwnProperty()<br>has：有<br>own：自己<br>Property：属性<br>判断指定的属性是否为当前对象自己的（不是继承）<br>语法：<code>&lt;object&gt;.hasOwnProperty(&#39;propName&#39;)</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = &#123;name:&quot;Tom&quot;&#125;;</div><div class="line">console.log(o.hasOwnProperty(&quot;name&quot;));</div><div class="line">console.log(o.hasOwnProperty(&quot;toString&quot;));</div></pre></td></tr></table></figure>
 </li>
 </ol>
+<p><img src="images/hasOwnProperty.png" alt=""></p>
+<ol>
+<li>isPrototypeOf<br>is：是否<br>prototype：原型<br>of：的<br>判断当前对象是否为指定对象的原型对象<br>只要对象a出现在对象b的原型链上就返回true，否则返回false<br>语法：<code>&lt;a&gt;.isPrototypeOf(&lt;b&gt;)</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">function B()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">B.prototype = a;</div><div class="line">var b = new B();</div><div class="line">//原型链：b-&gt;B.prototype-&gt;A.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(a.isPrototypeOf(b));</div><div class="line">console.log(A.prototype.isPrototypeOf(b));</div><div class="line">console.log(Object.prototype.isPrototypeOf(a));</div><div class="line">console.log(Object.prototype.isPrototypeOf(b));</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="images/isPrototypeOf.png" alt=""></p>
+<ol>
+<li>propertyIsEnumerable<br>property：属性<br>is：是否<br>Enumerable：可枚举的<br>判断对象的制定属性是否可枚举，并且指定的属性必须是自身的<br>是hasOwnProperty的升级版<br>默认：手动添加的属性都是可枚举的，js 解析器自动添加的属性都是不可枚举的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    age:18</div><div class="line">&#125;;</div><div class="line">for(var k in obj)&#123;</div><div class="line">    console.log(k)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="images/propertyIsEnumerable.png" alt=""></p>
 <p>构造函数的执行过程</p>
 <ol>
 <li>创建了一个空对象obj</li>
@@ -332,32 +369,42 @@ Javascript 语言的特点
 <li>给每一个对象的属性添加指向</li>
 <li>如果每一个对象的属性都有了指向，就说明原型链绘制完成</li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;</div><div class="line">//o-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
+<p><img src="images/o.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [];</div><div class="line">//arr-&gt;Array.prototype-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
+<p><img src="images/arr.png" alt=""></p>
 <h2 id="Function-的介绍"><a href="#Function-的介绍" class="headerlink" title="Function 的介绍"></a>Function 的介绍</h2><ul>
 <li><p>创建函数的方式</p>
 <ul>
 <li><p>声明式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="images/shengming.png" alt=""></p>
 </li>
 <li><p>表达式</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = function()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="images/shengming.png" alt=""></p>
 </li>
 <li><p>构造函数<br>Function(arg1,arg2,…argN,body)所有参数均为字符串<br>arg1,arg2,…argN 为可选的参数列表，表示为生成函数的形参列表<br>body 为必选参数，表示为生成函数的函数体部分</p>
 </li>
 </ul>
 </li>
-<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象，具有<strong>proto</strong>属性</li>
+<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象，具有<strong>proto</strong>属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(!!foo.__proto__);</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<p><img src="images/create.png" alt=""></p>
 <p>函数的原型链</p>
 <p>相关结论：</p>
 <ul>
-<li><p>所有的函数都是Function实例</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(Object.constructor);</div><div class="line">console.log(Array.constructor);</div><div class="line">//Array-&gt;Function.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(Date.constructor);</div><div class="line">console.log(RegExp.constructor);</div><div class="line">var foo = function()&#123;&#125;;</div><div class="line">console.log(foo.constructor);</div></pre></td></tr></table></figure>
+<li>所有的函数都是Function实例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(Object.constructor);</div><div class="line">console.log(Array.constructor);</div><div class="line">//Array-&gt;Function.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(Date.constructor);</div><div class="line">console.log(RegExp.constructor);</div><div class="line">var foo = function()&#123;&#125;;</div><div class="line">console.log(foo.constructor);</div></pre></td></tr></table></figure>
 </li>
-<li><p>所有函数的构造函数为Function</p>
-</li>
+</ul>
+<p><img src="images/Function.png" alt=""></p>
+<ul>
+<li>所有函数的构造函数为Function</li>
 <li>所有函数的原型对象为Function.prototype<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(foo.__proto__);</div><div class="line">console.log(Object.__proto__);</div><div class="line">console.log(Array.__proto__);</div><div class="line">console.log(Date.__proto__);</div><div class="line">console.log(RegExp.__proto__);</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p><img src="images/prototype.png" alt=""></p>
 <p>将函数称为函数对象<br>将其他对象称为普通对象</p>
 <p>arguments对象属性</p>
 <ul>
@@ -368,6 +415,7 @@ Javascript 语言的特点
 <li>name：存储函数的名字</li>
 </ul>
 <p>模拟函数重载<br>在 js 中，没有函数重载，只能通过arguments对象进行模拟<br>实例：<br>如果函数没有传递实参，就直接打印false<br>如果传递一个实参，就将其直接打印出来<br>如果传递一个实参并且类型为数字的话，就加1再打印<br>如果传递两个实参，就将两个实参拼接起来，再打印出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    if(arguments.length===0)&#123;</div><div class="line">        console.log(&quot;false&quot;);</div><div class="line">    &#125;else if(arguments.length===1)&#123;</div><div class="line">        if(typeof arguments[0]===&quot;number&quot;)&#123;</div><div class="line">            console.log(arguments[0]+1);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(arguments[0]);</div><div class="line">        &#125;</div><div class="line">    &#125;else if(arguments.length===2)&#123;</div><div class="line">        console.log(arguments[0]+&quot;&quot;+arguments[1]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line">foo(1);</div><div class="line">foo(&quot;abc&quot;);</div><div class="line">foo(&quot;a&quot;,&quot;1&quot;);</div></pre></td></tr></table></figure></p>
+<p><img src="images/arguments.png" alt=""></p>
 <p>函数递归</p>
 <ul>
 <li>概念：函数调用自身</li>
@@ -380,6 +428,7 @@ Javascript 语言的特点
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fibonacci(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return fibonacci(n-1)+fibonacci(n-2);</div><div class="line">&#125;</div><div class="line">console.log(fibonacci(6));</div></pre></td></tr></table></figure>
 <p>方法二：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fibonacci = (function(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return arguments.callee(n-1)+arguments.callee(n-2);</div><div class="line">&#125;(6));</div><div class="line">console.log(fibonacci);</div></pre></td></tr></table></figure>
+<p><img src="fibonacci.png" alt=""></p>
 </li>
 </ul>
 </li>
