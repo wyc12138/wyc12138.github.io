@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>面向对象从入门到精通（三） | Mine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Function 的介绍
+创建函数的方式
+
+声明式
+1234function foo()&amp;#123;    console.log(arguments);&amp;#125;foo(1,2,&amp;quot;3&amp;quot;,&amp;#123;name:&amp;quot;Tom&amp;quot;&amp;#125;);
+
+
+表达式
+1234var foo = function()&amp;#123;    console.log(argument">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象从入门到精通（三）">
+<meta property="og:url" content="http://yoursite.com/2016/10/17/面向对象从入门到精通（三）/index.html">
+<meta property="og:site_name" content="Mine">
+<meta property="og:description" content="Function 的介绍
+创建函数的方式
+
+声明式
+1234function foo()&amp;#123;    console.log(arguments);&amp;#125;foo(1,2,&amp;quot;3&amp;quot;,&amp;#123;name:&amp;quot;Tom&amp;quot;&amp;#125;);
+
+
+表达式
+1234var foo = function()&amp;#123;    console.log(argument">
+<meta property="og:image" content="http://yoursite.com/images/shengming.png">
+<meta property="og:image" content="http://yoursite.com/images/shengming.png">
+<meta property="og:image" content="http://yoursite.com/images/create.png">
+<meta property="og:image" content="http://yoursite.com/images/Function.png">
+<meta property="og:image" content="http://yoursite.com/images/prototype.png">
+<meta property="og:image" content="http://yoursite.com/images/arguments.png">
+<meta property="og:image" content="http://yoursite.com/images/fibonacci.png">
+<meta property="og:updated_time" content="2016-10-17T10:21:53.961Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象从入门到精通（三）">
+<meta name="twitter:description" content="Function 的介绍
+创建函数的方式
+
+声明式
+1234function foo()&amp;#123;    console.log(arguments);&amp;#125;foo(1,2,&amp;quot;3&amp;quot;,&amp;#123;name:&amp;quot;Tom&amp;quot;&amp;#125;);
+
+
+表达式
+1234var foo = function()&amp;#123;    console.log(argument">
+<meta name="twitter:image" content="http://yoursite.com/images/shengming.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Mine" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Mine</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象从入门到精通（三）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/17/面向对象从入门到精通（三）/" class="article-date">
+  <time datetime="2016-10-17T10:13:20.000Z" itemprop="datePublished">2016-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象从入门到精通（三）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Function-的介绍"><a href="#Function-的介绍" class="headerlink" title="Function 的介绍"></a>Function 的介绍</h2><ul>
+<li><p>创建函数的方式</p>
+<ul>
+<li><p>声明式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="/images/shengming.png" alt=""></p>
+</li>
+<li><p>表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = function()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="/images/shengming.png" alt=""></p>
+</li>
+<li><p>构造函数<br>Function(arg1,arg2,…argN,body)所有参数均为字符串<br>arg1,arg2,…argN 为可选的参数列表，表示为生成函数的形参列表<br>body 为必选参数，表示为生成函数的函数体部分</p>
+</li>
+</ul>
+</li>
+<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象，具有<strong>proto</strong>属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(!!foo.__proto__);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/create.png" alt=""></p>
+<p>函数的原型链</p>
+<p>相关结论：</p>
+<ul>
+<li>所有的函数都是Function实例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(Object.constructor);</div><div class="line">console.log(Array.constructor);</div><div class="line">//Array-&gt;Function.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(Date.constructor);</div><div class="line">console.log(RegExp.constructor);</div><div class="line">var foo = function()&#123;&#125;;</div><div class="line">console.log(foo.constructor);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/Function.png" alt=""></p>
+<ul>
+<li>所有函数的构造函数为Function</li>
+<li>所有函数的原型对象为Function.prototype<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(foo.__proto__);</div><div class="line">console.log(Object.__proto__);</div><div class="line">console.log(Array.__proto__);</div><div class="line">console.log(Date.__proto__);</div><div class="line">console.log(RegExp.__proto__);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/prototype.png" alt=""></p>
+<p>将函数称为函数对象<br>将其他对象称为普通对象</p>
+<p>arguments对象属性</p>
+<ul>
+<li>length：实参个数</li>
+<li>callee：返回正在执行的函数<br>函数相关属性</li>
+<li>caller：返回调用当前函数的函数</li>
+<li>length：形参的个数</li>
+<li>name：存储函数的名字</li>
+</ul>
+<p>模拟函数重载<br>在 js 中，没有函数重载，只能通过arguments对象进行模拟<br>实例：<br>如果函数没有传递实参，就直接打印false<br>如果传递一个实参，就将其直接打印出来<br>如果传递一个实参并且类型为数字的话，就加1再打印<br>如果传递两个实参，就将两个实参拼接起来，再打印出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    if(arguments.length===0)&#123;</div><div class="line">        console.log(&quot;false&quot;);</div><div class="line">    &#125;else if(arguments.length===1)&#123;</div><div class="line">        if(typeof arguments[0]===&quot;number&quot;)&#123;</div><div class="line">            console.log(arguments[0]+1);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(arguments[0]);</div><div class="line">        &#125;</div><div class="line">    &#125;else if(arguments.length===2)&#123;</div><div class="line">        console.log(arguments[0]+&quot;&quot;+arguments[1]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line">foo(1);</div><div class="line">foo(&quot;abc&quot;);</div><div class="line">foo(&quot;a&quot;,&quot;1&quot;);</div></pre></td></tr></table></figure></p>
+<p><img src="/images/arguments.png" alt=""></p>
+<p>函数递归</p>
+<ul>
+<li>概念：函数调用自身</li>
+<li><p>经典递归案例</p>
+<ul>
+<li><p>等差数列第n项值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//v为第一项的值，d为等差，n为第n项值</div><div class="line">function dengCha(v,d,n)&#123;</div><div class="line">    if(n&lt;1)&#123;</div><div class="line">        return undefined;</div><div class="line">    &#125;</div><div class="line">    else if(n==1)&#123;</div><div class="line">        return v;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return dengCha(v,d,n-1)+d;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(dengCha(2,2,6));</div></pre></td></tr></table></figure>
+</li>
+<li><p>fibonacci 数列第n项值<br>fibonacci数列：1，1，2，3，5，8，13，21，34，…<br>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fibonacci(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return fibonacci(n-1)+fibonacci(n-2);</div><div class="line">&#125;</div><div class="line">console.log(fibonacci(6));</div></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fibonacci = (function(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return arguments.callee(n-1)+arguments.callee(n-2);</div><div class="line">&#125;(6));</div><div class="line">console.log(fibonacci);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/fibonacci.png" alt=""></p>
+<p>词法作用域<br>规定变量的作用域是由变量声明的位置决定，而不是使用变量的位置决定<br>在词法作用域中，只有函数可以分割作用域，在函数内部是一个完整作用域，与外界隔离。<br>在函数内部可以访问函数外部的数据；但是在函数外部无法访问内部的数据。</p>
+<p>变量名（函数名）提升<br>在 js 预解析阶段执行的操作<br>js 本身是边解析边执行的</p>
+<p>在预解析阶段<br>首先分析代码语法，如果有语法错误，就直接抛出异常<br>其次，将变量名以及函数声明提升到当前作用域最顶端</p>
+<p>in 运算符<br>规则：前面的属性名字要用字符串来表示；如果为变量，那么会将变量的值隐式转换成字符串，然后去判断变量的值是否为指定对象的属性（可以为继承过来的属性）<br>注意：后面的参数必须为对象，否则报错</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（三）/" data-id="ciudx31vd0006j0up00029j3z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/17/面向对象从入门到精通（四）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面向对象从入门到精通（四）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/17/面向对象从入门到精通（二）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面向对象从入门到精通（二）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/14/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

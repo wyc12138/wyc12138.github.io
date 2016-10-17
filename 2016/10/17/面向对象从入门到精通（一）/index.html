@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>面向对象从入门到精通（一） | Mine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面向对象的概念一种编程思想。
+核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。
+好处：
+
+是调度者
+代码灵活度高
+可维护性高
+可扩展性高
+
+坏处：
+
+可能造成代码的复杂度提高
+可读性相对不好
+
+面向过程：
+
+是执行者
+一般情况下顺序不可打乱，从上至下一步一步执行
+
+Javascript 语言的特点
+弱类型
+多范式
+基于对象的语言：在 js 中，一切都是对象
+基于原型的
+
+原型概念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象从入门到精通（一）">
+<meta property="og:url" content="http://yoursite.com/2016/10/17/面向对象从入门到精通（一）/index.html">
+<meta property="og:site_name" content="Mine">
+<meta property="og:description" content="面向对象的概念一种编程思想。
+核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。
+好处：
+
+是调度者
+代码灵活度高
+可维护性高
+可扩展性高
+
+坏处：
+
+可能造成代码的复杂度提高
+可读性相对不好
+
+面向过程：
+
+是执行者
+一般情况下顺序不可打乱，从上至下一步一步执行
+
+Javascript 语言的特点
+弱类型
+多范式
+基于对象的语言：在 js 中，一切都是对象
+基于原型的
+
+原型概念">
+<meta property="og:image" content="http://yoursite.com/images/constructor.png">
+<meta property="og:image" content="http://yoursite.com/images/Dog.png">
+<meta property="og:updated_time" content="2016-10-17T10:12:25.499Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象从入门到精通（一）">
+<meta name="twitter:description" content="面向对象的概念一种编程思想。
+核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。
+好处：
+
+是调度者
+代码灵活度高
+可维护性高
+可扩展性高
+
+坏处：
+
+可能造成代码的复杂度提高
+可读性相对不好
+
+面向过程：
+
+是执行者
+一般情况下顺序不可打乱，从上至下一步一步执行
+
+Javascript 语言的特点
+弱类型
+多范式
+基于对象的语言：在 js 中，一切都是对象
+基于原型的
+
+原型概念">
+<meta name="twitter:image" content="http://yoursite.com/images/constructor.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Mine" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Mine</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象从入门到精通（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/17/面向对象从入门到精通（一）/" class="article-date">
+  <time datetime="2016-10-17T09:56:27.000Z" itemprop="datePublished">2016-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象从入门到精通（一）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h2><p>一种编程思想。</p>
+<p>核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。</p>
+<p>好处：</p>
+<ul>
+<li>是调度者</li>
+<li>代码灵活度高</li>
+<li>可维护性高</li>
+<li>可扩展性高</li>
+</ul>
+<p>坏处：</p>
+<ul>
+<li>可能造成代码的复杂度提高</li>
+<li>可读性相对不好</li>
+</ul>
+<p>面向过程：</p>
+<ul>
+<li>是执行者</li>
+<li>一般情况下顺序不可打乱，从上至下一步一步执行</li>
+</ul>
+<h2 id="Javascript-语言的特点"><a href="#Javascript-语言的特点" class="headerlink" title="Javascript 语言的特点"></a>Javascript 语言的特点</h2><ul>
+<li>弱类型</li>
+<li>多范式</li>
+<li>基于对象的语言：在 js 中，一切都是对象</li>
+<li>基于原型的</li>
+</ul>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>概念：所谓原型就是一个函数的prototype属性所引用的对象，只要声明一个函数，原型就存在。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">console.log(foo.prototype);</div><div class="line">//原型就是 foo.prototype</div></pre></td></tr></table></figure>
+<p>当通过该函数创建出来的每一个对象，都共享此原型，也就是说上述所创建出来的所有对象都可以直接访问到原型上的任何成员（属性和方法）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">foo.prototype.sayHello = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line">foo.prototype[&quot;name&quot;] = &quot;Tom&quot;;</div><div class="line"></div><div class="line">var f = new foo();</div><div class="line">f.sayHello();               //打印结果为hello,world</div><div class="line">console.log(f.name);        //打印结果为Tom</div></pre></td></tr></table></figure>
+<p>原型的本质：就是对象</p>
+<p>原型的好处：实现同类对象的数据共享。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.talk = function()&#123;</div><div class="line">        console.log(&quot;hello,world&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">//思考：三个人的talk方法是否一样？</div><div class="line">//验证：</div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为false，说明三个人的talk方法不一样是相互独立的。</div><div class="line">思考：怎样能让talk方法相同？</div><div class="line"></div><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Person.prototype.talk = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为true</div></pre></td></tr></table></figure></p>
+<p>获取原型的方式：</p>
+<ul>
+<li>通过函数：<code>&lt;fnName&gt;.prototype</code></li>
+<li>通过对象：<code>&lt;object&gt;.__proto__</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__ === foo.prototype);</div></pre></td></tr></table></figure>
+<p>获取构造函数：原型通过constructor属性获取到构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__.constructor);</div></pre></td></tr></table></figure>
+<p><img src="/images/constructor.png" alt=""></p>
+<p>对象的组成部分：</p>
+<ul>
+<li>对象本身</li>
+<li>它的原型</li>
+</ul>
+<p>每个对象都有__proto__属性。就是说，每一个对象都有原型</p>
+<p>对象类型：就是他构造函数的名字</p>
+<p>原型属性：站在函数的角度，原型可以被称为该函数的原型属性<br>原型对象：站在对象的角度，原型可以被称为该对象的原型对象</p>
+<p>__proto__是非标准属性，有兼容性问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getPrototype(obj)&#123;</div><div class="line">    //判断浏览器是否兼容__proto__</div><div class="line">    if(obj.__proto__)&#123;</div><div class="line">        return obj.__proto__;</div><div class="line">    &#125;else&#123;</div><div class="line">        //先获取该对象的构造函数，再通过此构造函数的prototype属性获取其原型对象。</div><div class="line">        return obj.constructor.prototype;</div><div class="line">    &#125;</div><div class="line">    //可以使用三元表达式</div><div class="line">    //return !!obj.__proto__?obj.__proto__:obj.constructor.prototype;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">console.log(getPrototype(a).constructor);</div></pre></td></tr></table></figure>
+<p>标准构造函数的写法：</p>
+<p>哪些属性要保留在构造函数内部，哪些属性要提取出来，放到原型上？</p>
+<ul>
+<li>和具体的某个对象息息相关的属性，这些属性都要写在构造函数内部</li>
+<li>每一个对象都具有的属性，并且属性值是确定的，不会随对象变化而变化。</li>
+<li>一般情况下所有的方法都应该放在原型上。</li>
+</ul>
+<p>不提倡在 js 原生对象上进行扩展成员。会导致原生对象过于庞大、累赘，影响性能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Dog(name,color,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.color = color;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Dog.prototype.eat = function()&#123;</div><div class="line">    console.log(&quot;eat&quot;);</div><div class="line">&#125;</div><div class="line">Dog.prototype.bark = function()&#123;</div><div class="line">    console.log(&quot;wang&quot;);</div><div class="line">&#125;</div><div class="line">var erha = new Dog(&quot;二哈&quot;，&quot;BlackWhite&quot;,&quot;female&quot;);</div><div class="line">erha.eat();</div><div class="line">erha.bark();</div></pre></td></tr></table></figure>
+<p><img src="/images/Dog.png" alt=""></p>
+<p>原型的动态特性：</p>
+<ul>
+<li>动态性：<ul>
+<li>给原型扩展成员会直接反映到已创建的对象身上</li>
+<li>替换原型对象不会反应到已创建出来的对象，但是会直接影响到之后创建出来的对象</li>
+</ul>
+</li>
+<li>唯一性：<br>由同一函数创建出来的所有对象，共享同一个原型对象</li>
+<li>不可变性：<br>对象是无法改变原型对象上的任何成员</li>
+<li>继承性：<br>所有对象都继承自它的原型对象</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（一）/" data-id="ciudx31ux0005j0upbccwyn47" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/10/17/面向对象从入门到精通（二）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面向对象从入门到精通（二）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/10/14/面向对象从入门到精通（六）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面向对象从入门到精通（六）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/14/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

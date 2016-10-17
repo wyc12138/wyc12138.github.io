@@ -5,43 +5,67 @@
   
   <title>面向对象从入门到精通（六） | Mine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数的四种调用模式1. 普通函数执行
-this -&amp;gt; window
-声明一个函数后，就直接调用
+  <meta name="description" content="课程报名流程
+目的：培养面向对象思想
+流程分析：
+院校开设课程
+院校开设班级
+学生报名课程
+学生缴纳费用，得到缴费凭证
+老师给学生分配班级
+老师将学生的信息登记在班级信息表格里
 
-12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
-2. 方法调用模式
-this -&amp;gt; 该方法的调用者
-通过一个对象来调用方法
 
-1234567var obj = &amp;">
+在整个流程中涉及多少个对象
+院校
+属性：codeNo 学校编码，name 名字，address 地址，description 描述
+行为：
+createCourse 开设课程
+院校开设课程，实质就是创建课程对象
+通过课">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象从入门到精通（六）">
 <meta property="og:url" content="http://yoursite.com/2016/10/14/面向对象从入门到精通（六）/index.html">
 <meta property="og:site_name" content="Mine">
-<meta property="og:description" content="函数的四种调用模式1. 普通函数执行
-this -&amp;gt; window
-声明一个函数后，就直接调用
+<meta property="og:description" content="课程报名流程
+目的：培养面向对象思想
+流程分析：
+院校开设课程
+院校开设班级
+学生报名课程
+学生缴纳费用，得到缴费凭证
+老师给学生分配班级
+老师将学生的信息登记在班级信息表格里
 
-12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
-2. 方法调用模式
-this -&amp;gt; 该方法的调用者
-通过一个对象来调用方法
 
-1234567var obj = &amp;">
-<meta property="og:updated_time" content="2016-10-14T09:04:23.653Z">
+在整个流程中涉及多少个对象
+院校
+属性：codeNo 学校编码，name 名字，address 地址，description 描述
+行为：
+createCourse 开设课程
+院校开设课程，实质就是创建课程对象
+通过课">
+<meta property="og:updated_time" content="2016-10-17T10:25:54.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象从入门到精通（六）">
-<meta name="twitter:description" content="函数的四种调用模式1. 普通函数执行
-this -&amp;gt; window
-声明一个函数后，就直接调用
+<meta name="twitter:description" content="课程报名流程
+目的：培养面向对象思想
+流程分析：
+院校开设课程
+院校开设班级
+学生报名课程
+学生缴纳费用，得到缴费凭证
+老师给学生分配班级
+老师将学生的信息登记在班级信息表格里
 
-12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
-2. 方法调用模式
-this -&amp;gt; 该方法的调用者
-通过一个对象来调用方法
 
-1234567var obj = &amp;">
+在整个流程中涉及多少个对象
+院校
+属性：codeNo 学校编码，name 名字，address 地址，description 描述
+行为：
+createCourse 开设课程
+院校开设课程，实质就是创建课程对象
+通过课">
   
     <link rel="alternate" href="/atom.xml" title="Mine" type="application/atom+xml">
   
@@ -112,75 +136,86 @@ this -&amp;gt; 该方法的调用者
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h2><h3 id="1-普通函数执行"><a href="#1-普通函数执行" class="headerlink" title="1. 普通函数执行"></a>1. 普通函数执行</h3><ul>
-<li>this -&gt; window</li>
-<li>声明一个函数后，就直接调用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(1);</div><div class="line">    console.log(this===window);</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
-<h3 id="2-方法调用模式"><a href="#2-方法调用模式" class="headerlink" title="2. 方法调用模式"></a>2. 方法调用模式</h3><ul>
-<li>this -&gt; 该方法的调用者</li>
-<li>通过一个对象来调用方法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    say:function()&#123;</div><div class="line">        console.log(&quot;Hello,world&quot;);</div><div class="line">        console.log(this===obj);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">obj.say();</div></pre></td></tr></table></figure>
-<h3 id="3-构造函数模式"><a href="#3-构造函数模式" class="headerlink" title="3. 构造函数模式"></a>3. 构造函数模式</h3><ul>
-<li>this -&gt; 当前创建出来的对象</li>
-<li>配合 new 操作符来调用函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fn(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">var f = new fn(&quot;f&quot;);</div></pre></td></tr></table></figure>
-<h3 id="4-call-apply（上下文）模式"><a href="#4-call-apply（上下文）模式" class="headerlink" title="4. call/apply（上下文）模式"></a>4. call/apply（上下文）模式</h3><ul>
-<li>this -&gt; 用户动态指定的<ul>
-<li>指定 call or apply 方法的第一个参数</li>
+        <h2 id="课程报名流程"><a href="#课程报名流程" class="headerlink" title="课程报名流程"></a>课程报名流程</h2><ul>
+<li>目的：培养面向对象思想</li>
+<li>流程分析：<ul>
+<li>院校开设课程</li>
+<li>院校开设班级</li>
+<li>学生报名课程</li>
+<li>学生缴纳费用，得到缴费凭证</li>
+<li>老师给学生分配班级</li>
+<li>老师将学生的信息登记在班级信息表格里</li>
 </ul>
 </li>
-<li>区别：<ul>
-<li><code>&lt;fn&gt;.call(thisObj,arg1,arg2,...,argN)</code>：thisObject 为 this 的指向。之后为形参列表，就是 fn 在执行时的形参列表</li>
-<li><code>&lt;fn&gt;.apply(thisObj,[实参])</code>：thisObject 为 this 的指向。数组参数为 fn 在执行时的实参。</li>
+<li>在整个流程中涉及多少个对象</li>
+<li>院校<ul>
+<li>属性：codeNo 学校编码，name 名字，address 地址，description 描述</li>
+<li>行为：<ol>
+<li>createCourse 开设课程<ul>
+<li>院校开设课程，实质就是创建课程对象</li>
+<li>通过课程对象，将课程的信息保存到 localStorage 上</li>
 </ul>
 </li>
-<li>注意：在非严格模式下，如果 thisObject 赋值为 null 或者不传实参，此时 this -&gt; window 对象，就相当于普通函数执行模式。</li>
+<li>createClass 开设班级<ul>
+<li>院校开设班级，实质就是创建一个班级对象</li>
+<li>通过班级对象，将班级信息保存到 localStorage 上</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">fn.call(o,&quot;o&quot;,18,&quot;man&quot;);</div><div class="line">fn.apply(o,[&quot;o&quot;,18,&quot;man&quot;]);</div><div class="line">console.log(o);</div></pre></td></tr></table></figure>
-<h4 id="上下文模式的应用"><a href="#上下文模式的应用" class="headerlink" title="上下文模式的应用"></a>上下文模式的应用</h4><ul>
-<li><p>数组的合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = [1,2,3];</div><div class="line">var arr2 = [4,5,6];</div><div class="line">Array.prototype.push.apply(arr1,arr2);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
 </li>
-<li><p>借调方法（函数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>借用构造函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    parent.call(this,name,age,gender);</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line">var c = new child(&quot;c&quot;,19,&quot;man&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
+</ol>
 </li>
-<li><p>借用原生方法</p>
-<ul>
-<li><p>求数组中的最大值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var data = [67,89,190,23,10,100];</div><div class="line">var max = Math.max.apply(null,data);</div><div class="line">console.log(max);</div></pre></td></tr></table></figure>
+</ul>
 </li>
-<li><p>获取内置对象类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getType(obj)&#123;</div><div class="line">    var patt = /^\[object(\w+)\]$/;</div><div class="line">    var str = Object.prototype.toString.call(obj);</div><div class="line">    var match = patt.exec(str);</div><div class="line">    return match[1].toLowerCase();</div><div class="line">&#125;</div><div class="line">console.log(getType(/a/));</div></pre></td></tr></table></figure>
-</li>
-<li><p>将伪数组变成真数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">onload = function()&#123;</div><div class="line">    var doms = document.getElementsByTagName(&quot;div&quot;);</div><div class="line">    console.log(getType(doms));</div><div class="line">    var domArr = Array.prototype.slice.call(doms);</div><div class="line">    console.log(getType(domArr));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>课程<ul>
+<li>属性：codeNo 课程编号，name 名字，money 学费</li>
+<li>行为：增删改查<ul>
+<li>createCourse 开设课程，将课程的信息保存到 localStorage</li>
 </ul>
 </li>
 </ul>
 </li>
+<li>班级<ul>
+<li>属性：codeNo 班号，name 名字，count 人数，seats 座位数</li>
+<li>行为：createClass 开设班级<ul>
+<li>将班级的信息保存到 localStorage</li>
 </ul>
-<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>实现思路：</p>
-<ul>
-<li>声明一个函数实现数组去重，取名unique</li>
-<li>判断浏览器是否支持数组的 indexOf 方法</li>
-<li>如果不支持就自己实现数组的 indexOf 方法，并且将其扩展到数组的原型对象上</li>
-<li>遍历数组，首先判断如果数组 ret 中是否含有当前遍历到的元素</li>
-<li>如果没有，就将当前元素添加到 ret 中</li>
-<li>循环结束， 将 ret 返回<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,&quot;1&quot;];</div><div class="line">function unique(a)&#123;</div><div class="line">    var ret = [];</div><div class="line">    if(!ret.indexOf)&#123;</div><div class="line">        Array.prototype.indexOf = function(val)&#123;</div><div class="line">            for(var i = 0, l = this.length; i&lt;l; i++)&#123;</div><div class="line">                if(this[i] === val) return i;</div><div class="line">            &#125;</div><div class="line">            return -1;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    for(var i = 0,l = a.length; i&lt;l; i++)&#123;</div><div class="line">        if(ret.indexOf(a[i])===-1)&#123;</div><div class="line">            ret.push(a[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">console.log(unique(arr));</div></pre></td></tr></table></figure>
 </li>
 </ul>
+</li>
+<li>学生<ul>
+<li>属性：codeNo 学号，name，age，gender，phoneNo，classNo，seatNo</li>
+<li>行为：<ul>
+<li>signUp 报名将学生的基本信息保存到 localStorage 上</li>
+<li>pay 缴费将学生基本信息中的 isPayed 字段修改为 true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>老师<ul>
+<li>属性：codeNo 员工编号，name，age，gender，phoneNo，classNo</li>
+<li>行为：<ul>
+<li>distributeClass 分配班级<ul>
+<li>首先校验当前学生是否已缴费，如果没有缴费，提示为缴费，分配班级失败</li>
+<li>如果已缴费并且班级座位数未满，就给其分配座位号，返回成功</li>
+<li>如果班级座位数已满，同时院校开设新班级</li>
+</ul>
+</li>
+<li>checkIn 登记信息<ul>
+<li>将每个班级的每个学生登录在案</li>
+<li>存储形式：{“班级编号”:[所有编号]}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">function School(codeNo,name,address,description)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.address = address;</div><div class="line">    this.description = description;</div><div class="line">&#125;</div><div class="line">School.prototype = &#123;</div><div class="line">    constructor:School,</div><div class="line">    createCourse:function(codeNo,name,money)&#123;</div><div class="line">        var course = new Course(codeNo,name,money);</div><div class="line">        return course;</div><div class="line">    &#125;,</div><div class="line">    createClass:function(codeNo,name,counts,seats)&#123;</div><div class="line">        var classes = new Classes(codeNo,name,counts,seats);</div><div class="line">        return classes;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">function Course(codeNo,name,money)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.money = money;</div><div class="line">&#125;</div><div class="line">Course.prototype = &#123;</div><div class="line">    constructor:Course,</div><div class="line">    createCourse:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;finally&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Classes(codeNo,name,counts,seats)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.counts = counts;</div><div class="line">    this.seats = seats;</div><div class="line">&#125;</div><div class="line">Classes.prototype = &#123;</div><div class="line">    constructor:Classes,</div><div class="line">    createClass:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Student(codeNo,name,age,gender,phoneNo,classNo,seatNo,isPayed)&#123;</div><div class="line">    Teacher.call(this,codeNo,name,age,gender,phoneNo,classNo);</div><div class="line">    this.seatNo = seatNo;</div><div class="line">    this.isPayed = false;</div><div class="line">&#125;</div><div class="line">Student.prototype = &#123;</div><div class="line">    constructor:Student,</div><div class="line">    SignUp:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    pay:function()&#123;</div><div class="line">        this.isPayed = true;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Teacher(codeNo,name,age,gender,phoneNo,classNo)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.phoneNo = phoneNo;</div><div class="line">    this.classNo = classNo;</div><div class="line">&#125;</div><div class="line">Teacher.prototype = &#123;</div><div class="line">    constructor:Teacher,</div><div class="line">    distributeClass:function(stu,cls)&#123;</div><div class="line">        if(stu.isPayed)&#123;</div><div class="line">            if(cls.counts &lt; cls.seats)&#123;</div><div class="line">                cls.count++;</div><div class="line">                stu.classNo = cls.codeNo;</div><div class="line">                stu.seatNo = cls.counts;</div><div class="line">                localStorage.setItem(cls.codeNo,JSON.stringify(cls));</div><div class="line">            &#125;else&#123;</div><div class="line">                console.wran(&quot;班级座位已满，请开设新的班级&quot;);</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">        &#125;else&#123;</div><div class="line">            console.warn(&quot;学生未缴费！&quot;);</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    checkIn:function(stu,cls)&#123;</div><div class="line">        var classInfor;</div><div class="line">        classInfor = localStroage.getItem(&quot;classInfor&quot;);</div><div class="line">        if(classInfor)&#123;</div><div class="line">            classInfor = JSON.parse(classInfor);</div><div class="line">            classInfor[cls.codeNo].push(stu.codeNo);</div><div class="line">        &#125;else&#123;</div><div class="line">            classInfor = &#123;&#125;;</div><div class="line">            classInfor[cls.codeNo] = [stu.codeNo];</div><div class="line">        &#125;</div><div class="line">        localStorage.setItem(&quot;classInfor&quot;,JSON.stringify(classInfor));</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var sch = nwe School(&quot;BJ2016&quot;,&quot;北京学院&quot;,&quot;七环&quot;,&quot;这是一所牛x的大学&quot;);</div><div class="line">var course = sch.createCourse(&quot;PHP16&quot;,&quot;PHP课程&quot;,1800);</div><div class="line">course.createCourse();</div><div class="line">var PhpClass = sch.createClass(&quot;PHP161002&quot;,&quot;PHP就业02&quot;,0,100);</div><div class="line">PhpClass.createClass();</div><div class="line">var xiaohong = new Student(&quot;P9527&quot;,&quot;小红&quot;,19,&quot;女&quot;,&quot;18989898890&quot;);</div><div class="line">xiaohong.signUp();</div><div class="line">xiaohong.pay();</div><div class="line">var tea = new Teacher(&quot;T9527&quot;,&quot;小绿&quot;,28,&quot;女&quot;,&quot;13838380038&quot;);</div><div class="line">tea.distributeClass(xiaohong,PhpClass);</div><div class="line">tea.checkIn(xiaohong,PhpClass);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建排序表格"><a href="#创建排序表格" class="headerlink" title="创建排序表格"></a>创建排序表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">var rdata = [&#123;</div><div class="line">    name:&quot;tom&quot;,</div><div class="line">    age:18,</div><div class="line">    count:100,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;，&#123;</div><div class="line">    name:&quot;jim&quot;,</div><div class="line">    age:22,</div><div class="line">    count:0,</div><div class="line">    gender:&quot;女&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    name:&quot;hanmei&quot;,</div><div class="line">    age:20,</div><div class="line">    count:10000,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;];</div><div class="line">function Table(options)&#123;</div><div class="line">    this.tclass = options.tclass;</div><div class="line">    this.model = options.model;</div><div class="line">    this.data = options.data;</div><div class="line">    this.target = options.target;</div><div class="line">    this.table = document.createElement(&quot;table&quot;);</div><div class="line">    if(this.tclass)&#123;</div><div class="line">        this.table.className = this.tclass;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Table.prototype = &#123;</div><div class="line">    constructor:Table,</div><div class="line">    renderTHead:function()&#123;</div><div class="line">        var thead = document.createElement(&quot;thead&quot;);</div><div class="line">        var tr = document.createElement(&quot;tr&quot;);</div><div class="line">        var th;</div><div class="line">        for(var i = 0,l = this.model.length;i&lt;l; i++)&#123;</div><div class="line">            th = document.createElement(&quot;th&quot;);</div><div class="line">            th.innerHTML = this.model[i].title;</div><div class="line">            if(this.model[i].width)&#123;</div><div class="line">                th.style.width = this.model[i].width+&quot;px&quot;;</div><div class="line">            &#125;</div><div class="line">            tr.appendChild(th);</div><div class="line">        &#125;</div><div class="line">        thead.appendChild(tr);</div><div class="line">        this.table.appendChild(thead);</div><div class="line">    &#125;,</div><div class="line">    renderTBody:function()&#123;</div><div class="line">        var tbody = document.createElement(&quot;tbody&quot;),</div><div class="line">            tr,</div><div class="line">            td,</div><div class="line">            col = 0;</div><div class="line">        for(var i = 0,l = this.data.length;i&lt;l;i++)&#123;</div><div class="line">            tr = document.createElement(&quot;tr&quot;);</div><div class="line">            var temp = this.data[i];</div><div class="line">            for(var k in temp)&#123;</div><div class="line">                td = document.createElement(&quot;td&quot;);</div><div class="line">                td.innerHTML = temp[k];</div><div class="line">                if(this.model[col].align)&#123;</div><div class="line">                    td.style.textAlign = this.model[col].align;</div><div class="line">                &#125;</div><div class="line">                tr.appendChild(td);</div><div class="line">                col++;</div><div class="line">            &#125;</div><div class="line">            tbody.appendChild(tr);</div><div class="line">            col = 0;</div><div class="line">        &#125;</div><div class="line">        this.table.appendChild(tbody);</div><div class="line">    &#125;,</div><div class="line">    draw:function()&#123;</div><div class="line">        this.renderTHead();</div><div class="line">        this.renderTBody();</div><div class="line">        document.querySelector(this.target).appendChild(this.table);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var t = new Table(&#123;</div><div class="line">    tclass:&quot;gridtable&quot;,</div><div class="line">    model:[&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:100,</div><div class="line">        align:&quot;center&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:200,</div><div class="line">        align:&quot;right&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;金币数&quot;,</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;性别&quot;,</div><div class="line">    &#125;],</div><div class="line">    data:rdata,</div><div class="line">    target:&quot;#list&quot;</div><div class="line">&#125;);</div><div class="line">t.draw();</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/14/面向对象从入门到精通（六）/" data-id="ciudsucax0007i0upa0r9wwpc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/10/14/面向对象从入门到精通（六）/" data-id="ciudx31we0009j0upu2ttbf60" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,11 +224,11 @@ this -&amp;gt; 该方法的调用者
     
 <nav id="article-nav">
   
-    <a href="/2016/10/14/面向对象从入门到精通（七）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/17/面向对象从入门到精通（一）/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          面向对象从入门到精通（七）
+          面向对象从入门到精通（一）
         
       </div>
     </a>
@@ -238,23 +273,23 @@ this -&amp;gt; 该方法的调用者
       <ul>
         
           <li>
-            <a href="/2016/10/14/面向对象从入门到精通（七）/">面向对象从入门到精通（七）</a>
+            <a href="/2016/10/17/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
+          </li>
+        
+          <li>
+            <a href="/2016/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
           </li>
         
           <li>
             <a href="/2016/10/14/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/14/面向对象从入门到精通（五）/">面向对象从入门到精通（五）</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/14/Canvas入门/">Canvas入门</a>
-          </li>
-        
-          <li>
-            <a href="/2016/10/08/面向对象/">面向对象</a>
           </li>
         
       </ul>
