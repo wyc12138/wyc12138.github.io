@@ -61,10 +61,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JQuery入门" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-github使用入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/26/JQuery入门/" class="article-date">
-  <time datetime="2016-10-26T09:31:15.000Z" itemprop="datePublished">2016-10-26</time>
+    <a href="/2016/05/23/github使用入门/" class="article-date">
+  <time datetime="2016-05-23T02:28:40.000Z" itemprop="datePublished">2016-05-23</time>
 </a>
     
   </div>
@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/26/JQuery入门/">JQuery入门</a>
+      <a class="article-title" href="/2016/05/23/github使用入门/">github使用入门</a>
     </h1>
   
 
@@ -83,106 +83,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是JQuery？"><a href="#什么是JQuery？" class="headerlink" title="什么是JQuery？"></a>什么是JQuery？</h2><p>JQuery 就是一个 JS 库，使用 JQuery 的话，会比使用 JavaScript 更简单。<br>JS 库：把一些常用的方法写到一个单独的 JS 文件，使用时直接去引用这些 JS 文件就好了。</p>
-<h2 id="为什么要学习JQuery？"><a href="#为什么要学习JQuery？" class="headerlink" title="为什么要学习JQuery？"></a>为什么要学习JQuery？</h2><ol>
-<li>JS 的入口函数只能有一个，如果出现多个，后面的会覆盖掉前面的。</li>
-<li>JS 的代码容错性差，容易出错，出错会导致后面的代码不执行。</li>
-<li>JS 存在浏览器兼容性，比如 innerHTML 在火狐浏览器中不起作用。</li>
-<li>JS DOM 操作复杂，实现简单的动画很麻烦。</li>
-</ol>
-<h2 id="学习-JQuery-主要是学习什么呢？"><a href="#学习-JQuery-主要是学习什么呢？" class="headerlink" title="学习 JQuery 主要是学习什么呢？"></a>学习 JQuery 主要是学习什么呢？</h2><p>学习JQuery，主要学习 JQuery 的一大堆 API<br>API：application programming interface：应用程序接口，说白了，API 就是方法。<br>方法调用时都带小括号(),使用 JQuery 的方法的时候，不要忘了小括号。</p>
-<h2 id="怎样使用-JQuery？"><a href="#怎样使用-JQuery？" class="headerlink" title="怎样使用 JQuery？"></a>怎样使用 JQuery？</h2><ol>
-<li>下载 JQuery<br>下载地址：<a href="http://jquery.com/download/" target="_blank" rel="external">http://jquery.com/download/</a></li>
-<li><p>使用 JQuery 实现 div 动态展示案例的步骤</p>
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>github 是为开发者提供 GIT 仓库的托管服务。是一个让开发者与朋友、同事及陌生人共享代码的完美平台。</p>
+<h2 id="Github的作用"><a href="#Github的作用" class="headerlink" title="Github的作用"></a>Github的作用</h2><ul>
+<li>托管仓库</li>
+<li>社交化编程（程序员的新浪微博）</li>
+</ul>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><p>地址：<a href="https://www.github.com/" target="_blank" rel="external">https://www.github.com/</a></p>
 <ol>
-<li><p>引包（引入 JQuery 文件）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src = &quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>入口函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;&#125;);</div></pre></td></tr></table></figure>
-</li>
-<li><p>功能实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;#btnShowDiv&quot;).click(function()&#123;</div><div class="line">    $(&quot;div&quot;).show(1000);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>div 动态展示案例中 JQuery 的好处</p>
-<ol>
-<li>可以多个，并且不会发生覆盖的情况</li>
-<li>代码容错性好，屏蔽错误，并且不会影响后面代码的运行</li>
-<li>对浏览器兼容性做了封装，因此不存在兼容性问题</li>
-<li>DOM 操作简单，支持隐式迭代，实现动画非常简单</li>
-</ol>
-</li>
-</ol>
-<h2 id="JQuery-详细解释"><a href="#JQuery-详细解释" class="headerlink" title="JQuery 详细解释"></a>JQuery 详细解释</h2><h3 id="版本介绍"><a href="#版本介绍" class="headerlink" title="版本介绍"></a>版本介绍</h3><h3 id="引包注意点"><a href="#引包注意点" class="headerlink" title="引包注意点"></a>引包注意点</h3><ul>
-<li>忘记引包或者引包在入口函数的后面</li>
-<li>引包路径错误（404）</li>
+<li>创建账户<ul>
+<li>填写Username、Email Address、和Password</li>
+<li>如果有账户直接sign in</li>
 </ul>
-<h3 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h3><ul>
-<li>JQuery 入口函数的两种写法<ol>
-<li><code>$(document).ready(function(){});</code></li>
-<li><code>$(function(){});</code></li>
-</ol>
 </li>
-<li>对比 JavaScript 的入口函数 JQuery 的入口函数，执行时机<ol>
-<li>JavaScript 的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。</li>
-<li>JQuery 的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</li>
-</ol>
+<li>创建仓库<ul>
+<li>登录完成后，右上角有一个加号，点击后出现下拉列表，选择 New repository</li>
+<li>填写仓库名称、描述、选择公开还是私有</li>
+<li>以上信息填写完成后点击 Create repository 创建，我们就有了一个远程仓库。</li>
+</ul>
 </li>
+</ol>
+<h2 id="Git-与-Github-的区别"><a href="#Git-与-Github-的区别" class="headerlink" title="Git 与 Github 的区别"></a>Git 与 Github 的区别</h2><ul>
+<li>在 GIT 中，开发者将原代码存入名叫“Git仓库”的资料库中并加以使用。</li>
+<li>Github 为开发者的“Git仓库”提供了一个托管的平台，在该平台上公开的软件原代码全都由Git进行管理。</li>
+<li>Github 除提供Git仓库的托管服务外，还为开发者提供了一系列功能，帮助高效率、高品质的进行代码编写。</li>
+<li>Github创始人的愿望就是能有一个Git仓库托管服务让自己与朋友轻松分享代码。</li>
 </ul>
-<h3 id="了解-JQuery-的-符号"><a href="#了解-JQuery-的-符号" class="headerlink" title="了解 JQuery 的 $ 符号"></a>了解 JQuery 的 $ 符号</h3><p>$ 就是一个函数：$();参数不一样，功能不一样<br>$ 常用的几种情况：</p>
-<ul>
-<li>$(function(){})   参数是 function，说明是入口函数</li>
-<li>$(“#btnSetConent”);   参数是字符串，并且以 # 开头，是一个标签选择器，查找 <code>id  = &quot;btnSetContent&quot;</code> 的元素</li>
-<li>$(“div”); 查找所有的 div 元素</li>
-<li>$(document).ready(function(){})   将 document 转换成 JQuery 对象<br>补充：<code>$===JQuery</code> 也就是说能用 $ 的地方，完全可以用 JQuery ，$ 仅仅是简写形式</li>
-</ul>
-<h2 id="JQuery-选择器"><a href="#JQuery-选择器" class="headerlink" title="JQuery 选择器"></a>JQuery 选择器</h2><h3 id="JQuery-选择器概述"><a href="#JQuery-选择器概述" class="headerlink" title="JQuery 选择器概述"></a>JQuery 选择器概述</h3><ul>
-<li>为什么要学习 JQuery 选择器？<br>考虑兼容性的话， JS 提供的获取元素的方法太少了，只有两个，不能满足我们的要求，比如想要通过 class 来获取元素就不行了<br>document.getElementById(“btnShowDiv”);<br>document.getElementByTagName(“div”);</li>
-<li>什么是 JQuery 选择器？<br>JQuery 选择器是 JQuery 为我们提供的一组方法，让我们更加方便的获取到页面中的元素。<br>注意：JQuery 选择器返回的是 JQuery 对象。<br>$(“#btnShowDiv”)    id 选择器<br>$(“div”)    标签选择器<br>JQuery 选择器有很多，基本兼容了 CSS1 到 CSS3 所有的选择器，并且 JQuery 还添加了很多更加复杂的选择器<br>JQuery 选择器虽然很多，但是选择器之间可以互相替代，就是说获取一个元素，你会有很多种方法获取到。所以我们平时真正能用到的只是少数的最常用的选择器。</li>
-</ul>
-<h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th style="text-align:center">用法</th>
-<th style="text-align:right">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ID 选择器</td>
-<td style="text-align:center">$(“#id”);</td>
-<td style="text-align:right">获取指定 ID 的元素</td>
-</tr>
-<tr>
-<td>类选择器</td>
-<td style="text-align:center">$(“.class”);</td>
-<td style="text-align:right">获取同一类 class 的元素</td>
-</tr>
-<tr>
-<td>标签选择器</td>
-<td style="text-align:center">$(“div”);</td>
-<td style="text-align:right">获取同一类标签的所有元素</td>
-</tr>
-<tr>
-<td>并集选择器</td>
-<td style="text-align:center">$(“div,p,li”);</td>
-<td style="text-align:right">获取所有的 div,p,li 的元素</td>
-</tr>
-<tr>
-<td>交集选择器（标签指定式选择器）</td>
-<td style="text-align:center">$(“div,redClass”);</td>
-<td style="text-align:right">获取指定 ID 的元素</td>
-</tr>
-</tbody>
-</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/26/JQuery入门/" data-id="ciwa32zc90001ugup9alc1qda" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/23/github使用入门/" data-id="ciwa32zcz0003ugupc5cf7d6n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,10 +122,10 @@
 
 
   
-    <article id="post-面向对象从入门到精通（四）" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git使用入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/17/面向对象从入门到精通（四）/" class="article-date">
-  <time datetime="2016-10-17T10:13:37.000Z" itemprop="datePublished">2016-10-17</time>
+    <a href="/2016/05/03/git使用入门/" class="article-date">
+  <time datetime="2016-05-03T02:22:20.000Z" itemprop="datePublished">2016-05-03</time>
 </a>
     
   </div>
@@ -206,7 +136,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+      <a class="article-title" href="/2016/05/03/git使用入门/">git使用入门</a>
     </h1>
   
 
@@ -214,629 +144,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="instanceof运算符规则"><a href="#instanceof运算符规则" class="headerlink" title="instanceof运算符规则"></a>instanceof运算符规则</h2><p>如果运算符后面的函数的 prototype 属性所引用的对象出现在运算符前面的对象的原型链上的话，就返回 true ，否则返回 false。</p>
-<h2 id="绘制作用域链的规则"><a href="#绘制作用域链的规则" class="headerlink" title="绘制作用域链的规则"></a>绘制作用域链的规则</h2><ol>
-<li>将整个 script 标签的全局作用域定义为 0 级作用域链。将全局作用域上的数据（变量、函数、对象等等）绘制在该链上。</li>
-<li>由于在词法作用域中，只有函数可以分割作用域。因此，只要遇到函数，就要引申出新的作用域链，级别为当前链的级别加 1 。</li>
-<li>重复第二步骤，直到没有遇到函数为止。</li>
-</ol>
-<h2 id="变量的搜索原则"><a href="#变量的搜索原则" class="headerlink" title="变量的搜索原则"></a>变量的搜索原则</h2><p>当访问一个变量时：</p>
-<ol>
-<li>首先在当前变量所处作用域链上查找，如果找到就直接使用，并且停止查找。</li>
-<li>如果没有找到，就向上一级链（T-1）上去查找，如果找到就直接使用，并停止查找。</li>
-<li>如果没有找到，就继续向上一级链查找，直到0级链，如果找到就直接使用，并停止查找。</li>
-<li>如果没有找到就报错。<br>注意：</li>
-<li>如果访问的变量不存在，会搜索整个作用域链（不仅性能低，而且抛出异常）。<br>在实际开发中，不推崇所有数据都写在全局上，尽量使用局部变量，推荐使用沙箱。<br>如果在开发中，所有 JS 代码都写在全局上，会造成全局变量的污染。</li>
-<li>同级别的链上的变量互不干扰。</li>
-</ol>
-<h2 id="activeObject"><a href="#activeObject" class="headerlink" title="activeObject"></a>activeObject</h2><p>在函数执行的时候，会创建一个执行的环境，包括activeObject（活动对象）以及作用域链。<br>activeObject 存储的是所有函数内部定义的变量，以及函数的形参，会将变量名字以及形参名字作为该对象的属性来存储。</p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><ul>
-<li>概念：一个函数有权去访问另一个函数的内部数据</li>
-<li>缺点：会造成函数内部的数据常驻内存，从而引发内存泄漏的问题</li>
-<li>解决的问题：解决在函数外部无法访问函数内部的数据。</li>
-<li>为了防止闭包导致内存泄漏，在使用完闭包后，将其赋值为 null 即可。</li>
-<li>闭包怎么缓存数据？因为在函数内部有方法（函数）对其有引用，并且又将其返回到外部作用域上的一个变量接收。</li>
-</ul>
-<h2 id="垃圾回收机制：GC（Garbage-Collection）"><a href="#垃圾回收机制：GC（Garbage-Collection）" class="headerlink" title="垃圾回收机制：GC（Garbage Collection）"></a>垃圾回收机制：GC（Garbage Collection）</h2><ol>
-<li>引用计数<br> 如果一个变量被另一个变量引用，那么该变量的应用计数加1；<br> 当这个变量不再引用该变量（该变量被回收掉了）时，此时这个变量的引用计数-1.<br> GC 会在一定时间间隔去查看每个变量的计数，如果为 0，就将其占用的内存回收。<br> 缺点：循环引用，会造成无法回收变量的内存。</li>
-<li>标记清除<br> 从当前文档根部（window对象）找一条路径，如果能到达该变量，那么说明此变量不应该被回收掉。反之，应该被回收其所占用的内存。<br> 如果变量进入某个执行环境，那么给其标记为“进入环境”。<br> 如果上述执行环境执行完成，被销毁，那么该环境内的所有变量都被标记为“已出环境”。</li>
-</ol>
-<h2 id="闭包应用"><a href="#闭包应用" class="headerlink" title="闭包应用"></a>闭包应用</h2><ol>
-<li><p>计数器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function Counter()&#123;</div><div class="line">    var n = 0;</div><div class="line">    return &#123;</div><div class="line">        add:function()&#123;</div><div class="line">            n++;</div><div class="line">        &#125;,</div><div class="line">        getCounts:function()&#123;</div><div class="line">            return n;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var PersonCount = Counter();</div><div class="line">var animalCount = Counter();</div><div class="line">function Person()&#123;</div><div class="line">    PersonCount.add();</div><div class="line">&#125;</div><div class="line">var p0 = new Person();</div><div class="line">var p1 = new Person();</div><div class="line">var p2 = new Person();</div><div class="line">var p3 = new Person();</div><div class="line">var p4 = new Person();</div><div class="line">var p5 = new Person();</div><div class="line">console.log(PersonCount.getCounts());</div><div class="line">console.log(animalCount.getCounts());</div></pre></td></tr></table></figure>
-</li>
-<li><p>对象的私有属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">function person(name,age)&#123;</div><div class="line">    return &#123;</div><div class="line">        getName:function()&#123;</div><div class="line">            return name;</div><div class="line">        &#125;,</div><div class="line">        getAge:function()&#123;</div><div class="line">            return age;</div><div class="line">        &#125;,</div><div class="line">        setAge:function(val)&#123;</div><div class="line">            age = val;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var xiaohong = person(&quot;小红&quot;,18);</div><div class="line">console.log(xiaohong.getName());</div><div class="line">console.log(xiaohong.getAge());</div><div class="line">Object.preventExtensions(xiaohong);</div><div class="line">xiaohong.name = &quot;小绿&quot;;</div><div class="line">console.log(xiaohong.getName());</div><div class="line">console.log(xiaohong.name);</div><div class="line">Object.preventExtensions(xiaohong);</div><div class="line">xiaohong.setAge(19);</div><div class="line">console.log(xiaohong.getAge());</div></pre></td></tr></table></figure>
-</li>
-<li><p>解决 fib 数列递归性能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var fib = (function()&#123;</div><div class="line">    var cache = [];</div><div class="line">    return function(n)&#123;</div><div class="line">        if(n&lt;1) return undefined;</div><div class="line">        if(!!cache[n]) return cache[n];</div><div class="line">        else&#123;</div><div class="line">            if(n==1||n==2)&#123;</div><div class="line">                cache[n] = 1;</div><div class="line">            &#125;else&#123;</div><div class="line">                cache[n] = argument.callee(n-1)+arguments.callee(n-2);</div><div class="line">            &#125;</div><div class="line">            return cache[n];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;());</div><div class="line">console.log(fib(5));</div></pre></td></tr></table></figure>
-</li>
-<li><p>沙箱模式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var n = 2;</div><div class="line">(function()&#123;</div><div class="line">    var n = 1;</div><div class="line">    function foo()&#123;</div><div class="line">        console.log(n);</div><div class="line">    &#125;</div><div class="line">    window.fn = foo;</div><div class="line">&#125;());</div><div class="line">fn();</div><div class="line">console.log(n);</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ul>
-<li>好处：不会污染全局变量（或者其他作用域的变量），并且能保证自己的代码安全执行。</li>
-<li><p>特性：</p>
-<ul>
-<li>能分割作用域，不会污染全局 fn。</li>
-<li>在分割后的作用域内部代码要能自执行。</li>
+        <h2 id="GIT-介绍"><a href="#GIT-介绍" class="headerlink" title="GIT 介绍"></a>GIT 介绍</h2><p>Git的作者：林纳斯·托瓦兹 也是Linux内核的最早作者</p>
+<p>Linux 开发团队 林纳斯·托瓦兹是负责人</p>
+<p>原来使用了一个商业版分布式版本管理系统（免费给该团队使用）</p>
+<p>直到有一天，某个人去尝试破解商业版管理系统</p>
+<p>商业版公司发现了这个团队要破解，所以收回了免费使用权限（只是警告了Linux开发团队）</p>
+<p>林纳斯·托瓦兹一怒之下，自己搞了个Git</p>
+<p>推荐图书：林纳斯·托瓦兹自传《只是为了好玩》 just for fun</p>
+<h2 id="GIT-安装"><a href="#GIT-安装" class="headerlink" title="GIT 安装"></a>GIT 安装</h2><p>Windows版下载地址：<a href="https://git-for-windows.github.io/(只有64位" target="_blank" rel="external">https://git-for-windows.github.io/(只有64位</a>)</p>
+<p>验证是否安装成功，打开开始菜单看是否有 Git 目录</p>
+<p>打开 Git Bash 输入 git –version 如果看到版本号说明没有问题</p>
+<p>输入 pwd 查看当前工作目录</p>
+<h2 id="GIT-基本命令"><a href="#GIT-基本命令" class="headerlink" title="GIT 基本命令"></a>GIT 基本命令</h2><ul>
+<li>git clone 仓库地址</li>
+<li>git init 仓库名称<ul>
+<li>只要执行了该命令，git 会帮你自动创建一个目录，然后在该目录下生成一个 <code>.git</code> 目录 （隐藏目录）</li>
 </ul>
 </li>
-<li><p>结构：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">    //代码块</div><div class="line">    window.fn = fn;</div><div class="line">&#125;())</div></pre></td></tr></table></figure>
+<li>git status<ul>
+<li>查看当前工作树的状态</li>
+</ul>
+</li>
+<li>git add 文件名<ul>
+<li>将操作的文件添加到暂存区，待提交</li>
+</ul>
+</li>
+<li>git commit -m “提交日志”<ul>
+<li>上面这条命令表示将暂存区中的文件提交到本地仓库</li>
+<li>使用 git commit 的时候，最好告诉版本仓库，你这一次提交的作者是谁，邮箱是多少</li>
+</ul>
+</li>
+<li>git log<ul>
+<li>查看提交日志</li>
+</ul>
+</li>
+<li>git config –global user.name “用户名”</li>
+<li>git config –global user.email “邮箱地址”</li>
+<li>git push<ul>
+<li>将本地仓库推送到远程仓库</li>
+</ul>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（四）/" data-id="ciwa32zfx000bugupc8l6ovki" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（三）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/17/面向对象从入门到精通（三）/" class="article-date">
-  <time datetime="2016-10-17T10:13:20.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Function-的介绍"><a href="#Function-的介绍" class="headerlink" title="Function 的介绍"></a>Function 的介绍</h2><ul>
-<li><p>创建函数的方式</p>
-<ul>
-<li><p>声明式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
-<p><img src="/images/shengming.png" alt=""></p>
-</li>
-<li><p>表达式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = function()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
-<p><img src="/images/shengming.png" alt=""></p>
-</li>
-<li><p>构造函数<br>Function(arg1,arg2,…argN,body)所有参数均为字符串<br>arg1,arg2,…argN 为可选的参数列表，表示为生成函数的形参列表<br>body 为必选参数，表示为生成函数的函数体部分</p>
-</li>
-</ul>
-</li>
-<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象，具有<strong>proto</strong>属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(!!foo.__proto__);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/create.png" alt=""></p>
-<p>函数的原型链</p>
-<p>相关结论：</p>
-<ul>
-<li>所有的函数都是Function实例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(Object.constructor);</div><div class="line">console.log(Array.constructor);</div><div class="line">//Array-&gt;Function.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(Date.constructor);</div><div class="line">console.log(RegExp.constructor);</div><div class="line">var foo = function()&#123;&#125;;</div><div class="line">console.log(foo.constructor);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/Function.png" alt=""></p>
-<ul>
-<li>所有函数的构造函数为Function</li>
-<li>所有函数的原型对象为Function.prototype<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(foo.__proto__);</div><div class="line">console.log(Object.__proto__);</div><div class="line">console.log(Array.__proto__);</div><div class="line">console.log(Date.__proto__);</div><div class="line">console.log(RegExp.__proto__);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/prototype.png" alt=""></p>
-<p>将函数称为函数对象<br>将其他对象称为普通对象</p>
-<p>arguments对象属性</p>
-<ul>
-<li>length：实参个数</li>
-<li>callee：返回正在执行的函数<br>函数相关属性</li>
-<li>caller：返回调用当前函数的函数</li>
-<li>length：形参的个数</li>
-<li>name：存储函数的名字</li>
-</ul>
-<p>模拟函数重载<br>在 js 中，没有函数重载，只能通过arguments对象进行模拟<br>实例：<br>如果函数没有传递实参，就直接打印false<br>如果传递一个实参，就将其直接打印出来<br>如果传递一个实参并且类型为数字的话，就加1再打印<br>如果传递两个实参，就将两个实参拼接起来，再打印出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    if(arguments.length===0)&#123;</div><div class="line">        console.log(&quot;false&quot;);</div><div class="line">    &#125;else if(arguments.length===1)&#123;</div><div class="line">        if(typeof arguments[0]===&quot;number&quot;)&#123;</div><div class="line">            console.log(arguments[0]+1);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(arguments[0]);</div><div class="line">        &#125;</div><div class="line">    &#125;else if(arguments.length===2)&#123;</div><div class="line">        console.log(arguments[0]+&quot;&quot;+arguments[1]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line">foo(1);</div><div class="line">foo(&quot;abc&quot;);</div><div class="line">foo(&quot;a&quot;,&quot;1&quot;);</div></pre></td></tr></table></figure></p>
-<p><img src="/images/arguments.png" alt=""></p>
-<p>函数递归</p>
-<ul>
-<li>概念：函数调用自身</li>
-<li><p>经典递归案例</p>
-<ul>
-<li><p>等差数列第n项值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//v为第一项的值，d为等差，n为第n项值</div><div class="line">function dengCha(v,d,n)&#123;</div><div class="line">    if(n&lt;1)&#123;</div><div class="line">        return undefined;</div><div class="line">    &#125;</div><div class="line">    else if(n==1)&#123;</div><div class="line">        return v;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return dengCha(v,d,n-1)+d;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(dengCha(2,2,6));</div></pre></td></tr></table></figure>
-</li>
-<li><p>fibonacci 数列第n项值<br>fibonacci数列：1，1，2，3，5，8，13，21，34，…<br>方法一：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fibonacci(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return fibonacci(n-1)+fibonacci(n-2);</div><div class="line">&#125;</div><div class="line">console.log(fibonacci(6));</div></pre></td></tr></table></figure>
-<p>方法二：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fibonacci = (function(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return arguments.callee(n-1)+arguments.callee(n-2);</div><div class="line">&#125;(6));</div><div class="line">console.log(fibonacci);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/fibonacci.png" alt=""></p>
-<p>词法作用域<br>规定变量的作用域是由变量声明的位置决定，而不是使用变量的位置决定<br>在词法作用域中，只有函数可以分割作用域，在函数内部是一个完整作用域，与外界隔离。<br>在函数内部可以访问函数外部的数据；但是在函数外部无法访问内部的数据。</p>
-<p>变量名（函数名）提升<br>在 js 预解析阶段执行的操作<br>js 本身是边解析边执行的</p>
-<p>在预解析阶段<br>首先分析代码语法，如果有语法错误，就直接抛出异常<br>其次，将变量名以及函数声明提升到当前作用域最顶端</p>
-<p>in 运算符<br>规则：前面的属性名字要用字符串来表示；如果为变量，那么会将变量的值隐式转换成字符串，然后去判断变量的值是否为指定对象的属性（可以为继承过来的属性）<br>注意：后面的参数必须为对象，否则报错</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（三）/" data-id="ciwa32ze90007ugup0bstlcvh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（二）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/17/面向对象从入门到精通（二）/" class="article-date">
-  <time datetime="2016-10-17T10:13:00.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h2><h3 id="1-封装："><a href="#1-封装：" class="headerlink" title="1. 封装："></a>1. 封装：</h3><p>概念：将复杂的实现过程包装隐藏起来，然后提供给用户使用的接口即可。<br>好处：实现代码复用，还具有私密性。<br>实际使用：只要出现重复代码逻辑，那么就要考虑封装成一个函数。如果该函数和一些变量的关联性比较大，那么就可以将这些变量和该函数封装成一个对象。<br>注意：保持函数或对象功能的单一性，便于日后维护。</p>
-<h3 id="2-继承："><a href="#2-继承：" class="headerlink" title="2. 继承："></a>2. 继承：</h3><p>在 js 中，继承是对象与对象之间；<br>在 js 中，构造函数可以被当作是类</p>
-<p>其他面向对象语言： C# JAVA Object-C swift C++ 建立在类与类之间的继承</p>
-<p>实质：构造函数和类都是实例化对象的模板</p>
-<p>概念：就是指一个对象有权去访问另一个对象的成员。通俗的说就是自己没有，别人有，通过某种方式去使用别人的方法（属性）的拿来主义</p>
-<p>在 js 中，只要让一个对象去访问领一个对象的成员，就必须建立继承关系。</p>
-<p>任何对象都继承他自己的原型对象。</p>
-<h4 id="继承的实现"><a href="#继承的实现" class="headerlink" title="继承的实现"></a>继承的实现</h4><p>两种常用模型</p>
-<ul>
-<li><p>基于原型</p>
-<ul>
-<li><p>扩展原型：在原有的原型上进行相应的扩展，实现继承。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">A.prototype.printA = function()&#123;</div><div class="line">    console.log(&quot;a&quot;);&apos;</div><div class="line">&#125;</div><div class="line">a.printA();</div></pre></td></tr></table></figure>
-<p><img src="/images/kuozhan.png" alt=""></p>
-</li>
-<li><p>置换原型：将要被继承的对象直接替换掉原有的原型实现继承。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;parent&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.printC = function()&#123;</div><div class="line">    console.log(&quot;c&quot;);</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">function child()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">child.prototype = new parent();</div><div class="line">var c = new child();</div><div class="line">c.printC();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/zhihuan.png" alt=""></p>
-<ul>
-<li>拷贝继承：将别的对象上的所有成员拷贝一份，添加到当前对象本身。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var parent = &#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;,</div><div class="line">    name:&quot;parent&quot;</div><div class="line">&#125;;</div><div class="line">var child = &#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;;</div><div class="line">//遍历parent</div><div class="line">for(var k in parent)&#123;</div><div class="line">    //将parent对象上的成员添加到child上</div><div class="line">    child[k] = parent[k];</div><div class="line">&#125;</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-<p><img src="/images/copy.png" alt=""></p>
-<p><strong> 在实际开发中上述两种继承方式可以组合起来使用 </strong></p>
-<ul>
-<li><p>extend方法 为了方便实现拷贝继承</p>
-<p>  一次只能继承一个对象</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function(parent)&#123;</div><div class="line">    for(var k in parent)&#123;</div><div class="line">        this[k] = parent[k];</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-<p>  一次继承多个对象</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function()&#123;</div><div class="line">    var args = arguments,</div><div class="line">        obj;</div><div class="line">    //遍历arguments上的所有对象，依次将遍历的每个对象的成员添加到child</div><div class="line">    for(var i = 0,l = args.length;i&lt;l;i++)&#123;</div><div class="line">        obj = args[i];</div><div class="line">        //判断传入的是否为对象，不是对象就执行下面的代码</div><div class="line">        if(typeof obj === &quot;object&quot;)&#123;</div><div class="line">            for(var k in obj)&#123;</div><div class="line">                this[k] = obj[k];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/extend.png" alt=""></p>
-<ul>
-<li>ES5 Object.create ：通过置换原型的方式来实现继承</li>
-</ul>
-<p>Object.create(parent); 返回一个新的对象，并继承自parent对象。</p>
-<p>用法：<code>var newObject = Object.create(parent)</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newObject = Object.create(obj);</div><div class="line">newObject.print();</div></pre></td></tr></table></figure>
-<p>解决兼容性问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(!Object.create)&#123;</div><div class="line">    Object.creat = function(parent)&#123;</div><div class="line">        function F()&#123;&#125;</div><div class="line">        F.prototype = parent;</div><div class="line">        return new F;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newobj = Object.create(&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">newobj.print();</div></pre></td></tr></table></figure>
-<p><img src="/images/ES5.png" alt=""></p>
-<ul>
-<li>对象冒充：<br>概念：在一个构造函数中，可以动态的添加一个parent方法指向已有的构造函数，然后调用parent方法去实例化当前对象的一部分成员（或全部成员），这种方式被称为对象冒充。<br>注意：利用完parent属性之后记得删除该属性。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    this.parent = parent;</div><div class="line">    this.parent(name,age,gender);</div><div class="line">    delete this.parent;</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new child(&quot;小美&quot;,20,&quot;girl&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
-<p><img src="/images/parent.png" alt=""></p>
-<h3 id="3-多态："><a href="#3-多态：" class="headerlink" title="3. 多态："></a>3. 多态：</h3><p>体现在继承中的概念。对象A继承自对象B，B对象的某个方法在A中并不适用，然后A对象重写该方法，那么这就是多态</p>
-<p>概念：在父类中的同一方法在各个子类中的实现行为不同。</p>
-<p>例：<br><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var date = new Date();</div><div class="line">console.log(date.toString());</div><div class="line">var arr = [1,3,5];</div><div class="line">console.log(arr.toString());</div><div class="line">var o = &#123;name:&quot;shelly&quot;&#125;;</div><div class="line">console.log(o.toString());</div></pre></td></tr></table></figure></p>
-<p><img src="/images/toString.png" alt=""></p>
-<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
-<li><p>概念：从当前对象到Object.prototype之间，存在一条层次分明，逐级递进的体现继承关系的链式结构，这个结构被称为原型链。</p>
-</li>
-<li><p>核心：__proto__</p>
-</li>
-<li><p>几个默认</p>
-<ul>
-<li>所有对象都有__proto__属性，这个属性引用他的原型对象</li>
-<li>原型对象继承自Object.prototype，具有constructor属性，如果置换了原型，记得要添加constructor属性</li>
-<li>只有函数具有prototype属性（Function.prototype除外）</li>
-</ul>
-</li>
-</ul>
-<p>属性搜索原型：当访问对象成员时，</p>
-<ul>
-<li>首先，在当前对象上查找，如果找到就直接返回（调用），停止查找；</li>
-<li>如果没有找到，就向其原型对象上查找，如果找到就直接返回（调用），停止查找；</li>
-<li>如果没有找到，就继续向原型对象的原型对象上查找，直到Object.prototype；</li>
-<li>如果找到，那么就直接返回（调用），并停止查找；否则返回undefined（报错：XXX is not a function）</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>如果访问对象的某个属性不存在的话，会搜索整个原型链。导致 js 性能降低</li>
-<li>在实际开发中，尽量保持一个适度的原型链长度</li>
-<li>兼顾 js 性能以及代码的可读性可扩展性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;Tom&quot;;</div><div class="line">    this.age = 20;</div><div class="line">    this.gender = &quot;man&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.address = &quot;China&quot;;</div><div class="line">parent.prototype.__proto__=&#123;</div><div class="line">    gender:&quot;nan&quot;</div><div class="line">&#125;;</div><div class="line">var p = new parent;</div><div class="line">console.log(p.name);</div><div class="line">console.log(p.address);</div><div class="line">console.log(p.gender);</div></pre></td></tr></table></figure>
-<p><img src="/images/sousuo.png" alt=""></p>
-<h3 id="Object-prototype简介"><a href="#Object-prototype简介" class="headerlink" title="Object.prototype简介"></a>Object.prototype简介</h3><p>console.log(Object.prototype); 介绍打印出来的几个属性</p>
-<h5 id="1-hasOwnProperty"><a href="#1-hasOwnProperty" class="headerlink" title="1. hasOwnProperty()"></a>1. hasOwnProperty()</h5><p>has：有<br>own：自己<br>Property：属性<br>判断指定的属性是否为当前对象自己的（不是继承）<br>语法：<code>&lt;object&gt;.hasOwnProperty(&#39;propName&#39;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = &#123;name:&quot;Tom&quot;&#125;;</div><div class="line">console.log(o.hasOwnProperty(&quot;name&quot;));</div><div class="line">console.log(o.hasOwnProperty(&quot;toString&quot;));</div></pre></td></tr></table></figure></p>
-<p><img src="/images/hasOwnProperty.png" alt=""></p>
-<h5 id="2-isPrototypeOf"><a href="#2-isPrototypeOf" class="headerlink" title="2. isPrototypeOf"></a>2. isPrototypeOf</h5><p>is：是否<br>prototype：原型<br>of：的<br>判断当前对象是否为指定对象的原型对象<br>只要对象a出现在对象b的原型链上就返回true，否则返回false<br>语法：<code>&lt;a&gt;.isPrototypeOf(&lt;b&gt;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">function B()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">B.prototype = a;</div><div class="line">var b = new B();</div><div class="line">//原型链：b-&gt;B.prototype-&gt;A.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(a.isPrototypeOf(b));</div><div class="line">console.log(A.prototype.isPrototypeOf(b));</div><div class="line">console.log(Object.prototype.isPrototypeOf(a));</div><div class="line">console.log(Object.prototype.isPrototypeOf(b));</div></pre></td></tr></table></figure></p>
-<p><img src="/images/isPrototypeOf.png" alt=""></p>
-<h5 id="3-propertyIsEnumerable"><a href="#3-propertyIsEnumerable" class="headerlink" title="3. propertyIsEnumerable"></a>3. propertyIsEnumerable</h5><p>property：属性<br>is：是否<br>Enumerable：可枚举的<br>判断对象的制定属性是否可枚举，并且指定的属性必须是自身的<br>是hasOwnProperty的升级版<br>默认：手动添加的属性都是可枚举的，js 解析器自动添加的属性都是不可枚举的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    age:18</div><div class="line">&#125;;</div><div class="line">for(var k in obj)&#123;</div><div class="line">    console.log(k)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="/images/propertyIsEnumerable.png" alt=""></p>
-<p>构造函数的执行过程</p>
-<ol>
-<li>创建了一个空对象obj</li>
-<li>将obj赋值给this（让this指向obj）</li>
-<li>将当前作用域交给this</li>
-<li>执行构造函数的内部代码</li>
-<li>将this返回（return this）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Fn(name,age)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">&#125;</div><div class="line">var fn = new Fn(&quot;Tom&quot;,18);</div><div class="line">console.log(fn);</div><div class="line">function Fn(name,age)&#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    this = obj;</div><div class="line">    Fn.call(this,name,age);</div><div class="line">    return this;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>绘制原型链<br>规则：</p>
-<ol>
-<li>绘制出简化的原型莲</li>
-<li>先将上述简化的原型链上的每一个对象绘制在图形上</li>
-<li>将每一个对象的默认属性添加上</li>
-<li>给每一个对象的属性添加指向</li>
-<li>如果每一个对象的属性都有了指向，就说明原型链绘制完成</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;</div><div class="line">//o-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
-<p><img src="/images/o.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [];</div><div class="line">//arr-&gt;Array.prototype-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
-<p><img src="/images/arr.png" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（二）/" data-id="ciwa32zev0008ugupa8n7ecws" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/17/面向对象从入门到精通（一）/" class="article-date">
-  <time datetime="2016-10-17T09:56:27.000Z" itemprop="datePublished">2016-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h2><p>一种编程思想。</p>
-<p>核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。</p>
-<p>好处：</p>
-<ul>
-<li>是调度者</li>
-<li>代码灵活度高</li>
-<li>可维护性高</li>
-<li>可扩展性高</li>
-</ul>
-<p>坏处：</p>
-<ul>
-<li>可能造成代码的复杂度提高</li>
-<li>可读性相对不好</li>
-</ul>
-<p>面向过程：</p>
-<ul>
-<li>是执行者</li>
-<li>一般情况下顺序不可打乱，从上至下一步一步执行</li>
-</ul>
-<h2 id="Javascript-语言的特点"><a href="#Javascript-语言的特点" class="headerlink" title="Javascript 语言的特点"></a>Javascript 语言的特点</h2><ul>
-<li>弱类型</li>
-<li>多范式</li>
-<li>基于对象的语言：在 js 中，一切都是对象</li>
-<li>基于原型的</li>
-</ul>
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>概念：所谓原型就是一个函数的prototype属性所引用的对象，只要声明一个函数，原型就存在。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">console.log(foo.prototype);</div><div class="line">//原型就是 foo.prototype</div></pre></td></tr></table></figure>
-<p>当通过该函数创建出来的每一个对象，都共享此原型，也就是说上述所创建出来的所有对象都可以直接访问到原型上的任何成员（属性和方法）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">foo.prototype.sayHello = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line">foo.prototype[&quot;name&quot;] = &quot;Tom&quot;;</div><div class="line"></div><div class="line">var f = new foo();</div><div class="line">f.sayHello();               //打印结果为hello,world</div><div class="line">console.log(f.name);        //打印结果为Tom</div></pre></td></tr></table></figure>
-<p>原型的本质：就是对象</p>
-<p>原型的好处：实现同类对象的数据共享。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.talk = function()&#123;</div><div class="line">        console.log(&quot;hello,world&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">//思考：三个人的talk方法是否一样？</div><div class="line">//验证：</div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为false，说明三个人的talk方法不一样是相互独立的。</div><div class="line">思考：怎样能让talk方法相同？</div><div class="line"></div><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Person.prototype.talk = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为true</div></pre></td></tr></table></figure></p>
-<p>获取原型的方式：</p>
-<ul>
-<li>通过函数：<code>&lt;fnName&gt;.prototype</code></li>
-<li>通过对象：<code>&lt;object&gt;.__proto__</code></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__ === foo.prototype);</div></pre></td></tr></table></figure>
-<p>获取构造函数：原型通过constructor属性获取到构造函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__.constructor);</div></pre></td></tr></table></figure>
-<p><img src="/images/constructor.png" alt=""></p>
-<p>对象的组成部分：</p>
-<ul>
-<li>对象本身</li>
-<li>它的原型</li>
-</ul>
-<p>每个对象都有__proto__属性。就是说，每一个对象都有原型</p>
-<p>对象类型：就是他构造函数的名字</p>
-<p>原型属性：站在函数的角度，原型可以被称为该函数的原型属性<br>原型对象：站在对象的角度，原型可以被称为该对象的原型对象</p>
-<p>__proto__是非标准属性，有兼容性问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getPrototype(obj)&#123;</div><div class="line">    //判断浏览器是否兼容__proto__</div><div class="line">    if(obj.__proto__)&#123;</div><div class="line">        return obj.__proto__;</div><div class="line">    &#125;else&#123;</div><div class="line">        //先获取该对象的构造函数，再通过此构造函数的prototype属性获取其原型对象。</div><div class="line">        return obj.constructor.prototype;</div><div class="line">    &#125;</div><div class="line">    //可以使用三元表达式</div><div class="line">    //return !!obj.__proto__?obj.__proto__:obj.constructor.prototype;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">console.log(getPrototype(a).constructor);</div></pre></td></tr></table></figure>
-<p>标准构造函数的写法：</p>
-<p>哪些属性要保留在构造函数内部，哪些属性要提取出来，放到原型上？</p>
-<ul>
-<li>和具体的某个对象息息相关的属性，这些属性都要写在构造函数内部</li>
-<li>每一个对象都具有的属性，并且属性值是确定的，不会随对象变化而变化。</li>
-<li>一般情况下所有的方法都应该放在原型上。</li>
-</ul>
-<p>不提倡在 js 原生对象上进行扩展成员。会导致原生对象过于庞大、累赘，影响性能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Dog(name,color,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.color = color;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Dog.prototype.eat = function()&#123;</div><div class="line">    console.log(&quot;eat&quot;);</div><div class="line">&#125;</div><div class="line">Dog.prototype.bark = function()&#123;</div><div class="line">    console.log(&quot;wang&quot;);</div><div class="line">&#125;</div><div class="line">var erha = new Dog(&quot;二哈&quot;，&quot;BlackWhite&quot;,&quot;female&quot;);</div><div class="line">erha.eat();</div><div class="line">erha.bark();</div></pre></td></tr></table></figure>
-<p><img src="/images/Dog.png" alt=""></p>
-<p>原型的动态特性：</p>
-<ul>
-<li>动态性：<ul>
-<li>给原型扩展成员会直接反映到已创建的对象身上</li>
-<li>替换原型对象不会反应到已创建出来的对象，但是会直接影响到之后创建出来的对象</li>
-</ul>
-</li>
-<li>唯一性：<br>由同一函数创建出来的所有对象，共享同一个原型对象</li>
-<li>不可变性：<br>对象是无法改变原型对象上的任何成员</li>
-<li>继承性：<br>所有对象都继承自它的原型对象</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/17/面向对象从入门到精通（一）/" data-id="ciwa32ze30006uguptbo0tmq1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（六）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/14/面向对象从入门到精通（六）/" class="article-date">
-  <time datetime="2016-10-14T08:08:05.000Z" itemprop="datePublished">2016-10-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="课程报名流程"><a href="#课程报名流程" class="headerlink" title="课程报名流程"></a>课程报名流程</h2><ul>
-<li>目的：培养面向对象思想</li>
-<li>流程分析：<ul>
-<li>院校开设课程</li>
-<li>院校开设班级</li>
-<li>学生报名课程</li>
-<li>学生缴纳费用，得到缴费凭证</li>
-<li>老师给学生分配班级</li>
-<li>老师将学生的信息登记在班级信息表格里</li>
-</ul>
-</li>
-<li>在整个流程中涉及多少个对象</li>
-<li>院校<ul>
-<li>属性：codeNo 学校编码，name 名字，address 地址，description 描述</li>
-<li>行为：<ol>
-<li>createCourse 开设课程<ul>
-<li>院校开设课程，实质就是创建课程对象</li>
-<li>通过课程对象，将课程的信息保存到 localStorage 上</li>
-</ul>
-</li>
-<li>createClass 开设班级<ul>
-<li>院校开设班级，实质就是创建一个班级对象</li>
-<li>通过班级对象，将班级信息保存到 localStorage 上</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>课程<ul>
-<li>属性：codeNo 课程编号，name 名字，money 学费</li>
-<li>行为：增删改查<ul>
-<li>createCourse 开设课程，将课程的信息保存到 localStorage</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>班级<ul>
-<li>属性：codeNo 班号，name 名字，count 人数，seats 座位数</li>
-<li>行为：createClass 开设班级<ul>
-<li>将班级的信息保存到 localStorage</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>学生<ul>
-<li>属性：codeNo 学号，name，age，gender，phoneNo，classNo，seatNo</li>
-<li>行为：<ul>
-<li>signUp 报名将学生的基本信息保存到 localStorage 上</li>
-<li>pay 缴费将学生基本信息中的 isPayed 字段修改为 true</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>老师<ul>
-<li>属性：codeNo 员工编号，name，age，gender，phoneNo，classNo</li>
-<li>行为：<ul>
-<li>distributeClass 分配班级<ul>
-<li>首先校验当前学生是否已缴费，如果没有缴费，提示为缴费，分配班级失败</li>
-<li>如果已缴费并且班级座位数未满，就给其分配座位号，返回成功</li>
-<li>如果班级座位数已满，同时院校开设新班级</li>
-</ul>
-</li>
-<li>checkIn 登记信息<ul>
-<li>将每个班级的每个学生登录在案</li>
-<li>存储形式：{“班级编号”:[所有编号]}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">function School(codeNo,name,address,description)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.address = address;</div><div class="line">    this.description = description;</div><div class="line">&#125;</div><div class="line">School.prototype = &#123;</div><div class="line">    constructor:School,</div><div class="line">    createCourse:function(codeNo,name,money)&#123;</div><div class="line">        var course = new Course(codeNo,name,money);</div><div class="line">        return course;</div><div class="line">    &#125;,</div><div class="line">    createClass:function(codeNo,name,counts,seats)&#123;</div><div class="line">        var classes = new Classes(codeNo,name,counts,seats);</div><div class="line">        return classes;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">function Course(codeNo,name,money)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.money = money;</div><div class="line">&#125;</div><div class="line">Course.prototype = &#123;</div><div class="line">    constructor:Course,</div><div class="line">    createCourse:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;finally&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Classes(codeNo,name,counts,seats)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.counts = counts;</div><div class="line">    this.seats = seats;</div><div class="line">&#125;</div><div class="line">Classes.prototype = &#123;</div><div class="line">    constructor:Classes,</div><div class="line">    createClass:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Student(codeNo,name,age,gender,phoneNo,classNo,seatNo,isPayed)&#123;</div><div class="line">    Teacher.call(this,codeNo,name,age,gender,phoneNo,classNo);</div><div class="line">    this.seatNo = seatNo;</div><div class="line">    this.isPayed = false;</div><div class="line">&#125;</div><div class="line">Student.prototype = &#123;</div><div class="line">    constructor:Student,</div><div class="line">    SignUp:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    pay:function()&#123;</div><div class="line">        this.isPayed = true;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Teacher(codeNo,name,age,gender,phoneNo,classNo)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.phoneNo = phoneNo;</div><div class="line">    this.classNo = classNo;</div><div class="line">&#125;</div><div class="line">Teacher.prototype = &#123;</div><div class="line">    constructor:Teacher,</div><div class="line">    distributeClass:function(stu,cls)&#123;</div><div class="line">        if(stu.isPayed)&#123;</div><div class="line">            if(cls.counts &lt; cls.seats)&#123;</div><div class="line">                cls.count++;</div><div class="line">                stu.classNo = cls.codeNo;</div><div class="line">                stu.seatNo = cls.counts;</div><div class="line">                localStorage.setItem(cls.codeNo,JSON.stringify(cls));</div><div class="line">            &#125;else&#123;</div><div class="line">                console.wran(&quot;班级座位已满，请开设新的班级&quot;);</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">        &#125;else&#123;</div><div class="line">            console.warn(&quot;学生未缴费！&quot;);</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    checkIn:function(stu,cls)&#123;</div><div class="line">        var classInfor;</div><div class="line">        classInfor = localStroage.getItem(&quot;classInfor&quot;);</div><div class="line">        if(classInfor)&#123;</div><div class="line">            classInfor = JSON.parse(classInfor);</div><div class="line">            classInfor[cls.codeNo].push(stu.codeNo);</div><div class="line">        &#125;else&#123;</div><div class="line">            classInfor = &#123;&#125;;</div><div class="line">            classInfor[cls.codeNo] = [stu.codeNo];</div><div class="line">        &#125;</div><div class="line">        localStorage.setItem(&quot;classInfor&quot;,JSON.stringify(classInfor));</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var sch = nwe School(&quot;BJ2016&quot;,&quot;北京学院&quot;,&quot;七环&quot;,&quot;这是一所牛x的大学&quot;);</div><div class="line">var course = sch.createCourse(&quot;PHP16&quot;,&quot;PHP课程&quot;,1800);</div><div class="line">course.createCourse();</div><div class="line">var PhpClass = sch.createClass(&quot;PHP161002&quot;,&quot;PHP就业02&quot;,0,100);</div><div class="line">PhpClass.createClass();</div><div class="line">var xiaohong = new Student(&quot;P9527&quot;,&quot;小红&quot;,19,&quot;女&quot;,&quot;18989898890&quot;);</div><div class="line">xiaohong.signUp();</div><div class="line">xiaohong.pay();</div><div class="line">var tea = new Teacher(&quot;T9527&quot;,&quot;小绿&quot;,28,&quot;女&quot;,&quot;13838380038&quot;);</div><div class="line">tea.distributeClass(xiaohong,PhpClass);</div><div class="line">tea.checkIn(xiaohong,PhpClass);</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="创建排序表格"><a href="#创建排序表格" class="headerlink" title="创建排序表格"></a>创建排序表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">var rdata = [&#123;</div><div class="line">    name:&quot;tom&quot;,</div><div class="line">    age:18,</div><div class="line">    count:100,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;，&#123;</div><div class="line">    name:&quot;jim&quot;,</div><div class="line">    age:22,</div><div class="line">    count:0,</div><div class="line">    gender:&quot;女&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    name:&quot;hanmei&quot;,</div><div class="line">    age:20,</div><div class="line">    count:10000,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;];</div><div class="line">function Table(options)&#123;</div><div class="line">    this.tclass = options.tclass;</div><div class="line">    this.model = options.model;</div><div class="line">    this.data = options.data;</div><div class="line">    this.target = options.target;</div><div class="line">    this.table = document.createElement(&quot;table&quot;);</div><div class="line">    if(this.tclass)&#123;</div><div class="line">        this.table.className = this.tclass;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Table.prototype = &#123;</div><div class="line">    constructor:Table,</div><div class="line">    renderTHead:function()&#123;</div><div class="line">        var thead = document.createElement(&quot;thead&quot;);</div><div class="line">        var tr = document.createElement(&quot;tr&quot;);</div><div class="line">        var th;</div><div class="line">        for(var i = 0,l = this.model.length;i&lt;l; i++)&#123;</div><div class="line">            th = document.createElement(&quot;th&quot;);</div><div class="line">            th.innerHTML = this.model[i].title;</div><div class="line">            if(this.model[i].width)&#123;</div><div class="line">                th.style.width = this.model[i].width+&quot;px&quot;;</div><div class="line">            &#125;</div><div class="line">            tr.appendChild(th);</div><div class="line">        &#125;</div><div class="line">        thead.appendChild(tr);</div><div class="line">        this.table.appendChild(thead);</div><div class="line">    &#125;,</div><div class="line">    renderTBody:function()&#123;</div><div class="line">        var tbody = document.createElement(&quot;tbody&quot;),</div><div class="line">            tr,</div><div class="line">            td,</div><div class="line">            col = 0;</div><div class="line">        for(var i = 0,l = this.data.length;i&lt;l;i++)&#123;</div><div class="line">            tr = document.createElement(&quot;tr&quot;);</div><div class="line">            var temp = this.data[i];</div><div class="line">            for(var k in temp)&#123;</div><div class="line">                td = document.createElement(&quot;td&quot;);</div><div class="line">                td.innerHTML = temp[k];</div><div class="line">                if(this.model[col].align)&#123;</div><div class="line">                    td.style.textAlign = this.model[col].align;</div><div class="line">                &#125;</div><div class="line">                tr.appendChild(td);</div><div class="line">                col++;</div><div class="line">            &#125;</div><div class="line">            tbody.appendChild(tr);</div><div class="line">            col = 0;</div><div class="line">        &#125;</div><div class="line">        this.table.appendChild(tbody);</div><div class="line">    &#125;,</div><div class="line">    draw:function()&#123;</div><div class="line">        this.renderTHead();</div><div class="line">        this.renderTBody();</div><div class="line">        document.querySelector(this.target).appendChild(this.table);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var t = new Table(&#123;</div><div class="line">    tclass:&quot;gridtable&quot;,</div><div class="line">    model:[&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:100,</div><div class="line">        align:&quot;center&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:200,</div><div class="line">        align:&quot;right&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;金币数&quot;,</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;性别&quot;,</div><div class="line">    &#125;],</div><div class="line">    data:rdata,</div><div class="line">    target:&quot;#list&quot;</div><div class="line">&#125;);</div><div class="line">t.draw();</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/14/面向对象从入门到精通（六）/" data-id="ciwa32zfb0009ugupodn4dw3s" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（五）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/10/14/面向对象从入门到精通（五）/" class="article-date">
-  <time datetime="2016-10-14T02:44:37.000Z" itemprop="datePublished">2016-10-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/面向对象从入门到精通（五）/">面向对象从入门到精通（五）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h2><h3 id="1-普通函数执行"><a href="#1-普通函数执行" class="headerlink" title="1. 普通函数执行"></a>1. 普通函数执行</h3><ul>
-<li>this -&gt; window</li>
-<li>声明一个函数后，就直接调用</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(1);</div><div class="line">    console.log(this===window);</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
-<h3 id="2-方法调用模式"><a href="#2-方法调用模式" class="headerlink" title="2. 方法调用模式"></a>2. 方法调用模式</h3><ul>
-<li>this -&gt; 该方法的调用者</li>
-<li>通过一个对象来调用方法</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    say:function()&#123;</div><div class="line">        console.log(&quot;Hello,world&quot;);</div><div class="line">        console.log(this===obj);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">obj.say();</div></pre></td></tr></table></figure>
-<h3 id="3-构造函数模式"><a href="#3-构造函数模式" class="headerlink" title="3. 构造函数模式"></a>3. 构造函数模式</h3><ul>
-<li>this -&gt; 当前创建出来的对象</li>
-<li>配合 new 操作符来调用函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fn(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">var f = new fn(&quot;f&quot;);</div></pre></td></tr></table></figure>
-<h3 id="4-call-apply（上下文）模式"><a href="#4-call-apply（上下文）模式" class="headerlink" title="4. call/apply（上下文）模式"></a>4. call/apply（上下文）模式</h3><ul>
-<li>this -&gt; 用户动态指定的<ul>
-<li>指定 call or apply 方法的第一个参数</li>
-</ul>
-</li>
-<li>区别：<ul>
-<li><code>&lt;fn&gt;.call(thisObj,arg1,arg2,...,argN)</code>：thisObject 为 this 的指向。之后为形参列表，就是 fn 在执行时的形参列表</li>
-<li><code>&lt;fn&gt;.apply(thisObj,[实参])</code>：thisObject 为 this 的指向。数组参数为 fn 在执行时的实参。</li>
-</ul>
-</li>
-<li>注意：在非严格模式下，如果 thisObject 赋值为 null 或者不传实参，此时 this -&gt; window 对象，就相当于普通函数执行模式。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">fn.call(o,&quot;o&quot;,18,&quot;man&quot;);</div><div class="line">fn.apply(o,[&quot;o&quot;,18,&quot;man&quot;]);</div><div class="line">console.log(o);</div></pre></td></tr></table></figure>
-<h4 id="上下文模式的应用"><a href="#上下文模式的应用" class="headerlink" title="上下文模式的应用"></a>上下文模式的应用</h4><ul>
-<li><p>数组的合并</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = [1,2,3];</div><div class="line">var arr2 = [4,5,6];</div><div class="line">Array.prototype.push.apply(arr1,arr2);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
-</li>
-<li><p>借调方法（函数）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>借用构造函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    parent.call(this,name,age,gender);</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line">var c = new child(&quot;c&quot;,19,&quot;man&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
-</li>
-<li><p>借用原生方法</p>
-<ul>
-<li><p>求数组中的最大值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var data = [67,89,190,23,10,100];</div><div class="line">var max = Math.max.apply(null,data);</div><div class="line">console.log(max);</div></pre></td></tr></table></figure>
-</li>
-<li><p>获取内置对象类型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getType(obj)&#123;</div><div class="line">    var patt = /^\[object(\w+)\]$/;</div><div class="line">    var str = Object.prototype.toString.call(obj);</div><div class="line">    var match = patt.exec(str);</div><div class="line">    return match[1].toLowerCase();</div><div class="line">&#125;</div><div class="line">console.log(getType(/a/));</div></pre></td></tr></table></figure>
-</li>
-<li><p>将伪数组变成真数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">onload = function()&#123;</div><div class="line">    var doms = document.getElementsByTagName(&quot;div&quot;);</div><div class="line">    console.log(getType(doms));</div><div class="line">    var domArr = Array.prototype.slice.call(doms);</div><div class="line">    console.log(getType(domArr));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>实现思路：</p>
-<ul>
-<li>声明一个函数实现数组去重，取名unique</li>
-<li>判断浏览器是否支持数组的 indexOf 方法</li>
-<li>如果不支持就自己实现数组的 indexOf 方法，并且将其扩展到数组的原型对象上</li>
-<li>遍历数组，首先判断如果数组 ret 中是否含有当前遍历到的元素</li>
-<li>如果没有，就将当前元素添加到 ret 中</li>
-<li>循环结束， 将 ret 返回<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,&quot;1&quot;];</div><div class="line">function unique(a)&#123;</div><div class="line">    var ret = [];</div><div class="line">    if(!ret.indexOf)&#123;</div><div class="line">        Array.prototype.indexOf = function(val)&#123;</div><div class="line">            for(var i = 0, l = this.length; i&lt;l; i++)&#123;</div><div class="line">                if(this[i] === val) return i;</div><div class="line">            &#125;</div><div class="line">            return -1;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    for(var i = 0,l = a.length; i&lt;l; i++)&#123;</div><div class="line">        if(ret.indexOf(a[i])===-1)&#123;</div><div class="line">            ret.push(a[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">console.log(unique(arr));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/14/面向对象从入门到精通（五）/" data-id="ciwa32zfr000augup22ppa3ha" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/03/git使用入门/" data-id="ciwa32zcp0002ugupxvdgdc8j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -848,8 +201,8 @@
   
     <article id="post-Canvas入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/14/Canvas入门/" class="article-date">
-  <time datetime="2016-10-14T01:17:58.000Z" itemprop="datePublished">2016-10-14</time>
+    <a href="/2015/06/14/Canvas入门/" class="article-date">
+  <time datetime="2015-06-14T01:17:58.000Z" itemprop="datePublished">2015-06-14</time>
 </a>
     
   </div>
@@ -860,7 +213,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/14/Canvas入门/">Canvas入门</a>
+      <a class="article-title" href="/2015/06/14/Canvas入门/">Canvas入门</a>
     </h1>
   
 
@@ -1067,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/14/Canvas入门/" data-id="ciwa32zbh0000ugupa9dlod9u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/14/Canvas入门/" data-id="ciwa32zbh0000ugupa9dlod9u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1077,10 +430,10 @@
 
 
   
-    <article id="post-github使用入门" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JQuery入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/03/github使用入门/" class="article-date">
-  <time datetime="2016-10-03T02:28:40.000Z" itemprop="datePublished">2016-10-03</time>
+    <a href="/2015/01/26/JQuery入门/" class="article-date">
+  <time datetime="2015-01-26T09:31:15.000Z" itemprop="datePublished">2015-01-26</time>
 </a>
     
   </div>
@@ -1091,7 +444,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/03/github使用入门/">github使用入门</a>
+      <a class="article-title" href="/2015/01/26/JQuery入门/">JQuery入门</a>
     </h1>
   
 
@@ -1099,36 +452,217 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>github 是为开发者提供 GIT 仓库的托管服务。是一个让开发者与朋友、同事及陌生人共享代码的完美平台。</p>
-<h2 id="Github的作用"><a href="#Github的作用" class="headerlink" title="Github的作用"></a>Github的作用</h2><ul>
-<li>托管仓库</li>
-<li>社交化编程（程序员的新浪微博）</li>
-</ul>
-<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><p>地址：<a href="https://www.github.com/" target="_blank" rel="external">https://www.github.com/</a></p>
+        <h2 id="什么是JQuery？"><a href="#什么是JQuery？" class="headerlink" title="什么是JQuery？"></a>什么是JQuery？</h2><p>JQuery 就是一个 JS 库，使用 JQuery 的话，会比使用 JavaScript 更简单。<br>JS 库：把一些常用的方法写到一个单独的 JS 文件，使用时直接去引用这些 JS 文件就好了。</p>
+<h2 id="为什么要学习JQuery？"><a href="#为什么要学习JQuery？" class="headerlink" title="为什么要学习JQuery？"></a>为什么要学习JQuery？</h2><ol>
+<li>JS 的入口函数只能有一个，如果出现多个，后面的会覆盖掉前面的。</li>
+<li>JS 的代码容错性差，容易出错，出错会导致后面的代码不执行。</li>
+<li>JS 存在浏览器兼容性，比如 innerHTML 在火狐浏览器中不起作用。</li>
+<li>JS DOM 操作复杂，实现简单的动画很麻烦。</li>
+</ol>
+<h2 id="学习-JQuery-主要是学习什么呢？"><a href="#学习-JQuery-主要是学习什么呢？" class="headerlink" title="学习 JQuery 主要是学习什么呢？"></a>学习 JQuery 主要是学习什么呢？</h2><p>学习JQuery，主要学习 JQuery 的一大堆 API<br>API：application programming interface：应用程序接口，说白了，API 就是方法。<br>方法调用时都带小括号(),使用 JQuery 的方法的时候，不要忘了小括号。</p>
+<h2 id="怎样使用-JQuery？"><a href="#怎样使用-JQuery？" class="headerlink" title="怎样使用 JQuery？"></a>怎样使用 JQuery？</h2><ol>
+<li>下载 JQuery<br>下载地址：<a href="http://jquery.com/download/" target="_blank" rel="external">http://jquery.com/download/</a></li>
+<li><p>使用 JQuery 实现 div 动态展示案例的步骤</p>
 <ol>
-<li>创建账户<ul>
-<li>填写Username、Email Address、和Password</li>
-<li>如果有账户直接sign in</li>
+<li><p>引包（引入 JQuery 文件）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src = &quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>入口函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(document).ready(function()&#123;&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>功能实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;#btnShowDiv&quot;).click(function()&#123;</div><div class="line">    $(&quot;div&quot;).show(1000);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>div 动态展示案例中 JQuery 的好处</p>
+<ol>
+<li>可以多个，并且不会发生覆盖的情况</li>
+<li>代码容错性好，屏蔽错误，并且不会影响后面代码的运行</li>
+<li>对浏览器兼容性做了封装，因此不存在兼容性问题</li>
+<li>DOM 操作简单，支持隐式迭代，实现动画非常简单</li>
+</ol>
+</li>
+</ol>
+<h2 id="JQuery-详细解释"><a href="#JQuery-详细解释" class="headerlink" title="JQuery 详细解释"></a>JQuery 详细解释</h2><h3 id="版本介绍"><a href="#版本介绍" class="headerlink" title="版本介绍"></a>版本介绍</h3><h3 id="引包注意点"><a href="#引包注意点" class="headerlink" title="引包注意点"></a>引包注意点</h3><ul>
+<li>忘记引包或者引包在入口函数的后面</li>
+<li>引包路径错误（404）</li>
+</ul>
+<h3 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h3><ul>
+<li>JQuery 入口函数的两种写法<ol>
+<li><code>$(document).ready(function(){});</code></li>
+<li><code>$(function(){});</code></li>
+</ol>
+</li>
+<li>对比 JavaScript 的入口函数 JQuery 的入口函数，执行时机<ol>
+<li>JavaScript 的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。</li>
+<li>JQuery 的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</li>
+</ol>
+</li>
+</ul>
+<h3 id="了解-JQuery-的-符号"><a href="#了解-JQuery-的-符号" class="headerlink" title="了解 JQuery 的 $ 符号"></a>了解 JQuery 的 $ 符号</h3><p>$ 就是一个函数：$();参数不一样，功能不一样<br>$ 常用的几种情况：</p>
+<ul>
+<li>$(function(){})   参数是 function，说明是入口函数</li>
+<li>$(“#btnSetConent”);   参数是字符串，并且以 # 开头，是一个标签选择器，查找 <code>id  = &quot;btnSetContent&quot;</code> 的元素</li>
+<li>$(“div”); 查找所有的 div 元素</li>
+<li>$(document).ready(function(){})   将 document 转换成 JQuery 对象<br>补充：<code>$===JQuery</code> 也就是说能用 $ 的地方，完全可以用 JQuery ，$ 仅仅是简写形式</li>
+</ul>
+<h2 id="JQuery-选择器"><a href="#JQuery-选择器" class="headerlink" title="JQuery 选择器"></a>JQuery 选择器</h2><h3 id="JQuery-选择器概述"><a href="#JQuery-选择器概述" class="headerlink" title="JQuery 选择器概述"></a>JQuery 选择器概述</h3><ul>
+<li>为什么要学习 JQuery 选择器？<br>考虑兼容性的话， JS 提供的获取元素的方法太少了，只有两个，不能满足我们的要求，比如想要通过 class 来获取元素就不行了<br>document.getElementById(“btnShowDiv”);<br>document.getElementByTagName(“div”);</li>
+<li>什么是 JQuery 选择器？<br>JQuery 选择器是 JQuery 为我们提供的一组方法，让我们更加方便的获取到页面中的元素。<br>注意：JQuery 选择器返回的是 JQuery 对象。<br>$(“#btnShowDiv”)    id 选择器<br>$(“div”)    标签选择器<br>JQuery 选择器有很多，基本兼容了 CSS1 到 CSS3 所有的选择器，并且 JQuery 还添加了很多更加复杂的选择器<br>JQuery 选择器虽然很多，但是选择器之间可以互相替代，就是说获取一个元素，你会有很多种方法获取到。所以我们平时真正能用到的只是少数的最常用的选择器。</li>
+</ul>
+<h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th style="text-align:center">用法</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID 选择器</td>
+<td style="text-align:center">$(“#id”);</td>
+<td style="text-align:right">获取指定 ID 的元素</td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td style="text-align:center">$(“.class”);</td>
+<td style="text-align:right">获取同一类 class 的元素</td>
+</tr>
+<tr>
+<td>标签选择器</td>
+<td style="text-align:center">$(“div”);</td>
+<td style="text-align:right">获取同一类标签的所有元素</td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td style="text-align:center">$(“div,p,li”);</td>
+<td style="text-align:right">获取所有的 div,p,li 的元素</td>
+</tr>
+<tr>
+<td>交集选择器（标签指定式选择器）</td>
+<td style="text-align:center">$(“div,redClass”);</td>
+<td style="text-align:right">获取指定 ID 的元素</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/26/JQuery入门/" data-id="ciwa32zc90001ugup9alc1qda" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象从入门到精通（六）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/05/面向对象从入门到精通（六）/" class="article-date">
+  <time datetime="2015-01-05T08:08:05.000Z" itemprop="datePublished">2015-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/05/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="课程报名流程"><a href="#课程报名流程" class="headerlink" title="课程报名流程"></a>课程报名流程</h2><ul>
+<li>目的：培养面向对象思想</li>
+<li>流程分析：<ul>
+<li>院校开设课程</li>
+<li>院校开设班级</li>
+<li>学生报名课程</li>
+<li>学生缴纳费用，得到缴费凭证</li>
+<li>老师给学生分配班级</li>
+<li>老师将学生的信息登记在班级信息表格里</li>
 </ul>
 </li>
-<li>创建仓库<ul>
-<li>登录完成后，右上角有一个加号，点击后出现下拉列表，选择 New repository</li>
-<li>填写仓库名称、描述、选择公开还是私有</li>
-<li>以上信息填写完成后点击 Create repository 创建，我们就有了一个远程仓库。</li>
+<li>在整个流程中涉及多少个对象</li>
+<li>院校<ul>
+<li>属性：codeNo 学校编码，name 名字，address 地址，description 描述</li>
+<li>行为：<ol>
+<li>createCourse 开设课程<ul>
+<li>院校开设课程，实质就是创建课程对象</li>
+<li>通过课程对象，将课程的信息保存到 localStorage 上</li>
+</ul>
+</li>
+<li>createClass 开设班级<ul>
+<li>院校开设班级，实质就是创建一个班级对象</li>
+<li>通过班级对象，将班级信息保存到 localStorage 上</li>
 </ul>
 </li>
 </ol>
-<h2 id="Git-与-Github-的区别"><a href="#Git-与-Github-的区别" class="headerlink" title="Git 与 Github 的区别"></a>Git 与 Github 的区别</h2><ul>
-<li>在 GIT 中，开发者将原代码存入名叫“Git仓库”的资料库中并加以使用。</li>
-<li>Github 为开发者的“Git仓库”提供了一个托管的平台，在该平台上公开的软件原代码全都由Git进行管理。</li>
-<li>Github 除提供Git仓库的托管服务外，还为开发者提供了一系列功能，帮助高效率、高品质的进行代码编写。</li>
-<li>Github创始人的愿望就是能有一个Git仓库托管服务让自己与朋友轻松分享代码。</li>
+</li>
 </ul>
+</li>
+<li>课程<ul>
+<li>属性：codeNo 课程编号，name 名字，money 学费</li>
+<li>行为：增删改查<ul>
+<li>createCourse 开设课程，将课程的信息保存到 localStorage</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>班级<ul>
+<li>属性：codeNo 班号，name 名字，count 人数，seats 座位数</li>
+<li>行为：createClass 开设班级<ul>
+<li>将班级的信息保存到 localStorage</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>学生<ul>
+<li>属性：codeNo 学号，name，age，gender，phoneNo，classNo，seatNo</li>
+<li>行为：<ul>
+<li>signUp 报名将学生的基本信息保存到 localStorage 上</li>
+<li>pay 缴费将学生基本信息中的 isPayed 字段修改为 true</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>老师<ul>
+<li>属性：codeNo 员工编号，name，age，gender，phoneNo，classNo</li>
+<li>行为：<ul>
+<li>distributeClass 分配班级<ul>
+<li>首先校验当前学生是否已缴费，如果没有缴费，提示为缴费，分配班级失败</li>
+<li>如果已缴费并且班级座位数未满，就给其分配座位号，返回成功</li>
+<li>如果班级座位数已满，同时院校开设新班级</li>
+</ul>
+</li>
+<li>checkIn 登记信息<ul>
+<li>将每个班级的每个学生登录在案</li>
+<li>存储形式：{“班级编号”:[所有编号]}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div></pre></td><td class="code"><pre><div class="line">function School(codeNo,name,address,description)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.address = address;</div><div class="line">    this.description = description;</div><div class="line">&#125;</div><div class="line">School.prototype = &#123;</div><div class="line">    constructor:School,</div><div class="line">    createCourse:function(codeNo,name,money)&#123;</div><div class="line">        var course = new Course(codeNo,name,money);</div><div class="line">        return course;</div><div class="line">    &#125;,</div><div class="line">    createClass:function(codeNo,name,counts,seats)&#123;</div><div class="line">        var classes = new Classes(codeNo,name,counts,seats);</div><div class="line">        return classes;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">function Course(codeNo,name,money)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.money = money;</div><div class="line">&#125;</div><div class="line">Course.prototype = &#123;</div><div class="line">    constructor:Course,</div><div class="line">    createCourse:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;finally&#123;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Classes(codeNo,name,counts,seats)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.counts = counts;</div><div class="line">    this.seats = seats;</div><div class="line">&#125;</div><div class="line">Classes.prototype = &#123;</div><div class="line">    constructor:Classes,</div><div class="line">    createClass:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Student(codeNo,name,age,gender,phoneNo,classNo,seatNo,isPayed)&#123;</div><div class="line">    Teacher.call(this,codeNo,name,age,gender,phoneNo,classNo);</div><div class="line">    this.seatNo = seatNo;</div><div class="line">    this.isPayed = false;</div><div class="line">&#125;</div><div class="line">Student.prototype = &#123;</div><div class="line">    constructor:Student,</div><div class="line">    SignUp:function()&#123;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    pay:function()&#123;</div><div class="line">        this.isPayed = true;</div><div class="line">        try&#123;</div><div class="line">            localStorage.setItem(this.codeNo,JSON.stringify(this));</div><div class="line">        &#125;catch(e)&#123;</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">function Teacher(codeNo,name,age,gender,phoneNo,classNo)&#123;</div><div class="line">    this.codeNo = codeNo;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.phoneNo = phoneNo;</div><div class="line">    this.classNo = classNo;</div><div class="line">&#125;</div><div class="line">Teacher.prototype = &#123;</div><div class="line">    constructor:Teacher,</div><div class="line">    distributeClass:function(stu,cls)&#123;</div><div class="line">        if(stu.isPayed)&#123;</div><div class="line">            if(cls.counts &lt; cls.seats)&#123;</div><div class="line">                cls.count++;</div><div class="line">                stu.classNo = cls.codeNo;</div><div class="line">                stu.seatNo = cls.counts;</div><div class="line">                localStorage.setItem(cls.codeNo,JSON.stringify(cls));</div><div class="line">            &#125;else&#123;</div><div class="line">                console.wran(&quot;班级座位已满，请开设新的班级&quot;);</div><div class="line">                return false;</div><div class="line">            &#125;</div><div class="line">        &#125;else&#123;</div><div class="line">            console.warn(&quot;学生未缴费！&quot;);</div><div class="line">            return false;</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;,</div><div class="line">    checkIn:function(stu,cls)&#123;</div><div class="line">        var classInfor;</div><div class="line">        classInfor = localStroage.getItem(&quot;classInfor&quot;);</div><div class="line">        if(classInfor)&#123;</div><div class="line">            classInfor = JSON.parse(classInfor);</div><div class="line">            classInfor[cls.codeNo].push(stu.codeNo);</div><div class="line">        &#125;else&#123;</div><div class="line">            classInfor = &#123;&#125;;</div><div class="line">            classInfor[cls.codeNo] = [stu.codeNo];</div><div class="line">        &#125;</div><div class="line">        localStorage.setItem(&quot;classInfor&quot;,JSON.stringify(classInfor));</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var sch = nwe School(&quot;BJ2016&quot;,&quot;北京学院&quot;,&quot;七环&quot;,&quot;这是一所牛x的大学&quot;);</div><div class="line">var course = sch.createCourse(&quot;PHP16&quot;,&quot;PHP课程&quot;,1800);</div><div class="line">course.createCourse();</div><div class="line">var PhpClass = sch.createClass(&quot;PHP161002&quot;,&quot;PHP就业02&quot;,0,100);</div><div class="line">PhpClass.createClass();</div><div class="line">var xiaohong = new Student(&quot;P9527&quot;,&quot;小红&quot;,19,&quot;女&quot;,&quot;18989898890&quot;);</div><div class="line">xiaohong.signUp();</div><div class="line">xiaohong.pay();</div><div class="line">var tea = new Teacher(&quot;T9527&quot;,&quot;小绿&quot;,28,&quot;女&quot;,&quot;13838380038&quot;);</div><div class="line">tea.distributeClass(xiaohong,PhpClass);</div><div class="line">tea.checkIn(xiaohong,PhpClass);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建排序表格"><a href="#创建排序表格" class="headerlink" title="创建排序表格"></a>创建排序表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line">var rdata = [&#123;</div><div class="line">    name:&quot;tom&quot;,</div><div class="line">    age:18,</div><div class="line">    count:100,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;，&#123;</div><div class="line">    name:&quot;jim&quot;,</div><div class="line">    age:22,</div><div class="line">    count:0,</div><div class="line">    gender:&quot;女&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    name:&quot;hanmei&quot;,</div><div class="line">    age:20,</div><div class="line">    count:10000,</div><div class="line">    gender:&quot;男&quot;</div><div class="line">&#125;];</div><div class="line">function Table(options)&#123;</div><div class="line">    this.tclass = options.tclass;</div><div class="line">    this.model = options.model;</div><div class="line">    this.data = options.data;</div><div class="line">    this.target = options.target;</div><div class="line">    this.table = document.createElement(&quot;table&quot;);</div><div class="line">    if(this.tclass)&#123;</div><div class="line">        this.table.className = this.tclass;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Table.prototype = &#123;</div><div class="line">    constructor:Table,</div><div class="line">    renderTHead:function()&#123;</div><div class="line">        var thead = document.createElement(&quot;thead&quot;);</div><div class="line">        var tr = document.createElement(&quot;tr&quot;);</div><div class="line">        var th;</div><div class="line">        for(var i = 0,l = this.model.length;i&lt;l; i++)&#123;</div><div class="line">            th = document.createElement(&quot;th&quot;);</div><div class="line">            th.innerHTML = this.model[i].title;</div><div class="line">            if(this.model[i].width)&#123;</div><div class="line">                th.style.width = this.model[i].width+&quot;px&quot;;</div><div class="line">            &#125;</div><div class="line">            tr.appendChild(th);</div><div class="line">        &#125;</div><div class="line">        thead.appendChild(tr);</div><div class="line">        this.table.appendChild(thead);</div><div class="line">    &#125;,</div><div class="line">    renderTBody:function()&#123;</div><div class="line">        var tbody = document.createElement(&quot;tbody&quot;),</div><div class="line">            tr,</div><div class="line">            td,</div><div class="line">            col = 0;</div><div class="line">        for(var i = 0,l = this.data.length;i&lt;l;i++)&#123;</div><div class="line">            tr = document.createElement(&quot;tr&quot;);</div><div class="line">            var temp = this.data[i];</div><div class="line">            for(var k in temp)&#123;</div><div class="line">                td = document.createElement(&quot;td&quot;);</div><div class="line">                td.innerHTML = temp[k];</div><div class="line">                if(this.model[col].align)&#123;</div><div class="line">                    td.style.textAlign = this.model[col].align;</div><div class="line">                &#125;</div><div class="line">                tr.appendChild(td);</div><div class="line">                col++;</div><div class="line">            &#125;</div><div class="line">            tbody.appendChild(tr);</div><div class="line">            col = 0;</div><div class="line">        &#125;</div><div class="line">        this.table.appendChild(tbody);</div><div class="line">    &#125;,</div><div class="line">    draw:function()&#123;</div><div class="line">        this.renderTHead();</div><div class="line">        this.renderTBody();</div><div class="line">        document.querySelector(this.target).appendChild(this.table);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">var t = new Table(&#123;</div><div class="line">    tclass:&quot;gridtable&quot;,</div><div class="line">    model:[&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:100,</div><div class="line">        align:&quot;center&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;姓名&quot;,</div><div class="line">        width:200,</div><div class="line">        align:&quot;right&quot;</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;金币数&quot;,</div><div class="line">    &#125;,&#123;</div><div class="line">        title:&quot;性别&quot;,</div><div class="line">    &#125;],</div><div class="line">    data:rdata,</div><div class="line">    target:&quot;#list&quot;</div><div class="line">&#125;);</div><div class="line">t.draw();</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/03/github使用入门/" data-id="ciwa32zcz0003ugupc5cf7d6n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/05/面向对象从入门到精通（六）/" data-id="ciwa32zfb0009ugupodn4dw3s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1138,10 +672,10 @@
 
 
   
-    <article id="post-git使用入门" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-面向对象从入门到精通（五）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/10/03/git使用入门/" class="article-date">
-  <time datetime="2016-10-03T02:22:20.000Z" itemprop="datePublished">2016-10-03</time>
+    <a href="/2014/12/14/面向对象从入门到精通（五）/" class="article-date">
+  <time datetime="2014-12-14T02:44:37.000Z" itemprop="datePublished">2014-12-14</time>
 </a>
     
   </div>
@@ -1152,7 +686,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/03/git使用入门/">git使用入门</a>
+      <a class="article-title" href="/2014/12/14/面向对象从入门到精通（五）/">面向对象从入门到精通（五）</a>
     </h1>
   
 
@@ -1160,52 +694,518 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="GIT-介绍"><a href="#GIT-介绍" class="headerlink" title="GIT 介绍"></a>GIT 介绍</h2><p>Git的作者：林纳斯·托瓦兹 也是Linux内核的最早作者</p>
-<p>Linux 开发团队 林纳斯·托瓦兹是负责人</p>
-<p>原来使用了一个商业版分布式版本管理系统（免费给该团队使用）</p>
-<p>直到有一天，某个人去尝试破解商业版管理系统</p>
-<p>商业版公司发现了这个团队要破解，所以收回了免费使用权限（只是警告了Linux开发团队）</p>
-<p>林纳斯·托瓦兹一怒之下，自己搞了个Git</p>
-<p>推荐图书：林纳斯·托瓦兹自传《只是为了好玩》 just for fun</p>
-<h2 id="GIT-安装"><a href="#GIT-安装" class="headerlink" title="GIT 安装"></a>GIT 安装</h2><p>Windows版下载地址：<a href="https://git-for-windows.github.io/(只有64位" target="_blank" rel="external">https://git-for-windows.github.io/(只有64位</a>)</p>
-<p>验证是否安装成功，打开开始菜单看是否有 Git 目录</p>
-<p>打开 Git Bash 输入 git –version 如果看到版本号说明没有问题</p>
-<p>输入 pwd 查看当前工作目录</p>
-<h2 id="GIT-基本命令"><a href="#GIT-基本命令" class="headerlink" title="GIT 基本命令"></a>GIT 基本命令</h2><ul>
-<li>git clone 仓库地址</li>
-<li>git init 仓库名称<ul>
-<li>只要执行了该命令，git 会帮你自动创建一个目录，然后在该目录下生成一个 <code>.git</code> 目录 （隐藏目录）</li>
+        <h2 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h2><h3 id="1-普通函数执行"><a href="#1-普通函数执行" class="headerlink" title="1. 普通函数执行"></a>1. 普通函数执行</h3><ul>
+<li>this -&gt; window</li>
+<li>声明一个函数后，就直接调用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(1);</div><div class="line">    console.log(this===window);</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
+<h3 id="2-方法调用模式"><a href="#2-方法调用模式" class="headerlink" title="2. 方法调用模式"></a>2. 方法调用模式</h3><ul>
+<li>this -&gt; 该方法的调用者</li>
+<li>通过一个对象来调用方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    say:function()&#123;</div><div class="line">        console.log(&quot;Hello,world&quot;);</div><div class="line">        console.log(this===obj);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">obj.say();</div></pre></td></tr></table></figure>
+<h3 id="3-构造函数模式"><a href="#3-构造函数模式" class="headerlink" title="3. 构造函数模式"></a>3. 构造函数模式</h3><ul>
+<li>this -&gt; 当前创建出来的对象</li>
+<li>配合 new 操作符来调用函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fn(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">var f = new fn(&quot;f&quot;);</div></pre></td></tr></table></figure>
+<h3 id="4-call-apply（上下文）模式"><a href="#4-call-apply（上下文）模式" class="headerlink" title="4. call/apply（上下文）模式"></a>4. call/apply（上下文）模式</h3><ul>
+<li>this -&gt; 用户动态指定的<ul>
+<li>指定 call or apply 方法的第一个参数</li>
 </ul>
 </li>
-<li>git status<ul>
-<li>查看当前工作树的状态</li>
+<li>区别：<ul>
+<li><code>&lt;fn&gt;.call(thisObj,arg1,arg2,...,argN)</code>：thisObject 为 this 的指向。之后为形参列表，就是 fn 在执行时的形参列表</li>
+<li><code>&lt;fn&gt;.apply(thisObj,[实参])</code>：thisObject 为 this 的指向。数组参数为 fn 在执行时的实参。</li>
 </ul>
 </li>
-<li>git add 文件名<ul>
-<li>将操作的文件添加到暂存区，待提交</li>
+<li>注意：在非严格模式下，如果 thisObject 赋值为 null 或者不传实参，此时 this -&gt; window 对象，就相当于普通函数执行模式。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">fn.call(o,&quot;o&quot;,18,&quot;man&quot;);</div><div class="line">fn.apply(o,[&quot;o&quot;,18,&quot;man&quot;]);</div><div class="line">console.log(o);</div></pre></td></tr></table></figure>
+<h4 id="上下文模式的应用"><a href="#上下文模式的应用" class="headerlink" title="上下文模式的应用"></a>上下文模式的应用</h4><ul>
+<li><p>数组的合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = [1,2,3];</div><div class="line">var arr2 = [4,5,6];</div><div class="line">Array.prototype.push.apply(arr1,arr2);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
+</li>
+<li><p>借调方法（函数）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>借用构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    parent.call(this,name,age,gender);</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line">var c = new child(&quot;c&quot;,19,&quot;man&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
+</li>
+<li><p>借用原生方法</p>
+<ul>
+<li><p>求数组中的最大值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var data = [67,89,190,23,10,100];</div><div class="line">var max = Math.max.apply(null,data);</div><div class="line">console.log(max);</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取内置对象类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getType(obj)&#123;</div><div class="line">    var patt = /^\[object(\w+)\]$/;</div><div class="line">    var str = Object.prototype.toString.call(obj);</div><div class="line">    var match = patt.exec(str);</div><div class="line">    return match[1].toLowerCase();</div><div class="line">&#125;</div><div class="line">console.log(getType(/a/));</div></pre></td></tr></table></figure>
+</li>
+<li><p>将伪数组变成真数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">onload = function()&#123;</div><div class="line">    var doms = document.getElementsByTagName(&quot;div&quot;);</div><div class="line">    console.log(getType(doms));</div><div class="line">    var domArr = Array.prototype.slice.call(doms);</div><div class="line">    console.log(getType(domArr));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>git commit -m “提交日志”<ul>
-<li>上面这条命令表示将暂存区中的文件提交到本地仓库</li>
-<li>使用 git commit 的时候，最好告诉版本仓库，你这一次提交的作者是谁，邮箱是多少</li>
 </ul>
 </li>
-<li>git log<ul>
-<li>查看提交日志</li>
 </ul>
-</li>
-<li>git config –global user.name “用户名”</li>
-<li>git config –global user.email “邮箱地址”</li>
-<li>git push<ul>
-<li>将本地仓库推送到远程仓库</li>
-</ul>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>实现思路：</p>
+<ul>
+<li>声明一个函数实现数组去重，取名unique</li>
+<li>判断浏览器是否支持数组的 indexOf 方法</li>
+<li>如果不支持就自己实现数组的 indexOf 方法，并且将其扩展到数组的原型对象上</li>
+<li>遍历数组，首先判断如果数组 ret 中是否含有当前遍历到的元素</li>
+<li>如果没有，就将当前元素添加到 ret 中</li>
+<li>循环结束， 将 ret 返回<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,&quot;1&quot;];</div><div class="line">function unique(a)&#123;</div><div class="line">    var ret = [];</div><div class="line">    if(!ret.indexOf)&#123;</div><div class="line">        Array.prototype.indexOf = function(val)&#123;</div><div class="line">            for(var i = 0, l = this.length; i&lt;l; i++)&#123;</div><div class="line">                if(this[i] === val) return i;</div><div class="line">            &#125;</div><div class="line">            return -1;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    for(var i = 0,l = a.length; i&lt;l; i++)&#123;</div><div class="line">        if(ret.indexOf(a[i])===-1)&#123;</div><div class="line">            ret.push(a[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">console.log(unique(arr));</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/03/git使用入门/" data-id="ciwa32zcp0002ugupxvdgdc8j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/12/14/面向对象从入门到精通（五）/" data-id="ciwa32zfr000augup22ppa3ha" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象从入门到精通（四）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/25/面向对象从入门到精通（四）/" class="article-date">
+  <time datetime="2014-11-25T10:13:37.000Z" itemprop="datePublished">2014-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/25/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="instanceof运算符规则"><a href="#instanceof运算符规则" class="headerlink" title="instanceof运算符规则"></a>instanceof运算符规则</h2><p>如果运算符后面的函数的 prototype 属性所引用的对象出现在运算符前面的对象的原型链上的话，就返回 true ，否则返回 false。</p>
+<h2 id="绘制作用域链的规则"><a href="#绘制作用域链的规则" class="headerlink" title="绘制作用域链的规则"></a>绘制作用域链的规则</h2><ol>
+<li>将整个 script 标签的全局作用域定义为 0 级作用域链。将全局作用域上的数据（变量、函数、对象等等）绘制在该链上。</li>
+<li>由于在词法作用域中，只有函数可以分割作用域。因此，只要遇到函数，就要引申出新的作用域链，级别为当前链的级别加 1 。</li>
+<li>重复第二步骤，直到没有遇到函数为止。</li>
+</ol>
+<h2 id="变量的搜索原则"><a href="#变量的搜索原则" class="headerlink" title="变量的搜索原则"></a>变量的搜索原则</h2><p>当访问一个变量时：</p>
+<ol>
+<li>首先在当前变量所处作用域链上查找，如果找到就直接使用，并且停止查找。</li>
+<li>如果没有找到，就向上一级链（T-1）上去查找，如果找到就直接使用，并停止查找。</li>
+<li>如果没有找到，就继续向上一级链查找，直到0级链，如果找到就直接使用，并停止查找。</li>
+<li>如果没有找到就报错。<br>注意：</li>
+<li>如果访问的变量不存在，会搜索整个作用域链（不仅性能低，而且抛出异常）。<br>在实际开发中，不推崇所有数据都写在全局上，尽量使用局部变量，推荐使用沙箱。<br>如果在开发中，所有 JS 代码都写在全局上，会造成全局变量的污染。</li>
+<li>同级别的链上的变量互不干扰。</li>
+</ol>
+<h2 id="activeObject"><a href="#activeObject" class="headerlink" title="activeObject"></a>activeObject</h2><p>在函数执行的时候，会创建一个执行的环境，包括activeObject（活动对象）以及作用域链。<br>activeObject 存储的是所有函数内部定义的变量，以及函数的形参，会将变量名字以及形参名字作为该对象的属性来存储。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><ul>
+<li>概念：一个函数有权去访问另一个函数的内部数据</li>
+<li>缺点：会造成函数内部的数据常驻内存，从而引发内存泄漏的问题</li>
+<li>解决的问题：解决在函数外部无法访问函数内部的数据。</li>
+<li>为了防止闭包导致内存泄漏，在使用完闭包后，将其赋值为 null 即可。</li>
+<li>闭包怎么缓存数据？因为在函数内部有方法（函数）对其有引用，并且又将其返回到外部作用域上的一个变量接收。</li>
+</ul>
+<h2 id="垃圾回收机制：GC（Garbage-Collection）"><a href="#垃圾回收机制：GC（Garbage-Collection）" class="headerlink" title="垃圾回收机制：GC（Garbage Collection）"></a>垃圾回收机制：GC（Garbage Collection）</h2><ol>
+<li>引用计数<br> 如果一个变量被另一个变量引用，那么该变量的应用计数加1；<br> 当这个变量不再引用该变量（该变量被回收掉了）时，此时这个变量的引用计数-1.<br> GC 会在一定时间间隔去查看每个变量的计数，如果为 0，就将其占用的内存回收。<br> 缺点：循环引用，会造成无法回收变量的内存。</li>
+<li>标记清除<br> 从当前文档根部（window对象）找一条路径，如果能到达该变量，那么说明此变量不应该被回收掉。反之，应该被回收其所占用的内存。<br> 如果变量进入某个执行环境，那么给其标记为“进入环境”。<br> 如果上述执行环境执行完成，被销毁，那么该环境内的所有变量都被标记为“已出环境”。</li>
+</ol>
+<h2 id="闭包应用"><a href="#闭包应用" class="headerlink" title="闭包应用"></a>闭包应用</h2><ol>
+<li><p>计数器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">function Counter()&#123;</div><div class="line">    var n = 0;</div><div class="line">    return &#123;</div><div class="line">        add:function()&#123;</div><div class="line">            n++;</div><div class="line">        &#125;,</div><div class="line">        getCounts:function()&#123;</div><div class="line">            return n;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var PersonCount = Counter();</div><div class="line">var animalCount = Counter();</div><div class="line">function Person()&#123;</div><div class="line">    PersonCount.add();</div><div class="line">&#125;</div><div class="line">var p0 = new Person();</div><div class="line">var p1 = new Person();</div><div class="line">var p2 = new Person();</div><div class="line">var p3 = new Person();</div><div class="line">var p4 = new Person();</div><div class="line">var p5 = new Person();</div><div class="line">console.log(PersonCount.getCounts());</div><div class="line">console.log(animalCount.getCounts());</div></pre></td></tr></table></figure>
+</li>
+<li><p>对象的私有属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">function person(name,age)&#123;</div><div class="line">    return &#123;</div><div class="line">        getName:function()&#123;</div><div class="line">            return name;</div><div class="line">        &#125;,</div><div class="line">        getAge:function()&#123;</div><div class="line">            return age;</div><div class="line">        &#125;,</div><div class="line">        setAge:function(val)&#123;</div><div class="line">            age = val;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var xiaohong = person(&quot;小红&quot;,18);</div><div class="line">console.log(xiaohong.getName());</div><div class="line">console.log(xiaohong.getAge());</div><div class="line">Object.preventExtensions(xiaohong);</div><div class="line">xiaohong.name = &quot;小绿&quot;;</div><div class="line">console.log(xiaohong.getName());</div><div class="line">console.log(xiaohong.name);</div><div class="line">Object.preventExtensions(xiaohong);</div><div class="line">xiaohong.setAge(19);</div><div class="line">console.log(xiaohong.getAge());</div></pre></td></tr></table></figure>
+</li>
+<li><p>解决 fib 数列递归性能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var fib = (function()&#123;</div><div class="line">    var cache = [];</div><div class="line">    return function(n)&#123;</div><div class="line">        if(n&lt;1) return undefined;</div><div class="line">        if(!!cache[n]) return cache[n];</div><div class="line">        else&#123;</div><div class="line">            if(n==1||n==2)&#123;</div><div class="line">                cache[n] = 1;</div><div class="line">            &#125;else&#123;</div><div class="line">                cache[n] = argument.callee(n-1)+arguments.callee(n-2);</div><div class="line">            &#125;</div><div class="line">            return cache[n];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;());</div><div class="line">console.log(fib(5));</div></pre></td></tr></table></figure>
+</li>
+<li><p>沙箱模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var n = 2;</div><div class="line">(function()&#123;</div><div class="line">    var n = 1;</div><div class="line">    function foo()&#123;</div><div class="line">        console.log(n);</div><div class="line">    &#125;</div><div class="line">    window.fn = foo;</div><div class="line">&#125;());</div><div class="line">fn();</div><div class="line">console.log(n);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>好处：不会污染全局变量（或者其他作用域的变量），并且能保证自己的代码安全执行。</li>
+<li><p>特性：</p>
+<ul>
+<li>能分割作用域，不会污染全局 fn。</li>
+<li>在分割后的作用域内部代码要能自执行。</li>
+</ul>
+</li>
+<li><p>结构：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">    //代码块</div><div class="line">    window.fn = fn;</div><div class="line">&#125;())</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/11/25/面向对象从入门到精通（四）/" data-id="ciwa32zfx000bugupc8l6ovki" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象从入门到精通（三）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/06/面向对象从入门到精通（三）/" class="article-date">
+  <time datetime="2014-11-06T11:16:20.000Z" itemprop="datePublished">2014-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/06/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Function-的介绍"><a href="#Function-的介绍" class="headerlink" title="Function 的介绍"></a>Function 的介绍</h2><ul>
+<li><p>创建函数的方式</p>
+<ul>
+<li><p>声明式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="/images/shengming.png" alt=""></p>
+</li>
+<li><p>表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = function()&#123;</div><div class="line">    console.log(arguments);</div><div class="line">&#125;</div><div class="line">foo(1,2,&quot;3&quot;,&#123;name:&quot;Tom&quot;&#125;);</div></pre></td></tr></table></figure>
+<p><img src="/images/shengming.png" alt=""></p>
+</li>
+<li><p>构造函数<br>Function(arg1,arg2,…argN,body)所有参数均为字符串<br>arg1,arg2,…argN 为可选的参数列表，表示为生成函数的形参列表<br>body 为必选参数，表示为生成函数的函数体部分</p>
+</li>
+</ul>
+</li>
+<li>由于函数也可以通过Function构造函数来创建，那么函数也是对象，具有<strong>proto</strong>属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">console.log(!!foo.__proto__);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/create.png" alt=""></p>
+<p>函数的原型链</p>
+<p>相关结论：</p>
+<ul>
+<li>所有的函数都是Function实例<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">console.log(Object.constructor);</div><div class="line">console.log(Array.constructor);</div><div class="line">//Array-&gt;Function.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(Date.constructor);</div><div class="line">console.log(RegExp.constructor);</div><div class="line">var foo = function()&#123;&#125;;</div><div class="line">console.log(foo.constructor);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/Function.png" alt=""></p>
+<ul>
+<li>所有函数的构造函数为Function</li>
+<li>所有函数的原型对象为Function.prototype<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">console.log(foo.__proto__);</div><div class="line">console.log(Object.__proto__);</div><div class="line">console.log(Array.__proto__);</div><div class="line">console.log(Date.__proto__);</div><div class="line">console.log(RegExp.__proto__);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/prototype.png" alt=""></p>
+<p>将函数称为函数对象<br>将其他对象称为普通对象</p>
+<p>arguments对象属性</p>
+<ul>
+<li>length：实参个数</li>
+<li>callee：返回正在执行的函数<br>函数相关属性</li>
+<li>caller：返回调用当前函数的函数</li>
+<li>length：形参的个数</li>
+<li>name：存储函数的名字</li>
+</ul>
+<p>模拟函数重载<br>在 js 中，没有函数重载，只能通过arguments对象进行模拟<br>实例：<br>如果函数没有传递实参，就直接打印false<br>如果传递一个实参，就将其直接打印出来<br>如果传递一个实参并且类型为数字的话，就加1再打印<br>如果传递两个实参，就将两个实参拼接起来，再打印出来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    if(arguments.length===0)&#123;</div><div class="line">        console.log(&quot;false&quot;);</div><div class="line">    &#125;else if(arguments.length===1)&#123;</div><div class="line">        if(typeof arguments[0]===&quot;number&quot;)&#123;</div><div class="line">            console.log(arguments[0]+1);</div><div class="line">        &#125;else&#123;</div><div class="line">            console.log(arguments[0]);</div><div class="line">        &#125;</div><div class="line">    &#125;else if(arguments.length===2)&#123;</div><div class="line">        console.log(arguments[0]+&quot;&quot;+arguments[1]);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line">foo(1);</div><div class="line">foo(&quot;abc&quot;);</div><div class="line">foo(&quot;a&quot;,&quot;1&quot;);</div></pre></td></tr></table></figure></p>
+<p><img src="/images/arguments.png" alt=""></p>
+<p>函数递归</p>
+<ul>
+<li>概念：函数调用自身</li>
+<li><p>经典递归案例</p>
+<ul>
+<li><p>等差数列第n项值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">//v为第一项的值，d为等差，n为第n项值</div><div class="line">function dengCha(v,d,n)&#123;</div><div class="line">    if(n&lt;1)&#123;</div><div class="line">        return undefined;</div><div class="line">    &#125;</div><div class="line">    else if(n==1)&#123;</div><div class="line">        return v;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return dengCha(v,d,n-1)+d;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">console.log(dengCha(2,2,6));</div></pre></td></tr></table></figure>
+</li>
+<li><p>fibonacci 数列第n项值<br>fibonacci数列：1，1，2，3，5，8，13，21，34，…<br>方法一：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fibonacci(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return fibonacci(n-1)+fibonacci(n-2);</div><div class="line">&#125;</div><div class="line">console.log(fibonacci(6));</div></pre></td></tr></table></figure>
+<p>方法二：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var fibonacci = (function(n)&#123;</div><div class="line">    if(n&lt;1) return undefined;</div><div class="line">    else if(n===1||n===2) return 1;</div><div class="line">    else return arguments.callee(n-1)+arguments.callee(n-2);</div><div class="line">&#125;(6));</div><div class="line">console.log(fibonacci);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/fibonacci.png" alt=""></p>
+<p>词法作用域<br>规定变量的作用域是由变量声明的位置决定，而不是使用变量的位置决定<br>在词法作用域中，只有函数可以分割作用域，在函数内部是一个完整作用域，与外界隔离。<br>在函数内部可以访问函数外部的数据；但是在函数外部无法访问内部的数据。</p>
+<p>变量名（函数名）提升<br>在 js 预解析阶段执行的操作<br>js 本身是边解析边执行的</p>
+<p>在预解析阶段<br>首先分析代码语法，如果有语法错误，就直接抛出异常<br>其次，将变量名以及函数声明提升到当前作用域最顶端</p>
+<p>in 运算符<br>规则：前面的属性名字要用字符串来表示；如果为变量，那么会将变量的值隐式转换成字符串，然后去判断变量的值是否为指定对象的属性（可以为继承过来的属性）<br>注意：后面的参数必须为对象，否则报错</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/11/06/面向对象从入门到精通（三）/" data-id="ciwa32ze90007ugup0bstlcvh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象从入门到精通（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/27/面向对象从入门到精通（二）/" class="article-date">
+  <time datetime="2014-10-27T12:13:05.000Z" itemprop="datePublished">2014-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/27/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h2><h3 id="1-封装："><a href="#1-封装：" class="headerlink" title="1. 封装："></a>1. 封装：</h3><p>概念：将复杂的实现过程包装隐藏起来，然后提供给用户使用的接口即可。<br>好处：实现代码复用，还具有私密性。<br>实际使用：只要出现重复代码逻辑，那么就要考虑封装成一个函数。如果该函数和一些变量的关联性比较大，那么就可以将这些变量和该函数封装成一个对象。<br>注意：保持函数或对象功能的单一性，便于日后维护。</p>
+<h3 id="2-继承："><a href="#2-继承：" class="headerlink" title="2. 继承："></a>2. 继承：</h3><p>在 js 中，继承是对象与对象之间；<br>在 js 中，构造函数可以被当作是类</p>
+<p>其他面向对象语言： C# JAVA Object-C swift C++ 建立在类与类之间的继承</p>
+<p>实质：构造函数和类都是实例化对象的模板</p>
+<p>概念：就是指一个对象有权去访问另一个对象的成员。通俗的说就是自己没有，别人有，通过某种方式去使用别人的方法（属性）的拿来主义</p>
+<p>在 js 中，只要让一个对象去访问领一个对象的成员，就必须建立继承关系。</p>
+<p>任何对象都继承他自己的原型对象。</p>
+<h4 id="继承的实现"><a href="#继承的实现" class="headerlink" title="继承的实现"></a>继承的实现</h4><p>两种常用模型</p>
+<ul>
+<li><p>基于原型</p>
+<ul>
+<li><p>扩展原型：在原有的原型上进行相应的扩展，实现继承。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">A.prototype.printA = function()&#123;</div><div class="line">    console.log(&quot;a&quot;);&apos;</div><div class="line">&#125;</div><div class="line">a.printA();</div></pre></td></tr></table></figure>
+<p><img src="/images/kuozhan.png" alt=""></p>
+</li>
+<li><p>置换原型：将要被继承的对象直接替换掉原有的原型实现继承。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;parent&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.printC = function()&#123;</div><div class="line">    console.log(&quot;c&quot;);</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">function child()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">child.prototype = new parent();</div><div class="line">var c = new child();</div><div class="line">c.printC();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/zhihuan.png" alt=""></p>
+<ul>
+<li>拷贝继承：将别的对象上的所有成员拷贝一份，添加到当前对象本身。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var parent = &#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;,</div><div class="line">    name:&quot;parent&quot;</div><div class="line">&#125;;</div><div class="line">var child = &#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;;</div><div class="line">//遍历parent</div><div class="line">for(var k in parent)&#123;</div><div class="line">    //将parent对象上的成员添加到child上</div><div class="line">    child[k] = parent[k];</div><div class="line">&#125;</div><div class="line">child.print();</div></pre></td></tr></table></figure>
+<p><img src="/images/copy.png" alt=""></p>
+<p><strong> 在实际开发中上述两种继承方式可以组合起来使用 </strong></p>
+<ul>
+<li><p>extend方法 为了方便实现拷贝继承</p>
+<p>  一次只能继承一个对象</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function(parent)&#123;</div><div class="line">    for(var k in parent)&#123;</div><div class="line">        this[k] = parent[k];</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
+<p>  一次继承多个对象</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function()&#123;</div><div class="line">    var args = arguments,</div><div class="line">        obj;</div><div class="line">    //遍历arguments上的所有对象，依次将遍历的每个对象的成员添加到child</div><div class="line">    for(var i = 0,l = args.length;i&lt;l;i++)&#123;</div><div class="line">        obj = args[i];</div><div class="line">        //判断传入的是否为对象，不是对象就执行下面的代码</div><div class="line">        if(typeof obj === &quot;object&quot;)&#123;</div><div class="line">            for(var k in obj)&#123;</div><div class="line">                this[k] = obj[k];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="/images/extend.png" alt=""></p>
+<ul>
+<li>ES5 Object.create ：通过置换原型的方式来实现继承</li>
+</ul>
+<p>Object.create(parent); 返回一个新的对象，并继承自parent对象。</p>
+<p>用法：<code>var newObject = Object.create(parent)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newObject = Object.create(obj);</div><div class="line">newObject.print();</div></pre></td></tr></table></figure>
+<p>解决兼容性问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(!Object.create)&#123;</div><div class="line">    Object.creat = function(parent)&#123;</div><div class="line">        function F()&#123;&#125;</div><div class="line">        F.prototype = parent;</div><div class="line">        return new F;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newobj = Object.create(&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">newobj.print();</div></pre></td></tr></table></figure>
+<p><img src="/images/ES5.png" alt=""></p>
+<ul>
+<li>对象冒充：<br>概念：在一个构造函数中，可以动态的添加一个parent方法指向已有的构造函数，然后调用parent方法去实例化当前对象的一部分成员（或全部成员），这种方式被称为对象冒充。<br>注意：利用完parent属性之后记得删除该属性。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    this.parent = parent;</div><div class="line">    this.parent(name,age,gender);</div><div class="line">    delete this.parent;</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new child(&quot;小美&quot;,20,&quot;girl&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
+<p><img src="/images/parent.png" alt=""></p>
+<h3 id="3-多态："><a href="#3-多态：" class="headerlink" title="3. 多态："></a>3. 多态：</h3><p>体现在继承中的概念。对象A继承自对象B，B对象的某个方法在A中并不适用，然后A对象重写该方法，那么这就是多态</p>
+<p>概念：在父类中的同一方法在各个子类中的实现行为不同。</p>
+<p>例：<br><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var date = new Date();</div><div class="line">console.log(date.toString());</div><div class="line">var arr = [1,3,5];</div><div class="line">console.log(arr.toString());</div><div class="line">var o = &#123;name:&quot;shelly&quot;&#125;;</div><div class="line">console.log(o.toString());</div></pre></td></tr></table></figure></p>
+<p><img src="/images/toString.png" alt=""></p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
+<li><p>概念：从当前对象到Object.prototype之间，存在一条层次分明，逐级递进的体现继承关系的链式结构，这个结构被称为原型链。</p>
+</li>
+<li><p>核心：__proto__</p>
+</li>
+<li><p>几个默认</p>
+<ul>
+<li>所有对象都有__proto__属性，这个属性引用他的原型对象</li>
+<li>原型对象继承自Object.prototype，具有constructor属性，如果置换了原型，记得要添加constructor属性</li>
+<li>只有函数具有prototype属性（Function.prototype除外）</li>
+</ul>
+</li>
+</ul>
+<p>属性搜索原型：当访问对象成员时，</p>
+<ul>
+<li>首先，在当前对象上查找，如果找到就直接返回（调用），停止查找；</li>
+<li>如果没有找到，就向其原型对象上查找，如果找到就直接返回（调用），停止查找；</li>
+<li>如果没有找到，就继续向原型对象的原型对象上查找，直到Object.prototype；</li>
+<li>如果找到，那么就直接返回（调用），并停止查找；否则返回undefined（报错：XXX is not a function）</li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>如果访问对象的某个属性不存在的话，会搜索整个原型链。导致 js 性能降低</li>
+<li>在实际开发中，尽量保持一个适度的原型链长度</li>
+<li>兼顾 js 性能以及代码的可读性可扩展性</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;Tom&quot;;</div><div class="line">    this.age = 20;</div><div class="line">    this.gender = &quot;man&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.address = &quot;China&quot;;</div><div class="line">parent.prototype.__proto__=&#123;</div><div class="line">    gender:&quot;nan&quot;</div><div class="line">&#125;;</div><div class="line">var p = new parent;</div><div class="line">console.log(p.name);</div><div class="line">console.log(p.address);</div><div class="line">console.log(p.gender);</div></pre></td></tr></table></figure>
+<p><img src="/images/sousuo.png" alt=""></p>
+<h3 id="Object-prototype简介"><a href="#Object-prototype简介" class="headerlink" title="Object.prototype简介"></a>Object.prototype简介</h3><p>console.log(Object.prototype); 介绍打印出来的几个属性</p>
+<h5 id="1-hasOwnProperty"><a href="#1-hasOwnProperty" class="headerlink" title="1. hasOwnProperty()"></a>1. hasOwnProperty()</h5><p>has：有<br>own：自己<br>Property：属性<br>判断指定的属性是否为当前对象自己的（不是继承）<br>语法：<code>&lt;object&gt;.hasOwnProperty(&#39;propName&#39;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = &#123;name:&quot;Tom&quot;&#125;;</div><div class="line">console.log(o.hasOwnProperty(&quot;name&quot;));</div><div class="line">console.log(o.hasOwnProperty(&quot;toString&quot;));</div></pre></td></tr></table></figure></p>
+<p><img src="/images/hasOwnProperty.png" alt=""></p>
+<h5 id="2-isPrototypeOf"><a href="#2-isPrototypeOf" class="headerlink" title="2. isPrototypeOf"></a>2. isPrototypeOf</h5><p>is：是否<br>prototype：原型<br>of：的<br>判断当前对象是否为指定对象的原型对象<br>只要对象a出现在对象b的原型链上就返回true，否则返回false<br>语法：<code>&lt;a&gt;.isPrototypeOf(&lt;b&gt;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">function B()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">B.prototype = a;</div><div class="line">var b = new B();</div><div class="line">//原型链：b-&gt;B.prototype-&gt;A.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(a.isPrototypeOf(b));</div><div class="line">console.log(A.prototype.isPrototypeOf(b));</div><div class="line">console.log(Object.prototype.isPrototypeOf(a));</div><div class="line">console.log(Object.prototype.isPrototypeOf(b));</div></pre></td></tr></table></figure></p>
+<p><img src="/images/isPrototypeOf.png" alt=""></p>
+<h5 id="3-propertyIsEnumerable"><a href="#3-propertyIsEnumerable" class="headerlink" title="3. propertyIsEnumerable"></a>3. propertyIsEnumerable</h5><p>property：属性<br>is：是否<br>Enumerable：可枚举的<br>判断对象的制定属性是否可枚举，并且指定的属性必须是自身的<br>是hasOwnProperty的升级版<br>默认：手动添加的属性都是可枚举的，js 解析器自动添加的属性都是不可枚举的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    age:18</div><div class="line">&#125;;</div><div class="line">for(var k in obj)&#123;</div><div class="line">    console.log(k)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><img src="/images/propertyIsEnumerable.png" alt=""></p>
+<p>构造函数的执行过程</p>
+<ol>
+<li>创建了一个空对象obj</li>
+<li>将obj赋值给this（让this指向obj）</li>
+<li>将当前作用域交给this</li>
+<li>执行构造函数的内部代码</li>
+<li>将this返回（return this）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Fn(name,age)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">&#125;</div><div class="line">var fn = new Fn(&quot;Tom&quot;,18);</div><div class="line">console.log(fn);</div><div class="line">function Fn(name,age)&#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    this = obj;</div><div class="line">    Fn.call(this,name,age);</div><div class="line">    return this;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>绘制原型链<br>规则：</p>
+<ol>
+<li>绘制出简化的原型莲</li>
+<li>先将上述简化的原型链上的每一个对象绘制在图形上</li>
+<li>将每一个对象的默认属性添加上</li>
+<li>给每一个对象的属性添加指向</li>
+<li>如果每一个对象的属性都有了指向，就说明原型链绘制完成</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;</div><div class="line">//o-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
+<p><img src="/images/o.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [];</div><div class="line">//arr-&gt;Array.prototype-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
+<p><img src="/images/arr.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/27/面向对象从入门到精通（二）/" data-id="ciwa32zev0008ugupa8n7ecws" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-面向对象从入门到精通（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/17/面向对象从入门到精通（一）/" class="article-date">
+  <time datetime="2014-10-17T09:56:27.000Z" itemprop="datePublished">2014-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h2><p>一种编程思想。</p>
+<p>核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。</p>
+<p>好处：</p>
+<ul>
+<li>是调度者</li>
+<li>代码灵活度高</li>
+<li>可维护性高</li>
+<li>可扩展性高</li>
+</ul>
+<p>坏处：</p>
+<ul>
+<li>可能造成代码的复杂度提高</li>
+<li>可读性相对不好</li>
+</ul>
+<p>面向过程：</p>
+<ul>
+<li>是执行者</li>
+<li>一般情况下顺序不可打乱，从上至下一步一步执行</li>
+</ul>
+<h2 id="Javascript-语言的特点"><a href="#Javascript-语言的特点" class="headerlink" title="Javascript 语言的特点"></a>Javascript 语言的特点</h2><ul>
+<li>弱类型</li>
+<li>多范式</li>
+<li>基于对象的语言：在 js 中，一切都是对象</li>
+<li>基于原型的</li>
+</ul>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>概念：所谓原型就是一个函数的prototype属性所引用的对象，只要声明一个函数，原型就存在。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">console.log(foo.prototype);</div><div class="line">//原型就是 foo.prototype</div></pre></td></tr></table></figure>
+<p>当通过该函数创建出来的每一个对象，都共享此原型，也就是说上述所创建出来的所有对象都可以直接访问到原型上的任何成员（属性和方法）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">foo.prototype.sayHello = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line">foo.prototype[&quot;name&quot;] = &quot;Tom&quot;;</div><div class="line"></div><div class="line">var f = new foo();</div><div class="line">f.sayHello();               //打印结果为hello,world</div><div class="line">console.log(f.name);        //打印结果为Tom</div></pre></td></tr></table></figure>
+<p>原型的本质：就是对象</p>
+<p>原型的好处：实现同类对象的数据共享。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.talk = function()&#123;</div><div class="line">        console.log(&quot;hello,world&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">//思考：三个人的talk方法是否一样？</div><div class="line">//验证：</div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为false，说明三个人的talk方法不一样是相互独立的。</div><div class="line">思考：怎样能让talk方法相同？</div><div class="line"></div><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Person.prototype.talk = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为true</div></pre></td></tr></table></figure></p>
+<p>获取原型的方式：</p>
+<ul>
+<li>通过函数：<code>&lt;fnName&gt;.prototype</code></li>
+<li>通过对象：<code>&lt;object&gt;.__proto__</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__ === foo.prototype);</div></pre></td></tr></table></figure>
+<p>获取构造函数：原型通过constructor属性获取到构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__.constructor);</div></pre></td></tr></table></figure>
+<p><img src="/images/constructor.png" alt=""></p>
+<p>对象的组成部分：</p>
+<ul>
+<li>对象本身</li>
+<li>它的原型</li>
+</ul>
+<p>每个对象都有__proto__属性。就是说，每一个对象都有原型</p>
+<p>对象类型：就是他构造函数的名字</p>
+<p>原型属性：站在函数的角度，原型可以被称为该函数的原型属性<br>原型对象：站在对象的角度，原型可以被称为该对象的原型对象</p>
+<p>__proto__是非标准属性，有兼容性问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getPrototype(obj)&#123;</div><div class="line">    //判断浏览器是否兼容__proto__</div><div class="line">    if(obj.__proto__)&#123;</div><div class="line">        return obj.__proto__;</div><div class="line">    &#125;else&#123;</div><div class="line">        //先获取该对象的构造函数，再通过此构造函数的prototype属性获取其原型对象。</div><div class="line">        return obj.constructor.prototype;</div><div class="line">    &#125;</div><div class="line">    //可以使用三元表达式</div><div class="line">    //return !!obj.__proto__?obj.__proto__:obj.constructor.prototype;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">console.log(getPrototype(a).constructor);</div></pre></td></tr></table></figure>
+<p>标准构造函数的写法：</p>
+<p>哪些属性要保留在构造函数内部，哪些属性要提取出来，放到原型上？</p>
+<ul>
+<li>和具体的某个对象息息相关的属性，这些属性都要写在构造函数内部</li>
+<li>每一个对象都具有的属性，并且属性值是确定的，不会随对象变化而变化。</li>
+<li>一般情况下所有的方法都应该放在原型上。</li>
+</ul>
+<p>不提倡在 js 原生对象上进行扩展成员。会导致原生对象过于庞大、累赘，影响性能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Dog(name,color,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.color = color;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Dog.prototype.eat = function()&#123;</div><div class="line">    console.log(&quot;eat&quot;);</div><div class="line">&#125;</div><div class="line">Dog.prototype.bark = function()&#123;</div><div class="line">    console.log(&quot;wang&quot;);</div><div class="line">&#125;</div><div class="line">var erha = new Dog(&quot;二哈&quot;，&quot;BlackWhite&quot;,&quot;female&quot;);</div><div class="line">erha.eat();</div><div class="line">erha.bark();</div></pre></td></tr></table></figure>
+<p><img src="/images/Dog.png" alt=""></p>
+<p>原型的动态特性：</p>
+<ul>
+<li>动态性：<ul>
+<li>给原型扩展成员会直接反映到已创建的对象身上</li>
+<li>替换原型对象不会反应到已创建出来的对象，但是会直接影响到之后创建出来的对象</li>
+</ul>
+</li>
+<li>唯一性：<br>由同一函数创建出来的所有对象，共享同一个原型对象</li>
+<li>不可变性：<br>对象是无法改变原型对象上的任何成员</li>
+<li>继承性：<br>所有对象都继承自它的原型对象</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/10/17/面向对象从入门到精通（一）/" data-id="ciwa32ze30006uguptbo0tmq1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1236,7 +1236,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li></ul>
     </div>
   </div>
 
@@ -1249,23 +1249,23 @@
       <ul>
         
           <li>
-            <a href="/2016/10/26/JQuery入门/">JQuery入门</a>
+            <a href="/2016/05/23/github使用入门/">github使用入门</a>
           </li>
         
           <li>
-            <a href="/2016/10/17/面向对象从入门到精通（四）/">面向对象从入门到精通（四）</a>
+            <a href="/2016/05/03/git使用入门/">git使用入门</a>
           </li>
         
           <li>
-            <a href="/2016/10/17/面向对象从入门到精通（三）/">面向对象从入门到精通（三）</a>
+            <a href="/2015/06/14/Canvas入门/">Canvas入门</a>
           </li>
         
           <li>
-            <a href="/2016/10/17/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
+            <a href="/2015/01/26/JQuery入门/">JQuery入门</a>
           </li>
         
           <li>
-            <a href="/2016/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
+            <a href="/2015/01/05/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
           </li>
         
       </ul>
@@ -1280,7 +1280,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
+      &copy; 2016 Sally W<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

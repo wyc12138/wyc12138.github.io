@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>面向对象从入门到精通（五） | Mine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数的四种调用模式1. 普通函数执行
+this -&amp;gt; window
+声明一个函数后，就直接调用
+
+12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
+2. 方法调用模式
+this -&amp;gt; 该方法的调用者
+通过一个对象来调用方法
+
+1234567var obj = &amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象从入门到精通（五）">
+<meta property="og:url" content="http://yoursite.com/2014/12/14/面向对象从入门到精通（五）/index.html">
+<meta property="og:site_name" content="Mine">
+<meta property="og:description" content="函数的四种调用模式1. 普通函数执行
+this -&amp;gt; window
+声明一个函数后，就直接调用
+
+12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
+2. 方法调用模式
+this -&amp;gt; 该方法的调用者
+通过一个对象来调用方法
+
+1234567var obj = &amp;">
+<meta property="og:updated_time" content="2016-12-04T03:35:30.438Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面向对象从入门到精通（五）">
+<meta name="twitter:description" content="函数的四种调用模式1. 普通函数执行
+this -&amp;gt; window
+声明一个函数后，就直接调用
+
+12345function foo()&amp;#123;    console.log(1);    console.log(this===window);&amp;#125;foo();
+2. 方法调用模式
+this -&amp;gt; 该方法的调用者
+通过一个对象来调用方法
+
+1234567var obj = &amp;">
+  
+    <link rel="alternate" href="/atom.xml" title="Mine" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Mine</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-面向对象从入门到精通（五）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/14/面向对象从入门到精通（五）/" class="article-date">
+  <time datetime="2014-12-14T02:44:37.000Z" itemprop="datePublished">2014-12-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象从入门到精通（五）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="函数的四种调用模式"><a href="#函数的四种调用模式" class="headerlink" title="函数的四种调用模式"></a>函数的四种调用模式</h2><h3 id="1-普通函数执行"><a href="#1-普通函数执行" class="headerlink" title="1. 普通函数执行"></a>1. 普通函数执行</h3><ul>
+<li>this -&gt; window</li>
+<li>声明一个函数后，就直接调用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(1);</div><div class="line">    console.log(this===window);</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
+<h3 id="2-方法调用模式"><a href="#2-方法调用模式" class="headerlink" title="2. 方法调用模式"></a>2. 方法调用模式</h3><ul>
+<li>this -&gt; 该方法的调用者</li>
+<li>通过一个对象来调用方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    say:function()&#123;</div><div class="line">        console.log(&quot;Hello,world&quot;);</div><div class="line">        console.log(this===obj);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">obj.say();</div></pre></td></tr></table></figure>
+<h3 id="3-构造函数模式"><a href="#3-构造函数模式" class="headerlink" title="3. 构造函数模式"></a>3. 构造函数模式</h3><ul>
+<li>this -&gt; 当前创建出来的对象</li>
+<li>配合 new 操作符来调用函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function fn(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">var f = new fn(&quot;f&quot;);</div></pre></td></tr></table></figure>
+<h3 id="4-call-apply（上下文）模式"><a href="#4-call-apply（上下文）模式" class="headerlink" title="4. call/apply（上下文）模式"></a>4. call/apply（上下文）模式</h3><ul>
+<li>this -&gt; 用户动态指定的<ul>
+<li>指定 call or apply 方法的第一个参数</li>
+</ul>
+</li>
+<li>区别：<ul>
+<li><code>&lt;fn&gt;.call(thisObj,arg1,arg2,...,argN)</code>：thisObject 为 this 的指向。之后为形参列表，就是 fn 在执行时的形参列表</li>
+<li><code>&lt;fn&gt;.apply(thisObj,[实参])</code>：thisObject 为 this 的指向。数组参数为 fn 在执行时的实参。</li>
+</ul>
+</li>
+<li>注意：在非严格模式下，如果 thisObject 赋值为 null 或者不传实参，此时 this -&gt; window 对象，就相当于普通函数执行模式。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;;</div><div class="line">fn.call(o,&quot;o&quot;,18,&quot;man&quot;);</div><div class="line">fn.apply(o,[&quot;o&quot;,18,&quot;man&quot;]);</div><div class="line">console.log(o);</div></pre></td></tr></table></figure>
+<h4 id="上下文模式的应用"><a href="#上下文模式的应用" class="headerlink" title="上下文模式的应用"></a>上下文模式的应用</h4><ul>
+<li><p>数组的合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = [1,2,3];</div><div class="line">var arr2 = [4,5,6];</div><div class="line">Array.prototype.push.apply(arr1,arr2);</div><div class="line">console.log(arr1);</div></pre></td></tr></table></figure>
+</li>
+<li><p>借调方法（函数）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>借用构造函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    parent.call(this,name,age,gender);</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line">var c = new child(&quot;c&quot;,19,&quot;man&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
+</li>
+<li><p>借用原生方法</p>
+<ul>
+<li><p>求数组中的最大值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var data = [67,89,190,23,10,100];</div><div class="line">var max = Math.max.apply(null,data);</div><div class="line">console.log(max);</div></pre></td></tr></table></figure>
+</li>
+<li><p>获取内置对象类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getType(obj)&#123;</div><div class="line">    var patt = /^\[object(\w+)\]$/;</div><div class="line">    var str = Object.prototype.toString.call(obj);</div><div class="line">    var match = patt.exec(str);</div><div class="line">    return match[1].toLowerCase();</div><div class="line">&#125;</div><div class="line">console.log(getType(/a/));</div></pre></td></tr></table></figure>
+</li>
+<li><p>将伪数组变成真数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">onload = function()&#123;</div><div class="line">    var doms = document.getElementsByTagName(&quot;div&quot;);</div><div class="line">    console.log(getType(doms));</div><div class="line">    var domArr = Array.prototype.slice.call(doms);</div><div class="line">    console.log(getType(domArr));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>实现思路：</p>
+<ul>
+<li>声明一个函数实现数组去重，取名unique</li>
+<li>判断浏览器是否支持数组的 indexOf 方法</li>
+<li>如果不支持就自己实现数组的 indexOf 方法，并且将其扩展到数组的原型对象上</li>
+<li>遍历数组，首先判断如果数组 ret 中是否含有当前遍历到的元素</li>
+<li>如果没有，就将当前元素添加到 ret 中</li>
+<li>循环结束， 将 ret 返回<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var arr = [1,2,2,&quot;1&quot;];</div><div class="line">function unique(a)&#123;</div><div class="line">    var ret = [];</div><div class="line">    if(!ret.indexOf)&#123;</div><div class="line">        Array.prototype.indexOf = function(val)&#123;</div><div class="line">            for(var i = 0, l = this.length; i&lt;l; i++)&#123;</div><div class="line">                if(this[i] === val) return i;</div><div class="line">            &#125;</div><div class="line">            return -1;</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">    for(var i = 0,l = a.length; i&lt;l; i++)&#123;</div><div class="line">        if(ret.indexOf(a[i])===-1)&#123;</div><div class="line">            ret.push(a[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">console.log(unique(arr));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/12/14/面向对象从入门到精通（五）/" data-id="ciwa32zfr000augup22ppa3ha" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/05/面向对象从入门到精通（六）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          面向对象从入门到精通（六）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/11/25/面向对象从入门到精通（四）/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">面向对象从入门到精通（四）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/23/github使用入门/">github使用入门</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/03/git使用入门/">git使用入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/Canvas入门/">Canvas入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/26/JQuery入门/">JQuery入门</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/05/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sally W<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
