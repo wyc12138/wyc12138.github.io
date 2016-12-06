@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/23/github使用入门/" data-id="ciwa32zcz0003ugupc5cf7d6n" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/23/github使用入门/" data-id="ciwd7sldn0003l0upfgzak7qq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -189,7 +189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/03/git使用入门/" data-id="ciwa32zcp0002ugupxvdgdc8j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/03/git使用入门/" data-id="ciwd7sle30004l0uprnf6q5jx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -420,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/14/Canvas入门/" data-id="ciwa32zbh0000ugupa9dlod9u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/06/14/Canvas入门/" data-id="ciwd7slcs0000l0upex1g5fde" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,9 +430,230 @@
 
 
   
-    <article id="post-JQuery入门" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-JQuery入门（二）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/01/26/JQuery入门/" class="article-date">
+    <a href="/2015/01/30/JQuery入门（二）/" class="article-date">
+  <time datetime="2015-01-30T03:27:48.000Z" itemprop="datePublished">2015-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/30/JQuery入门（二）/">JQuery入门(二)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JQuery-操作样式"><a href="#JQuery-操作样式" class="headerlink" title="JQuery 操作样式"></a>JQuery 操作样式</h2><h3 id="css-操作"><a href="#css-操作" class="headerlink" title="css 操作"></a>css 操作</h3><p>功能：设置或者修改样式，操作的是 style 属性</p>
+<ul>
+<li><p>设置单个样式</p>
+<ul>
+<li>name：需要设置的样式名称</li>
+<li>value：对应的样式值</li>
+<li>css(name,value);</li>
+<li>使用案例：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;); 将背景颜色改为为灰色。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>设置多个样式</p>
+<ul>
+<li>参数是一个对象，对象中包含了需要设置的样式名和样式值</li>
+<li>css(obj);</li>
+<li>使用案例：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;#one&quot;).css(&#123;</div><div class="line">    &quot;background&quot;:&quot;gray&quot;,</div><div class="line">    &quot;width&quot;:&quot;400px&quot;,</div><div class="line">    &quot;height&quot;:&quot;200px&quot;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>获取样式</p>
+<ul>
+<li>name：需要获取的样式名称</li>
+<li>css(name);</li>
+<li><p>案例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).css(&quot;background-color&quot;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意：获取样式操作只会返回第一个元素对应的样式值</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="class-操作"><a href="#class-操作" class="headerlink" title="class 操作"></a>class 操作</h3><ul>
+<li><p>添加样式类</p>
+<ul>
+<li>name：需要添加的样式类名，注意参数不要带点</li>
+<li>addClass(name);</li>
+<li>案例：给所有 div 添加 one 的样式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).addClass(&quot;one&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>移除所有样式类</p>
+<ul>
+<li>不带参数，移除所有的样式类</li>
+<li>removeClass()</li>
+<li>案例：移除所有的样式类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).removeClass();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>移除单个样式类</p>
+<ul>
+<li>name：需要移除的样式类名</li>
+<li>removeClass(“name”)</li>
+<li>案例：移除 div 中 one 的样式类名<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).removeClass(&quot;one&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>判断是否有样式类</p>
+<ul>
+<li>name：用于判断的样式类名，返回值为 true false</li>
+<li>hasClass(name)</li>
+<li>案例：判断第一个 div 是否有 one 的样式类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).hasClass(&quot;one&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>切换样式类</p>
+<ul>
+<li>name：需要切换的样式类名，如果有，移除该样式，如果没有，添加该样式</li>
+<li>toggleClass(name)</li>
+<li><p>案例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).toggleClass(&quot;one&quot;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>经验总结：</p>
+<ol>
+<li>如果操作到的样式非常少，可以考虑 css 方法。</li>
+<li>如果操作到的样式非常多，那么可以通过 class 方法来操作，将样式写到一个 class 类里面</li>
+<li>如果考虑到后期维护方便，将 css 从 js 中分离出来，那么推荐使用 class 的方式来操作。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JQuery-动画"><a href="#JQuery-动画" class="headerlink" title="JQuery 动画"></a>JQuery 动画</h2><ul>
+<li>显示与隐藏（show hide）<ul>
+<li>show 方法详解：<ul>
+<li>show（[speed],[callback]）;</li>
+<li>speed(可选)：动画执行时间</li>
+<li>如果不传，就没有动画效果</li>
+<li>毫秒值（1000），动画在1000毫秒执行完成（推荐）</li>
+<li>固定字符串，slow（200）、normal（400）、fast（600），如果传其他字符串默认为normal</li>
+<li>callback（可选）：执行完动画后执行的回调函数</li>
+</ul>
+</li>
+<li>hide 方法详解：与show用法完全一致。</li>
+<li>show、hide：修改的元素是width、height、opacity</li>
+</ul>
+</li>
+<li><p>滑入与滑出<br>效果与卷帘门类似</p>
+<ul>
+<li><p>滑入与滑出（slideUp slideDown）</p>
+<ul>
+<li>slideUp 方法详解：<ul>
+<li>slideUp（speed,callback）;</li>
+<li>speed(可选)：动画执行时间</li>
+<li>如果不传，默认为normal，注意区分show/hide</li>
+<li>毫秒值（1000），动画在1000毫秒执行完成（推荐）</li>
+<li>固定字符串，slow（200）、normal（400）、fast（600）</li>
+<li>callback（可选）：执行完动画后执行的回调函数</li>
+</ul>
+</li>
+<li><p>滑入滑出切换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).slideToggle(speed,callback);</div></pre></td></tr></table></figure>
+<p>如果是隐藏状态，那么执行slideDown操作，如果是显示状态，那么执行slideUp操作。<br>slideUp/slideDown 修改的是元素的 height</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>淡入淡出<br>fadeIn/fadeOut 使用方法与show/hide、slideUp/slideDown 一致</p>
+<ul>
+<li><p>淡入淡出（fadeIn fadeOut）</p>
+<ul>
+<li>fadeIn 方法详解：<ul>
+<li>fadeIn（speed,callback）;</li>
+<li>speed(可选)：动画执行时间</li>
+<li>如果不传，默认为normal</li>
+<li>毫秒值（1000），动画在1000毫秒执行完成（推荐）</li>
+<li>固定字符串，slow（200）、normal（400）、fast（600）</li>
+<li>callback（可选）：执行完动画后执行的回调函数</li>
+</ul>
+</li>
+<li><p>淡入淡出切换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fadeToggle(speed,callback);</div></pre></td></tr></table></figure>
+<p>如果是隐藏状态，那么执行 fadeIn 操作，如果是显示状态，那么执行 fadeOut 操作。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>淡入淡出到某个值<br>与淡入淡出的区别：淡入淡出只能控制元素的不透明度从完全不透明到完全透明；而 fadeTo 可以指定元素不透明度的具体值，并且时间参数是必须的。<ul>
+<li>fadeTo（speed,value,callback）可以设置具体的透明度</li>
+<li>speed（必须）</li>
+<li>value 0-1 之间的数值（如0.4），表示淡到某一个值</li>
+<li>callback（可选）回调函数</li>
+<li>fade系列的方法修改的是元素的 opacity</li>
+</ul>
+</li>
+<li>自定义动画<ul>
+<li>animate：自定义动画<br>$(selector).animate({params},[speed],[callback]);<ul>
+<li>{params}：要执行动画的 css 属性，带数字（必选）</li>
+<li>speed：执行动画的时长（可选）</li>
+<li>callback：动画执行完后立即执行的回调函数（可选）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>easing 参数<br>控制动画在不同元素的速度，默认为 swing<br>swing：在开头和结尾移动慢，在中间移动速度快<br>linear：匀速移动</li>
+<li>动画队列<br>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行</li>
+<li>停止动画<br>stop方法：停止动画效果<br>stop(clearQueue,jumpToEnd);<br>第一个参数：是否清除队列<br>第二个参数：是否跳转到最终效果<br>最常用的停止动画：stop();</li>
+</ul>
+<h2 id="JQuery-操作DOM（节点）"><a href="#JQuery-操作DOM（节点）" class="headerlink" title="JQuery 操作DOM（节点）"></a>JQuery 操作DOM（节点）</h2><h3 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h3><p>$(htmlStr)<br>htmlStr:html格式的字符串<br><code>$(&quot;&lt;span&gt;这是一个 span 元素&lt;/span&gt;&quot;)</code></p>
+<h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><ul>
+<li><p>添加新建的元素：</p>
+<ul>
+<li><p>方法一：将 JQuery 对象添加到调用者内部的最后面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var $span = $(&quot;&lt;span&gt;这是一个 span 元素&lt;/span&gt;&quot;);</div><div class="line">$(&quot;div&quot;).append($span);</div></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：参数传字符串，会自动创建成 JQuery 对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;).append(&quot;&lt;span&gt;这是一个 span 元素&lt;/span&gt;&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>添加已经存在的元素</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var $p = $(&quot;p&quot;);</div><div class="line">$(&quot;div&quot;).append($p);</div></pre></td></tr></table></figure>
+<p>  注意：如果添加的是已经存在的元素，那么会把之前的元素给干掉（类似于剪切的功能）。<br>  类似用法：append prepend after before</p>
+</li>
+<li>使用 html 方法创建元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//设置内容</div><div class="line">$(&quot;div&quot;).html(&quot;&lt;span&gt;这是一段内容&lt;/span&gt;&quot;);</div><div class="line">//获取内容</div><div class="line">$(&quot;div&quot;).html();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="清空元素"><a href="#清空元素" class="headerlink" title="清空元素"></a>清空元素</h3><p>empty：清空指定节点的所有元素，自身保留（清理门户）</p>
+<ul>
+<li>方法一：$(“div”).empty(); 清空 div 的所有内容（推荐使用，会清除子元素上绑定的内容，源码）</li>
+<li>方法二：$(“div”).html();  使用 html 方法来清空元素，不推荐使用，会造成内存泄漏，绑定的事件不会被清除</li>
+</ul>
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><p>remove：相比于empty，自身也删除<br>$(“div”).remove();</p>
+<h3 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a>克隆元素</h3><p>作用：复制匹配的元素<br>复制$(selector)所匹配的元素（深度复制）<br>cloneNode(true)<br>返回值为复制的新元素，和原来的元素没有任何关系。即修改新元素，不会影响到原来的元素<br>$(selector).clone();</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/30/JQuery入门（二）/" data-id="ciwd7sld70001l0up432v4gxw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JQuery入门（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/26/JQuery入门（一）/" class="article-date">
   <time datetime="2015-01-26T09:31:15.000Z" itemprop="datePublished">2015-01-26</time>
 </a>
     
@@ -444,7 +665,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/26/JQuery入门/">JQuery入门</a>
+      <a class="article-title" href="/2015/01/26/JQuery入门（一）/">JQuery入门(一)</a>
     </h1>
   
 
@@ -542,8 +763,93 @@
 </tr>
 <tr>
 <td>交集选择器（标签指定式选择器）</td>
-<td style="text-align:center">$(“div,redClass”);</td>
-<td style="text-align:right">获取指定 ID 的元素</td>
+<td style="text-align:center">$(“div.redClass”);</td>
+<td style="text-align:right">class为redClass的div元素</td>
+</tr>
+</tbody>
+</table>
+<p>总结：与css选择器用法相同。</p>
+<h3 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th style="text-align:center">用法</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>子代选择器</td>
+<td style="text-align:center">$(“ul&gt;li”);</td>
+<td style="text-align:right">获取儿子层级的元素，并且不会获取孙子层级的元素</td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td style="text-align:center">$(“ul li”);</td>
+<td style="text-align:right">空格代表后代选择器，选择ul下的所有li元素，包括孙子等</td>
+</tr>
+</tbody>
+</table>
+<h3 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th style="text-align:center">用法</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:eq(index)</td>
+<td style="text-align:center">$(“li:eq(2)”);</td>
+<td style="text-align:right">获取li元素，选取索引号为2的元素</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td style="text-align:center">$(“li:odd”);</td>
+<td style="text-align:right">获取li元素，选取索引号为奇数的元素</td>
+</tr>
+<tr>
+<td>:even</td>
+<td style="text-align:center">$(“li:even”);</td>
+<td style="text-align:right">获取li元素，选取索引号为偶数的元素</td>
+</tr>
+</tbody>
+</table>
+<p>这类选择器都带:</p>
+<h3 id="筛选选择器"><a href="#筛选选择器" class="headerlink" title="筛选选择器"></a>筛选选择器</h3><table>
+<thead>
+<tr>
+<th>名称</th>
+<th style="text-align:center">用法</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>children(selector)</td>
+<td style="text-align:center">$(“ul”).children(“li”);</td>
+<td style="text-align:right">相当于$(“ul&gt;li”),子类选择器</td>
+</tr>
+<tr>
+<td>find(selector)</td>
+<td style="text-align:center">$(“ul”).find(“li”);</td>
+<td style="text-align:right">相当于$(“ul li”),后代选择器</td>
+</tr>
+<tr>
+<td>siblings(selector)</td>
+<td style="text-align:center">$(“#first”).siblings(“li”);</td>
+<td style="text-align:right">查找兄弟节点不包括自己本身</td>
+</tr>
+<tr>
+<td>parent()</td>
+<td style="text-align:center">$(“#first”).parent();</td>
+<td style="text-align:right">查找父亲</td>
+</tr>
+<tr>
+<td>eq(index)</td>
+<td style="text-align:center">$(“li”).eq(2);</td>
+<td style="text-align:right">相当于$(“li:eq(2)”)</td>
 </tr>
 </tbody>
 </table>
@@ -551,7 +857,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/26/JQuery入门/" data-id="ciwa32zc90001ugup9alc1qda" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/26/JQuery入门（一）/" data-id="ciwd7sldn0002l0up7ux1o1ep" class="article-share-link">Share</a>
       
       
     </footer>
@@ -662,7 +968,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/05/面向对象从入门到精通（六）/" data-id="ciwa32zfb0009ugupodn4dw3s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/05/面向对象从入门到精通（六）/" data-id="ciwd7slfk000bl0upyqd8sj6r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -762,7 +1068,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/12/14/面向对象从入门到精通（五）/" data-id="ciwa32zfr000augup22ppa3ha" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/12/14/面向对象从入门到精通（五）/" data-id="ciwd7slfk0009l0upvmcutvyt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -851,7 +1157,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/25/面向对象从入门到精通（四）/" data-id="ciwa32zfx000bugupc8l6ovki" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/11/25/面向对象从入门到精通（四）/" data-id="ciwd7slfk000al0upfks2azaf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -951,7 +1257,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/11/06/面向对象从入门到精通（三）/" data-id="ciwa32ze90007ugup0bstlcvh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/11/06/面向对象从入门到精通（三）/" data-id="ciwd7slei0007l0upuewrlwr2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1098,114 +1404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/27/面向对象从入门到精通（二）/" data-id="ciwa32zev0008ugupa8n7ecws" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-面向对象从入门到精通（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/17/面向对象从入门到精通（一）/" class="article-date">
-  <time datetime="2014-10-17T09:56:27.000Z" itemprop="datePublished">2014-10-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/17/面向对象从入门到精通（一）/">面向对象从入门到精通（一）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的概念"><a href="#面向对象的概念" class="headerlink" title="面向对象的概念"></a>面向对象的概念</h2><p>一种编程思想。</p>
-<p>核心：在解决任何问题的时候，首先试图去找到一个对象来帮助解决问题。</p>
-<p>好处：</p>
-<ul>
-<li>是调度者</li>
-<li>代码灵活度高</li>
-<li>可维护性高</li>
-<li>可扩展性高</li>
-</ul>
-<p>坏处：</p>
-<ul>
-<li>可能造成代码的复杂度提高</li>
-<li>可读性相对不好</li>
-</ul>
-<p>面向过程：</p>
-<ul>
-<li>是执行者</li>
-<li>一般情况下顺序不可打乱，从上至下一步一步执行</li>
-</ul>
-<h2 id="Javascript-语言的特点"><a href="#Javascript-语言的特点" class="headerlink" title="Javascript 语言的特点"></a>Javascript 语言的特点</h2><ul>
-<li>弱类型</li>
-<li>多范式</li>
-<li>基于对象的语言：在 js 中，一切都是对象</li>
-<li>基于原型的</li>
-</ul>
-<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p>概念：所谓原型就是一个函数的prototype属性所引用的对象，只要声明一个函数，原型就存在。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">console.log(foo.prototype);</div><div class="line">//原型就是 foo.prototype</div></pre></td></tr></table></figure>
-<p>当通过该函数创建出来的每一个对象，都共享此原型，也就是说上述所创建出来的所有对象都可以直接访问到原型上的任何成员（属性和方法）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">foo.prototype.sayHello = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line">foo.prototype[&quot;name&quot;] = &quot;Tom&quot;;</div><div class="line"></div><div class="line">var f = new foo();</div><div class="line">f.sayHello();               //打印结果为hello,world</div><div class="line">console.log(f.name);        //打印结果为Tom</div></pre></td></tr></table></figure>
-<p>原型的本质：就是对象</p>
-<p>原型的好处：实现同类对象的数据共享。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">    this.talk = function()&#123;</div><div class="line">        console.log(&quot;hello,world&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">//思考：三个人的talk方法是否一样？</div><div class="line">//验证：</div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为false，说明三个人的talk方法不一样是相互独立的。</div><div class="line">思考：怎样能让talk方法相同？</div><div class="line"></div><div class="line">function Person(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Person.prototype.talk = function()&#123;</div><div class="line">    console.log(&quot;hello,world&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var Tom = new Person(&quot;Tom&quot;,20,&quot;man&quot;);</div><div class="line">var Sally = new Person(&quot;Sally&quot;,18,&quot;woman&quot;);</div><div class="line">var Jack = new Person(&quot;Jack&quot;,22,&quot;man&quot;);</div><div class="line"></div><div class="line">Tom.talk();</div><div class="line">Sally.talk();</div><div class="line">Jack.talk();</div><div class="line"></div><div class="line">console.log(Tom.talk === Sally.talk);</div><div class="line">console.log(Jack.talk === Sally.talk);</div><div class="line"></div><div class="line">//打印结果为true</div></pre></td></tr></table></figure></p>
-<p>获取原型的方式：</p>
-<ul>
-<li>通过函数：<code>&lt;fnName&gt;.prototype</code></li>
-<li>通过对象：<code>&lt;object&gt;.__proto__</code></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__ === foo.prototype);</div></pre></td></tr></table></figure>
-<p>获取构造函数：原型通过constructor属性获取到构造函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;&#125;</div><div class="line">var f = new foo();</div><div class="line">console.log(f.__proto__.constructor);</div></pre></td></tr></table></figure>
-<p><img src="/images/constructor.png" alt=""></p>
-<p>对象的组成部分：</p>
-<ul>
-<li>对象本身</li>
-<li>它的原型</li>
-</ul>
-<p>每个对象都有__proto__属性。就是说，每一个对象都有原型</p>
-<p>对象类型：就是他构造函数的名字</p>
-<p>原型属性：站在函数的角度，原型可以被称为该函数的原型属性<br>原型对象：站在对象的角度，原型可以被称为该对象的原型对象</p>
-<p>__proto__是非标准属性，有兼容性问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">function getPrototype(obj)&#123;</div><div class="line">    //判断浏览器是否兼容__proto__</div><div class="line">    if(obj.__proto__)&#123;</div><div class="line">        return obj.__proto__;</div><div class="line">    &#125;else&#123;</div><div class="line">        //先获取该对象的构造函数，再通过此构造函数的prototype属性获取其原型对象。</div><div class="line">        return obj.constructor.prototype;</div><div class="line">    &#125;</div><div class="line">    //可以使用三元表达式</div><div class="line">    //return !!obj.__proto__?obj.__proto__:obj.constructor.prototype;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">console.log(getPrototype(a).constructor);</div></pre></td></tr></table></figure>
-<p>标准构造函数的写法：</p>
-<p>哪些属性要保留在构造函数内部，哪些属性要提取出来，放到原型上？</p>
-<ul>
-<li>和具体的某个对象息息相关的属性，这些属性都要写在构造函数内部</li>
-<li>每一个对象都具有的属性，并且属性值是确定的，不会随对象变化而变化。</li>
-<li>一般情况下所有的方法都应该放在原型上。</li>
-</ul>
-<p>不提倡在 js 原生对象上进行扩展成员。会导致原生对象过于庞大、累赘，影响性能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function Dog(name,color,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.color = color;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">Dog.prototype.eat = function()&#123;</div><div class="line">    console.log(&quot;eat&quot;);</div><div class="line">&#125;</div><div class="line">Dog.prototype.bark = function()&#123;</div><div class="line">    console.log(&quot;wang&quot;);</div><div class="line">&#125;</div><div class="line">var erha = new Dog(&quot;二哈&quot;，&quot;BlackWhite&quot;,&quot;female&quot;);</div><div class="line">erha.eat();</div><div class="line">erha.bark();</div></pre></td></tr></table></figure>
-<p><img src="/images/Dog.png" alt=""></p>
-<p>原型的动态特性：</p>
-<ul>
-<li>动态性：<ul>
-<li>给原型扩展成员会直接反映到已创建的对象身上</li>
-<li>替换原型对象不会反应到已创建出来的对象，但是会直接影响到之后创建出来的对象</li>
-</ul>
-</li>
-<li>唯一性：<br>由同一函数创建出来的所有对象，共享同一个原型对象</li>
-<li>不可变性：<br>对象是无法改变原型对象上的任何成员</li>
-<li>继承性：<br>所有对象都继承自它的原型对象</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/17/面向对象从入门到精通（一）/" data-id="ciwa32ze30006uguptbo0tmq1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2014/10/27/面向对象从入门到精通（二）/" data-id="ciwd7slfg0008l0up7nqi7vvp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1261,11 +1460,11 @@
           </li>
         
           <li>
-            <a href="/2015/01/26/JQuery入门/">JQuery入门</a>
+            <a href="/2015/01/30/JQuery入门（二）/">JQuery入门(二)</a>
           </li>
         
           <li>
-            <a href="/2015/01/05/面向对象从入门到精通（六）/">面向对象从入门到精通（六）</a>
+            <a href="/2015/01/26/JQuery入门（一）/">JQuery入门(一)</a>
           </li>
         
       </ul>
