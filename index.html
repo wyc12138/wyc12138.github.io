@@ -430,6 +430,227 @@
 
 
   
+    <article id="post-JQuery入门（三）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/12/JQuery入门（三）/" class="article-date">
+  <time datetime="2015-02-12T08:57:45.000Z" itemprop="datePublished">2015-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/12/JQuery入门（三）/">JQuery入门(三)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JQuery-操作-DOM"><a href="#JQuery-操作-DOM" class="headerlink" title="JQuery 操作 DOM"></a>JQuery 操作 DOM</h2><h3 id="JQuery-操作属性"><a href="#JQuery-操作属性" class="headerlink" title="JQuery 操作属性"></a>JQuery 操作属性</h3><ul>
+<li>设置单个属性<ul>
+<li>attr(name,value);</li>
+<li>第一个参数：需要设置的属性名</li>
+<li>第二个参数：对应的属性值</li>
+<li>案例：<code>$(&quot;img&quot;).attr(&quot;title&quot;,&quot;hello&quot;);   $(&quot;img&quot;).attr(&quot;alt&quot;,&quot;hello&quot;);</code></li>
+</ul>
+</li>
+<li><p>设置多个属性</p>
+<ul>
+<li>attr(obj)</li>
+<li>参数是一个对象，包含了需要设置的属性名和属性值</li>
+<li>案例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(&quot;img&quot;).attr(&#123;</div><div class="line">    tltle:&quot;hello&quot;,</div><div class="line">    alt:&quot;hello&quot;,</div><div class="line">    style:&quot;opacity:.5&quot;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>获取属性</p>
+<ul>
+<li>attr(name)</li>
+<li>传需要获取的属性名称，返回对应的属性值</li>
+<li><p>案例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var oTitle = $(&quot;img&quot;).attr(&quot;title&quot;);</div><div class="line">alert(oTitle);</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意：获取属性值时，只会获取到第一个元素对应的属性，与 css 方法一样；如果该属性不存在。那么会返回 undefined</p>
+</li>
+</ul>
+</li>
+<li>移除属性<ul>
+<li>removeAttr(name)</li>
+<li>参数：需要移除的属性名，如果传空，那么不会有任何操作，注意，并不是移除所有的属性，区分removeClass</li>
+<li>用法举例：<code>$(&quot;img&quot;).removeAttr(&quot;title&quot;)</code></li>
+</ul>
+</li>
+<li>prop<ul>
+<li>设置属性：<code>$(&quot;:checked&quot;).prop(&quot;checked&quot;,true);</code></li>
+<li>获取属性：<code>$(&quot;:checked&quot;).prop(&quot;checked&quot;);</code> 返回 true 或者 false</li>
+<li>注意：在JQuery1.6之后，对于 checked、selected、disable 这类 boolean 类型的属性来说，如果使用 attr 方法获取属性值，得到的不是 true 和 false，而是 checked 以及 undefined。使用 prop 方法来获取或者设置 checked、selected、disable 这类的值。prop 方法使用跟 attr 方法一样。</li>
+</ul>
+</li>
+</ul>
+<h3 id="JQuery-操作值与内容"><a href="#JQuery-操作值与内容" class="headerlink" title="JQuery 操作值与内容"></a>JQuery 操作值与内容</h3><ul>
+<li>val 方法<ul>
+<li>val 方法用于设置和获取表单元素的值，如：input、select、textarea的值</li>
+<li>设置值：<code>$(&quot;#name&quot;).val(&quot;张三&quot;);</code></li>
+<li>获取值：<code>$(&quot;#name&quot;).val();</code></li>
+</ul>
+</li>
+<li>html 方法<ul>
+<li>设置内容：<code>$(&quot;div&quot;).html(&quot;&lt;span&gt;这是一段内容&lt;/span&gt;&quot;)</code></li>
+<li>获取内容：<code>$(&quot;div&quot;).html()</code></li>
+</ul>
+</li>
+<li>text 方法<ul>
+<li>设置内容：<code>$(&quot;div&quot;).text(&quot;&lt;span&gt;这是一段内容&lt;/span&gt;&quot;)</code></li>
+<li>获取内容：<code>$(&quot;div&quot;).text()</code></li>
+</ul>
+</li>
+</ul>
+<p>html方法与text方法的区别：html方法会识别html标签，text方法会把内容直接当成字符串，并不会识别html标签</p>
+<h3 id="JQuery-操作尺寸"><a href="#JQuery-操作尺寸" class="headerlink" title="JQuery 操作尺寸"></a>JQuery 操作尺寸</h3><ul>
+<li>height 设置或获取高度<ul>
+<li>带参数表示设置高度 <code>$(&quot;img&quot;).height(200);</code></li>
+<li>不带参数获取高度 <code>$(&quot;img&quot;).height();</code></li>
+</ul>
+</li>
+<li>width 设置或获取宽度，与高度操作功能一样<ul>
+<li>带参数表示设置宽度 <code>$(&quot;img&quot;).width(200);</code></li>
+<li>不带参数获取宽度 <code>$(&quot;img&quot;).width();</code></li>
+<li>返回值是 number类型（如200），使用$(“img”).css(“width”)返回的是字符串（如200px）</li>
+</ul>
+</li>
+</ul>
+<h3 id="JQuery-操作坐标值"><a href="#JQuery-操作坐标值" class="headerlink" title="JQuery 操作坐标值"></a>JQuery 操作坐标值</h3><ul>
+<li>offset<ul>
+<li>设置或获取元素相对于文档 document 的位置</li>
+<li>设置位置：<code>$(selector).offset({left:100,top:150});</code></li>
+<li>获取位置：<code>$(selector).offset();</code></li>
+<li>注意：使用 offset 操作，如果元素没有设置定位（默认 position:static），则会把 position 修改为 relative 会修改 left、top</li>
+</ul>
+</li>
+<li>position<ul>
+<li>获取相对于其最近的有定位的父元素的位置</li>
+<li>获取，返回值为对象：{left:num,top:num} $(selector).position();</li>
+<li>注意：position 方法只能获取，不能设置</li>
+</ul>
+</li>
+<li>scrollTop<ul>
+<li>设置或者获取垂直滚动条的位置</li>
+<li>有参数表示设置偏移，参数为数值类型 <code>$(selector).scrollTop(100)</code></li>
+<li>无参数表示获取偏移 <code>$(selector).scrollTop()</code></li>
+</ul>
+</li>
+<li>scrollLeft<ul>
+<li>设置或获取水平滚动条的位置</li>
+<li>有参数表示设置偏移，参数为数值类型 <code>$(selector).scrollLeft(100)</code></li>
+<li>无参数表示获取偏移 <code>$(selector).scrollLeft()</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="JQuery-事件机制"><a href="#JQuery-事件机制" class="headerlink" title="JQuery 事件机制"></a>JQuery 事件机制</h2><p>JQuery 对 JavaScript 事件进行了封装，增加并扩展了事件处理机制。JQuery 不仅提供了更加优雅的事件处理语法，而且极大的增强了事件的处理能力。</p>
+<h3 id="JQuery-事件的发展历程"><a href="#JQuery-事件的发展历程" class="headerlink" title="JQuery 事件的发展历程"></a>JQuery 事件的发展历程</h3><p>简单事件绑定 &gt;&gt; bind 事件绑定 &gt;&gt; delegate 事件绑定 &gt;&gt; on 事件绑定（推荐）</p>
+<ul>
+<li>简单事件绑定<ul>
+<li>click（handler）单击事件</li>
+<li>mouseenter（handler）鼠标进入事件</li>
+<li>mouseleave（handler）鼠标离开事件</li>
+<li>scroll（handler）滚动事件</li>
+<li>缺点：一次只能绑定一个事件</li>
+</ul>
+</li>
+<li>bind 事件绑定<ul>
+<li>不推荐使用，JQuery1.7版本后被 on 取代</li>
+<li>绑定多个事件<ul>
+<li>第一个参数：事件类型</li>
+<li>第二个参数：事件处理程序</li>
+<li>$(“p”).bind(“clik mouseenter”,function(){<br>  事件响应方法<br>})</li>
+</ul>
+</li>
+<li>缺点：不支持动态创建出来的元素绑定事件</li>
+</ul>
+</li>
+<li>delegate 事件绑定<ul>
+<li>支持动态事件绑定<ul>
+<li>第一个参数：selector，要绑定事件的元素</li>
+<li>第二个参数：事件类型</li>
+<li>第三个参数：事件处理函数<br>$(“.parentBox”).delegate(“p”,”click”,function(){<br>  为.parentBox 下面的所有的 p 标签绑定事件<br>});</li>
+</ul>
+</li>
+<li>支持原因：事件冒泡机制，事件是绑定到父元素上的，由子元素触发。</li>
+</ul>
+</li>
+<li>on 事件绑定<br>  JQuery1.7之后，JQuery用 on 统一了所有时间的处理方法</li>
+</ul>
+<h3 id="on-事件绑定"><a href="#on-事件绑定" class="headerlink" title="on 事件绑定"></a>on 事件绑定</h3><p>优势：最现代的方式，兼容zepto（移动端类似于JQuery的一个库），强烈建议使用。<br>第一个参数：events，绑定事件的名称可以是由空格分隔的多个事件（标准事件或自定义事件）<br>第二个参数：selector，执行事件的后代元素（可选），如果没有后代元素，那么事件将由自己执行。<br>第三个参数：date，传递给处理函数的数据，事件触发的时候通过event.data来使用（不常使用）<br>第四个参数：handler，事件处理函数    $(selector).on(events[selector],[data],handler);<br>例子：</p>
+<ul>
+<li>表示给$(selector)绑定代理事件，当必须是它的内部元素 span 才能触发这个事件，支持动态绑定<ul>
+<li>$(selector).on(“click”,”span”,function(){});</li>
+</ul>
+</li>
+<li>表示给$(selector)绑定事件，并且由自己触发，不支持动态绑定（不使用代理）<ul>
+<li>$(selector).on(“click”,function(){});</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件解绑"><a href="#事件解绑" class="headerlink" title="事件解绑"></a>事件解绑</h3><ul>
+<li>unbind() 方式（不用）<ul>
+<li>作用：解绑事件<ul>
+<li>解绑所有事件 <code>$(selector).unbind();</code></li>
+<li>解绑指定事件 <code>$(selector).unbind(&quot;click&quot;);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>undelegate() 方式（不用）<ul>
+<li>作用：解绑事件<ul>
+<li>解绑所有的 delegate 事件 <code>$(selector).undelegate();</code></li>
+<li>解绑所有的 click 事件 <code>$(selector).undelegate(&quot;click&quot;);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>off方式<ul>
+<li>作用：解绑事件<ul>
+<li>解绑匹配元素的所有事件 <code>$(selector).off();</code></li>
+<li>解绑匹配元素的所有 click 事件 <code>$(selector).off(&quot;click&quot;);</code></li>
+<li>解绑匹配所有代理的 click 事件，元素本身的事件不会被解绑 <code>$(selector).off(&quot;click&quot;,&quot;**&quot;);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件触发"><a href="#事件触发" class="headerlink" title="事件触发"></a>事件触发</h3><ul>
+<li>简单事件触发<ul>
+<li><code>$(selector).click();</code> 触发 click 事件</li>
+</ul>
+</li>
+<li>trigger 方法触发事件<ul>
+<li><code>$(selector).trigger(&quot;click&quot;);</code></li>
+</ul>
+</li>
+<li>triggerHandler 触发 事件响应方法，不触发浏览器行为<ul>
+<li><code>$(selector).triggerHandler(&quot;focus&quot;);</code></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/12/JQuery入门（三）/" data-id="ciwdhsgfe0000gkup15fxyiy1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JQuery入门（二）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/30/JQuery入门（二）/" class="article-date">
@@ -1267,153 +1488,6 @@
 
 
   
-    <article id="post-面向对象从入门到精通（二）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/10/27/面向对象从入门到精通（二）/" class="article-date">
-  <time datetime="2014-10-27T12:13:05.000Z" itemprop="datePublished">2014-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/10/27/面向对象从入门到精通（二）/">面向对象从入门到精通（二）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h2><h3 id="1-封装："><a href="#1-封装：" class="headerlink" title="1. 封装："></a>1. 封装：</h3><p>概念：将复杂的实现过程包装隐藏起来，然后提供给用户使用的接口即可。<br>好处：实现代码复用，还具有私密性。<br>实际使用：只要出现重复代码逻辑，那么就要考虑封装成一个函数。如果该函数和一些变量的关联性比较大，那么就可以将这些变量和该函数封装成一个对象。<br>注意：保持函数或对象功能的单一性，便于日后维护。</p>
-<h3 id="2-继承："><a href="#2-继承：" class="headerlink" title="2. 继承："></a>2. 继承：</h3><p>在 js 中，继承是对象与对象之间；<br>在 js 中，构造函数可以被当作是类</p>
-<p>其他面向对象语言： C# JAVA Object-C swift C++ 建立在类与类之间的继承</p>
-<p>实质：构造函数和类都是实例化对象的模板</p>
-<p>概念：就是指一个对象有权去访问另一个对象的成员。通俗的说就是自己没有，别人有，通过某种方式去使用别人的方法（属性）的拿来主义</p>
-<p>在 js 中，只要让一个对象去访问领一个对象的成员，就必须建立继承关系。</p>
-<p>任何对象都继承他自己的原型对象。</p>
-<h4 id="继承的实现"><a href="#继承的实现" class="headerlink" title="继承的实现"></a>继承的实现</h4><p>两种常用模型</p>
-<ul>
-<li><p>基于原型</p>
-<ul>
-<li><p>扩展原型：在原有的原型上进行相应的扩展，实现继承。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">A.prototype.printA = function()&#123;</div><div class="line">    console.log(&quot;a&quot;);&apos;</div><div class="line">&#125;</div><div class="line">a.printA();</div></pre></td></tr></table></figure>
-<p><img src="/images/kuozhan.png" alt=""></p>
-</li>
-<li><p>置换原型：将要被继承的对象直接替换掉原有的原型实现继承。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;parent&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.printC = function()&#123;</div><div class="line">    console.log(&quot;c&quot;);</div><div class="line">    console.log(this.name);</div><div class="line">&#125;;</div><div class="line">function child()&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">child.prototype = new parent();</div><div class="line">var c = new child();</div><div class="line">c.printC();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/zhihuan.png" alt=""></p>
-<ul>
-<li>拷贝继承：将别的对象上的所有成员拷贝一份，添加到当前对象本身。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var parent = &#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;,</div><div class="line">    name:&quot;parent&quot;</div><div class="line">&#125;;</div><div class="line">var child = &#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;;</div><div class="line">//遍历parent</div><div class="line">for(var k in parent)&#123;</div><div class="line">    //将parent对象上的成员添加到child上</div><div class="line">    child[k] = parent[k];</div><div class="line">&#125;</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-<p><img src="/images/copy.png" alt=""></p>
-<p><strong> 在实际开发中上述两种继承方式可以组合起来使用 </strong></p>
-<ul>
-<li><p>extend方法 为了方便实现拷贝继承</p>
-<p>  一次只能继承一个对象</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function(parent)&#123;</div><div class="line">    for(var k in parent)&#123;</div><div class="line">        this[k] = parent[k];</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-<p>  一次继承多个对象</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">var child = &#123;&#125;;</div><div class="line">child.extend = function()&#123;</div><div class="line">    var args = arguments,</div><div class="line">        obj;</div><div class="line">    //遍历arguments上的所有对象，依次将遍历的每个对象的成员添加到child</div><div class="line">    for(var i = 0,l = args.length;i&lt;l;i++)&#123;</div><div class="line">        obj = args[i];</div><div class="line">        //判断传入的是否为对象，不是对象就执行下面的代码</div><div class="line">        if(typeof obj === &quot;object&quot;)&#123;</div><div class="line">            for(var k in obj)&#123;</div><div class="line">                this[k] = obj[k];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">child.extend(&#123;</div><div class="line">    name:&quot;child&quot;</div><div class="line">&#125;,&#123;</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(&quot;I am &quot;+this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">child.print();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/extend.png" alt=""></p>
-<ul>
-<li>ES5 Object.create ：通过置换原型的方式来实现继承</li>
-</ul>
-<p>Object.create(parent); 返回一个新的对象，并继承自parent对象。</p>
-<p>用法：<code>var newObject = Object.create(parent)</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newObject = Object.create(obj);</div><div class="line">newObject.print();</div></pre></td></tr></table></figure>
-<p>解决兼容性问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">if(!Object.create)&#123;</div><div class="line">    Object.creat = function(parent)&#123;</div><div class="line">        function F()&#123;&#125;</div><div class="line">        F.prototype = parent;</div><div class="line">        return new F;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">var newobj = Object.create(&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    print:function()&#123;</div><div class="line">        console.log(this.name);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">newobj.print();</div></pre></td></tr></table></figure>
-<p><img src="/images/ES5.png" alt=""></p>
-<ul>
-<li>对象冒充：<br>概念：在一个构造函数中，可以动态的添加一个parent方法指向已有的构造函数，然后调用parent方法去实例化当前对象的一部分成员（或全部成员），这种方式被称为对象冒充。<br>注意：利用完parent属性之后记得删除该属性。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function parent(name,age,gender)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    this.gender = gender;</div><div class="line">&#125;</div><div class="line">function child(name,age,gender,address)&#123;</div><div class="line">    this.parent = parent;</div><div class="line">    this.parent(name,age,gender);</div><div class="line">    delete this.parent;</div><div class="line">    this.address = address;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var c = new child(&quot;小美&quot;,20,&quot;girl&quot;,&quot;China&quot;);</div><div class="line">console.log(c);</div></pre></td></tr></table></figure>
-<p><img src="/images/parent.png" alt=""></p>
-<h3 id="3-多态："><a href="#3-多态：" class="headerlink" title="3. 多态："></a>3. 多态：</h3><p>体现在继承中的概念。对象A继承自对象B，B对象的某个方法在A中并不适用，然后A对象重写该方法，那么这就是多态</p>
-<p>概念：在父类中的同一方法在各个子类中的实现行为不同。</p>
-<p>例：<br><code>toString()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var date = new Date();</div><div class="line">console.log(date.toString());</div><div class="line">var arr = [1,3,5];</div><div class="line">console.log(arr.toString());</div><div class="line">var o = &#123;name:&quot;shelly&quot;&#125;;</div><div class="line">console.log(o.toString());</div></pre></td></tr></table></figure></p>
-<p><img src="/images/toString.png" alt=""></p>
-<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><ul>
-<li><p>概念：从当前对象到Object.prototype之间，存在一条层次分明，逐级递进的体现继承关系的链式结构，这个结构被称为原型链。</p>
-</li>
-<li><p>核心：__proto__</p>
-</li>
-<li><p>几个默认</p>
-<ul>
-<li>所有对象都有__proto__属性，这个属性引用他的原型对象</li>
-<li>原型对象继承自Object.prototype，具有constructor属性，如果置换了原型，记得要添加constructor属性</li>
-<li>只有函数具有prototype属性（Function.prototype除外）</li>
-</ul>
-</li>
-</ul>
-<p>属性搜索原型：当访问对象成员时，</p>
-<ul>
-<li>首先，在当前对象上查找，如果找到就直接返回（调用），停止查找；</li>
-<li>如果没有找到，就向其原型对象上查找，如果找到就直接返回（调用），停止查找；</li>
-<li>如果没有找到，就继续向原型对象的原型对象上查找，直到Object.prototype；</li>
-<li>如果找到，那么就直接返回（调用），并停止查找；否则返回undefined（报错：XXX is not a function）</li>
-</ul>
-<p>注意：</p>
-<ul>
-<li>如果访问对象的某个属性不存在的话，会搜索整个原型链。导致 js 性能降低</li>
-<li>在实际开发中，尽量保持一个适度的原型链长度</li>
-<li>兼顾 js 性能以及代码的可读性可扩展性</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function parent()&#123;</div><div class="line">    this.name = &quot;Tom&quot;;</div><div class="line">    this.age = 20;</div><div class="line">    this.gender = &quot;man&quot;;</div><div class="line">&#125;</div><div class="line">parent.prototype.address = &quot;China&quot;;</div><div class="line">parent.prototype.__proto__=&#123;</div><div class="line">    gender:&quot;nan&quot;</div><div class="line">&#125;;</div><div class="line">var p = new parent;</div><div class="line">console.log(p.name);</div><div class="line">console.log(p.address);</div><div class="line">console.log(p.gender);</div></pre></td></tr></table></figure>
-<p><img src="/images/sousuo.png" alt=""></p>
-<h3 id="Object-prototype简介"><a href="#Object-prototype简介" class="headerlink" title="Object.prototype简介"></a>Object.prototype简介</h3><p>console.log(Object.prototype); 介绍打印出来的几个属性</p>
-<h5 id="1-hasOwnProperty"><a href="#1-hasOwnProperty" class="headerlink" title="1. hasOwnProperty()"></a>1. hasOwnProperty()</h5><p>has：有<br>own：自己<br>Property：属性<br>判断指定的属性是否为当前对象自己的（不是继承）<br>语法：<code>&lt;object&gt;.hasOwnProperty(&#39;propName&#39;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var o = &#123;name:&quot;Tom&quot;&#125;;</div><div class="line">console.log(o.hasOwnProperty(&quot;name&quot;));</div><div class="line">console.log(o.hasOwnProperty(&quot;toString&quot;));</div></pre></td></tr></table></figure></p>
-<p><img src="/images/hasOwnProperty.png" alt=""></p>
-<h5 id="2-isPrototypeOf"><a href="#2-isPrototypeOf" class="headerlink" title="2. isPrototypeOf"></a>2. isPrototypeOf</h5><p>is：是否<br>prototype：原型<br>of：的<br>判断当前对象是否为指定对象的原型对象<br>只要对象a出现在对象b的原型链上就返回true，否则返回false<br>语法：<code>&lt;a&gt;.isPrototypeOf(&lt;b&gt;)</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function A()&#123;&#125;</div><div class="line">function B()&#123;&#125;</div><div class="line">var a = new A();</div><div class="line">B.prototype = a;</div><div class="line">var b = new B();</div><div class="line">//原型链：b-&gt;B.prototype-&gt;A.prototype-&gt;Object.prototype-&gt;null</div><div class="line">console.log(a.isPrototypeOf(b));</div><div class="line">console.log(A.prototype.isPrototypeOf(b));</div><div class="line">console.log(Object.prototype.isPrototypeOf(a));</div><div class="line">console.log(Object.prototype.isPrototypeOf(b));</div></pre></td></tr></table></figure></p>
-<p><img src="/images/isPrototypeOf.png" alt=""></p>
-<h5 id="3-propertyIsEnumerable"><a href="#3-propertyIsEnumerable" class="headerlink" title="3. propertyIsEnumerable"></a>3. propertyIsEnumerable</h5><p>property：属性<br>is：是否<br>Enumerable：可枚举的<br>判断对象的制定属性是否可枚举，并且指定的属性必须是自身的<br>是hasOwnProperty的升级版<br>默认：手动添加的属性都是可枚举的，js 解析器自动添加的属性都是不可枚举的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj=&#123;</div><div class="line">    name:&quot;Tom&quot;,</div><div class="line">    age:18</div><div class="line">&#125;;</div><div class="line">for(var k in obj)&#123;</div><div class="line">    console.log(k)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="/images/propertyIsEnumerable.png" alt=""></p>
-<p>构造函数的执行过程</p>
-<ol>
-<li>创建了一个空对象obj</li>
-<li>将obj赋值给this（让this指向obj）</li>
-<li>将当前作用域交给this</li>
-<li>执行构造函数的内部代码</li>
-<li>将this返回（return this）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Fn(name,age)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">&#125;</div><div class="line">var fn = new Fn(&quot;Tom&quot;,18);</div><div class="line">console.log(fn);</div><div class="line">function Fn(name,age)&#123;</div><div class="line">    var obj = &#123;&#125;;</div><div class="line">    this = obj;</div><div class="line">    Fn.call(this,name,age);</div><div class="line">    return this;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>绘制原型链<br>规则：</p>
-<ol>
-<li>绘制出简化的原型莲</li>
-<li>先将上述简化的原型链上的每一个对象绘制在图形上</li>
-<li>将每一个对象的默认属性添加上</li>
-<li>给每一个对象的属性添加指向</li>
-<li>如果每一个对象的属性都有了指向，就说明原型链绘制完成</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var o = &#123;&#125;</div><div class="line">//o-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
-<p><img src="/images/o.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var arr = [];</div><div class="line">//arr-&gt;Array.prototype-&gt;Object.prototype-&gt;null</div></pre></td></tr></table></figure>
-<p><img src="/images/arr.png" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2014/10/27/面向对象从入门到精通（二）/" data-id="ciwd7slfg0008l0up7nqi7vvp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1435,7 +1509,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li></ul>
     </div>
   </div>
 
@@ -1460,11 +1534,11 @@
           </li>
         
           <li>
-            <a href="/2015/01/30/JQuery入门（二）/">JQuery入门(二)</a>
+            <a href="/2015/02/12/JQuery入门（三）/">JQuery入门(三)</a>
           </li>
         
           <li>
-            <a href="/2015/01/26/JQuery入门（一）/">JQuery入门(一)</a>
+            <a href="/2015/01/30/JQuery入门（二）/">JQuery入门(二)</a>
           </li>
         
       </ul>
