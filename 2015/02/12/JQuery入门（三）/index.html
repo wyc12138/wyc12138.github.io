@@ -21,7 +21,7 @@ attr(name,value);
 第一个参数：需要设置的属性名
 第二个参数：对应的属性值
 案例：$(&amp;quot;img&amp;quot;).attr(&amp;quot;title&amp;quot;,&amp;quot;hello&amp;quot;);   $(&amp;quot;img&amp;quot;).attr(&amp;quot;alt&amp;quot;,&amp;quot;hello&amp;quo">
-<meta property="og:updated_time" content="2016-12-06T12:38:36.621Z">
+<meta property="og:updated_time" content="2016-12-06T14:22:23.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQuery入门(三)">
 <meta name="twitter:description" content="JQuery 操作 DOMJQuery 操作属性
@@ -285,6 +285,70 @@ attr(name,value);
 </ul>
 </li>
 </ul>
+<h3 id="JQuery-事件对象"><a href="#JQuery-事件对象" class="headerlink" title="JQuery 事件对象"></a>JQuery 事件对象</h3><table>
+<thead>
+<tr>
+<th>对象属性</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event.type</td>
+<td style="text-align:center">事件类型</td>
+</tr>
+<tr>
+<td>event.data</td>
+<td style="text-align:center">存储绑定事件时传递的附加数据</td>
+</tr>
+<tr>
+<td>event.target</td>
+<td style="text-align:center">点了谁就是谁</td>
+</tr>
+<tr>
+<td>event.currentTarget</td>
+<td style="text-align:center">当前DOM元素，等同于this</td>
+</tr>
+<tr>
+<td>event.delegateTarget</td>
+<td style="text-align:center">代理对象</td>
+</tr>
+<tr>
+<td>screenX和screenY</td>
+<td style="text-align:center">对应屏幕最左上角的值</td>
+</tr>
+<tr>
+<td>offsetX和offsetY</td>
+<td style="text-align:center">点击位置距离元素的最左上角的位置</td>
+</tr>
+<tr>
+<td>clientX和clientY</td>
+<td style="text-align:center">距离页面左上角的位置（忽视滚动条）</td>
+</tr>
+<tr>
+<td>pageX和pageY</td>
+<td style="text-align:center">距离页面最顶部的左上角的位置（会计算滚动条的距离）</td>
+</tr>
+<tr>
+<td>event.witch</td>
+<td style="text-align:center">鼠标按键类型，1=鼠标左键 2=鼠标中键 3=鼠标右键</td>
+</tr>
+<tr>
+<td>event.keyCode</td>
+<td style="text-align:center">按下键盘的代码</td>
+</tr>
+<tr>
+<td>event.stopPropagation()</td>
+<td style="text-align:center">阻止事件冒泡行为</td>
+</tr>
+<tr>
+<td>event.preventDefault()</td>
+<td style="text-align:center">阻止浏览器默认行为</td>
+</tr>
+</tbody>
+</table>
+<h2 id="JQuery-补充"><a href="#JQuery-补充" class="headerlink" title="JQuery 补充"></a>JQuery 补充</h2><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><p>原理：return this<br>通常情况下，只有设置操作才能把链式编程延续下去，因为获取操作的时候，会返回获取到的相应的值，无法返回this<br>end();筛选选择器会改变 JQuery 对象的 DOM 对象，想要回到上一次的状态，并且返回匹配元素之前的状态</p>
+<h3 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h3><p>在方法内部会为匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们再进行循环，简化我们的操作，方便我们调用。如果获取的是多元素值，大部分情况下返回的是第一个元素的值。<br>设置性操作的时候：设置的是所有的元素<br>获取性操作：获取的是第一个元素。</p>
 
       
     </div>
